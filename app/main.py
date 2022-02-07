@@ -37,7 +37,9 @@ def draw_gaussian_distribution_graph():
     ax.set_xlabel("Heads count")
     ax.plot(datas.keys(), datas.values(), color=(1.0, 0.2, 0.3))
 
-    plt.show()  # I didn't find how I can change height of y line
+    plt.ylim([0, 100])
+    plt.xlim([0, 10])
+    plt.show()
 
 
 if __name__ == "__main__":
