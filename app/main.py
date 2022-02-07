@@ -1,5 +1,6 @@
 import random
 from collections import Counter
+import matplotlib.pyplot as plt
 
 
 def flip_coin():
@@ -14,3 +15,13 @@ def flip_coin():
     }
 
     return head_appearing_percentage
+
+
+def draw_gaussian_distribution_graph(percentage_dict):
+    fig, ax = plt.subplots()
+    ax.plot(percentage_dict.keys(), percentage_dict.values())
+    ax.set_title('Gaussian distribution')
+    ax.set_xlabel("Heads count")
+    ax.set_ylabel("Drop percentage %")
+    ax.set_ylim([0, 100])
+    plt.show()
