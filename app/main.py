@@ -6,7 +6,7 @@ def flip_coin():
 
     for _ in range(10000):
         flips = {1: 0, 0: 0}
-        for flip_index in range(10):
+        for i in range(10):
             num = random.randint(0, 1)
             flips[num] += 1
         chance_dict[flips[1]] += 1
