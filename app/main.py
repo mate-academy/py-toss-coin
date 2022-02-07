@@ -7,8 +7,8 @@ def flip_coin():
     heads = 0
     for time in range(10000):
         heads = len([heads for _ in range(10) if choice((0, 1)) == 0])
-        head_percentage[heads] = head_percentage.get(heads, 0) + heads
-    distribution = {key: (value / sum(head_percentage.values())) * 100
+        head_percentage[heads] = head_percentage.get(heads, 0) + 1
+    distribution = {key: (value / 10000) * 100
                     for key, value in head_percentage.items()}
     distribution_keys = list(distribution.keys())
     distribution_keys.sort()
