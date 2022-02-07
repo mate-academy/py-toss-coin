@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 def flip_coin():
     head_percentage = dict()
-    heads, tails = 0, 0
+    heads = 0
     for time in range(10000):
         heads = len([heads for _ in range(10) if choice((0, 1)) == 0])
         head_percentage[heads] = head_percentage.get(heads, 0) + heads
