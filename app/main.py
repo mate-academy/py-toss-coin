@@ -12,6 +12,3 @@ def flip_coin():
     flips_result_rounded = {key: int(flips_result[key]) for key in flips_result}
 
     return flips_result_rounded
-
-
-print(flip_coin())
