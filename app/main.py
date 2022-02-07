@@ -9,7 +9,6 @@ def create_dictionary():
     for iteration in range(10000):
         flips = [random.randrange(0, 2, 1) for i in range(10)]
         dict_of_occurrences[flips.count(1)] += 1
-    # print(dict_of_occurrences)
     return dict_of_occurrences
 
 
@@ -21,8 +20,8 @@ def draw_gauss_curve():
         fig, ax = plt.subplots(1, 1)
 
         ax.scatter(create_dictionary().keys(), create_dictionary().values())
-        ax.set_xlabel('Key')
-        ax.set_ylabel('Value')
+        plt.xlabel('Key', fontsize=10, color="green")
+        plt.ylabel('Count of occurrences', fontsize=10, color="blue")
 
         mu = np.mean(list_of_occurrences)
         sigma = np.std(list_of_occurrences)
