@@ -5,9 +5,7 @@ import matplotlib.pyplot as plt
 def flip_coin():
     flips = 10
     quantity_experiment = 10000
-    experiment_result = {
-        0: 0, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0, 10: 0
-    }
+    experiment_result = {flip: 0 for flip in range(number_of_flips + 1)}
     for _ in range(quantity_experiment):
         flips_result = {"head": 0, "tail": 0}
         for flip in range(flips):
