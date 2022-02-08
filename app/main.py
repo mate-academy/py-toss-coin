@@ -21,7 +21,9 @@ def draw_gaussian_distribution_graph(data: dict) -> None:
     plt.show()
 
 
-def flip_coin(number_of_flips: int, number_of_times: int, plot: bool = False) -> dict:
+def flip_coin(number_of_flips: int,
+              number_of_times: int,
+              plot: bool = False) -> dict:
     percentages_of_head_fell_out = {}
     for _ in range(number_of_times):
         number_of_heads_fall_out = len(head_fell_out(number_of_flips))
@@ -32,7 +34,9 @@ def flip_coin(number_of_flips: int, number_of_times: int, plot: bool = False) ->
     for k, v in percentages_of_head_fell_out.items():
         percentages_of_head_fell_out[k] = round((v / number_of_times) * 100, 2)
 
-    percentages_of_head_fell_out_keys = list(percentages_of_head_fell_out.keys())
+    percentages_of_head_fell_out_keys = list(
+        percentages_of_head_fell_out.keys()
+    )
     percentages_of_head_fell_out_sorted = {
         k: percentages_of_head_fell_out[k]
         for k in sorted(percentages_of_head_fell_out_keys)
