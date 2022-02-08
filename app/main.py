@@ -3,8 +3,8 @@ import matplotlib.pyplot as plt
 
 
 def flip_coin():
-    heads_odds = {0: 0, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0,
-                  6: 0, 7: 0, 8: 0, 9: 0, 10: 0}
+    times = 10
+    heads_odds = {key: 0 for key in range(times + 1)}
     for i in range(10000):
         heads_count = 0
         for j in range(10):
