@@ -3,15 +3,14 @@ import random
 
 
 def flip_coin(cases: int) -> dict:
-    template = {0: 0, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0,
-                6: 0, 7: 0, 8: 0, 9: 0, 10: 0}
+    template = dict.fromkeys(range(11), 0)
     for _ in range(cases):
         temp_result = 0
         for _ in range(10):
             if random.choice(["heads", "tails"]) == "heads":
                 temp_result += 1
         template[temp_result] += 1
-    result = {x: int(template[x] / cases * 100) for x in template}
+    result = {key: int(template[key] / cases * 100) for key in template}
     return result
 
 
