@@ -6,12 +6,7 @@ def flip_coin():
     cases = 10000
     flips = 10
 
-    flip_dict = {0: 0, 1: 0,
-                 2: 0, 3: 0,
-                 4: 0, 5: 0,
-                 6: 0, 7: 0,
-                 8: 0, 9: 0,
-                 10: 0}
+    flip_dict = {i: 0 for i in range(0, 11)}
 
     for _ in range(cases):
         eagle_and_tails = {1: 0, 0: 0}  # 1 is head, 0 is heads dropped out
