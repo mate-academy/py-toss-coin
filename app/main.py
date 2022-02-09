@@ -32,7 +32,8 @@ def flip_coin(number_of_flips: int,
             number_of_heads_fall_out, 0) + 1
 
     for flip, count in percentages_of_head_fell_out.items():
-        percentages_of_head_fell_out[flip] = round((count / number_of_times) * 100, 2)
+        percentages_of_head_fell_out[flip] = \
+            round((count / number_of_times) * 100, 2)
 
     percentages_of_head_fell_out_keys = list(
         percentages_of_head_fell_out.keys()
