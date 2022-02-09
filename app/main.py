@@ -31,15 +31,15 @@ def flip_coin(number_of_flips: int,
             number_of_heads_fall_out] = percentages_of_head_fell_out.get(
             number_of_heads_fall_out, 0) + 1
 
-    for k, v in percentages_of_head_fell_out.items():
-        percentages_of_head_fell_out[k] = round((v / number_of_times) * 100, 2)
+    for flip, count in percentages_of_head_fell_out.items():
+        percentages_of_head_fell_out[flip] = round((count / number_of_times) * 100, 2)
 
     percentages_of_head_fell_out_keys = list(
         percentages_of_head_fell_out.keys()
     )
     percentages_of_head_fell_out_sorted = {
-        k: percentages_of_head_fell_out[k]
-        for k in sorted(percentages_of_head_fell_out_keys)
+        flip: percentages_of_head_fell_out[flip]
+        for flip in sorted(percentages_of_head_fell_out_keys)
     }
 
     if plot:
