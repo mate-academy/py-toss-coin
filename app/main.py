@@ -7,7 +7,7 @@ def flip_coin():
     flips_result = {item: 0 for item in range(11)}
 
     for _ in range(10000):
-        heads = sum( randint(0, 1) for _ in range(10))
+        heads = sum(randint(0, 1) for _ in range(10))
         flips_result[heads] += 1
 
     flips_result = {flip: round(count * 100 / 10000, 2)
