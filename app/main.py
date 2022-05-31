@@ -19,12 +19,15 @@ def flip_coin():
     for result in result_list:
         results[result] += 1
 
+    for key, items in results.items():
+        results[key] = round(items / 10000 * 100)
+
     return results
 
 
 def draw_gaussian_distribution_graph():
     x = [x for x in flip_coin().keys()]
-    y = [y / 10000 * 100 for y in flip_coin().values()]
+    y = [y for y in flip_coin().values()]
     plt.plot(x, y)
     plt.xlabel('Heads count')
     plt.ylabel('Drop percentage %')
