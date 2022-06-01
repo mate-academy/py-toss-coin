@@ -20,7 +20,7 @@ def flip_coin():
         results[result] += 1
 
     for key, items in results.items():
-        results[key] = round(items / 10000 * 100)
+        results[key] = round(items / 10000 * 100, 2)
 
     return results
 
