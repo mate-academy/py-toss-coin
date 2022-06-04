@@ -4,16 +4,15 @@ from random import randint
 from matplotlib.ticker import MultipleLocator
 
 
-def flip_coin():
+def flip_coin(cases):
     drops_count = {key: 0 for key in range(11)}
 
-    for _ in range(10000):
+    for _ in range(cases):
         heads_amount = sum(randint(0, 1) for _ in range(10))
-        drops_count[heads_amount] += heads_amount
-    total_heads = sum(drops_count.values())
+        drops_count[heads_amount] += 1
 
     drops_statistic = {
-        head: round(amount * 100 / total_heads, 1)
+        head: round((amount * 100) / cases, 1)
         for head, amount in drops_count.items()
     }
 
@@ -39,3 +38,5 @@ def draw_result(data):
     plt.yticks(range(0, 101, 10))
 
     plt.show()
+
+print(flip_coin(10000))
