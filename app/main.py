@@ -38,5 +38,3 @@ def draw_result(data):
     plt.yticks(range(0, 101, 10))
 
     plt.show()
-
-print(flip_coin(10000))
