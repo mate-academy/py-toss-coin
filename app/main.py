@@ -15,15 +15,8 @@ def draw_gaussian_distribution_graph():
     plt.xlabel('Heads count')
     plt.ylabel('Drop percentage %')
 
-    xs = []
-    count = []
-
-    for key, value in heads_count.items():
-        value = value / 100
-        xs.append(key)
-        count.append(value)
-
-    plt.plot(xs, count, color='blue', linestyle='solid',
+    plt.plot(heads_count.keys(), heads_count.values(),
+             color='blue', linestyle='solid',
              label='Flip distribution')
 
     ax.xaxis.set_major_locator(ticker.MultipleLocator(1))
@@ -34,3 +27,4 @@ def draw_gaussian_distribution_graph():
 
     plt.legend(loc='upper right')
     fig.savefig('Gaussian distribution.png')
+    plt.show()
