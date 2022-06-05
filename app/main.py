@@ -11,6 +11,3 @@ def flip_coin():
     for k, v in result.items():
         result[k] = round(v / 100, 2)
     return result
-
-
-print(flip_coin())
