@@ -2,19 +2,7 @@ import random
 
 
 def flip_coin():
-    heads_count = {
-        0: 0,
-        1: 0,
-        2: 0,
-        3: 0,
-        4: 0,
-        5: 0,
-        6: 0,
-        7: 0,
-        8: 0,
-        9: 0,
-        10: 0,
-    }
+    heads_count = {i: 0 for i in range(11)}
 
     for _ in range(10000):
         heads_flip = 0
