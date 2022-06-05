@@ -12,4 +12,4 @@ def flip_coin():
                 heads_flip += 1
         heads_count[heads_flip] += 1
 
-    return heads_count
+    return {key: value / 100 for key, value in heads_count.items()}
