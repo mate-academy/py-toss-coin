@@ -14,8 +14,11 @@ def flip_coin(counts: int, iteration: int):
         plt.ylabel('Drop percentage %')
         x_dots = []
         y_dots = []
-        for x, y in enumerate(toss_coin.values()):
-            y_dots.append(y)
+        for x in range(counts + 1):
+            if x in toss_coin.keys():
+                y_dots.append(toss_coin[x])
+            else:
+                y_dots.append(0)
             x_dots.append(x)
         plt.plot(x_dots, y_dots, color='blue', linestyle='solid',
                  label='gauss')
@@ -33,7 +36,7 @@ def flip_coin(counts: int, iteration: int):
         else:
             result_dict[head] = 1
 
-    result = {key: round(value / iteration * 100, 2) for key, value in
+    result = {key: round(value / iteration * 100, 3) for key, value in
               sorted(result_dict.items())}
     create_gaussian_chart(result)
     return result
