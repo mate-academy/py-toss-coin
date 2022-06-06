@@ -24,16 +24,14 @@ def flip_coin(counts: int, iteration: int):
 
     result_dict = {}
     for _ in range(iteration):
-        one, zero = 0, 0
+        head = 0
         for _ in range(counts):
-            if randint(0, 1):
-                one += 1
-            else:
-                zero += 1
-        if zero in result_dict:
-            result_dict[zero] += 1
+            if not randint(0, 1):
+                head += 1
+        if head in result_dict:
+            result_dict[head] += 1
         else:
-            result_dict[zero] = 1
+            result_dict[head] = 1
 
     result = {key: round(value / iteration * 100, 2) for key, value in
               sorted(result_dict.items())}
