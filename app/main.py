@@ -12,8 +12,9 @@ def flip_coin():
 def draw_gaussian_distribution_graph():
     odds_dict = flip_coin()
     pl.plot(odds_dict.keys(), odds_dict.values())
-    pl.xlabel("Heads count")
-    pl.ylabel("Drop percentage %")
+    pl.xlim(0, 10)
+    pl.ylim(0, 100)
+    pl.xlabel("Heads count", fontsize=10)
+    pl.ylabel("Drop percentage %", fontsize=10)
     pl.title("Gaussian distribution")
-    pl.savefig("filename.png")
     pl.show()
