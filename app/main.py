@@ -17,7 +17,6 @@ def flip_coin(cases):
     for key, value in dictionary.items():
         dictionary[key] = int(value / cases * 100)
 
-
     return dict(dictionary.items())
 
 
@@ -35,7 +34,6 @@ def draw_gaussian_distribution_graph():
 
     plt.xticks(np.arange(0, 11, 1))
     plt.yticks(np.arange(0, 101, 10))
-
 
     plt.ylabel("Drop percentage %")
     plt.xlabel("Heads count")
