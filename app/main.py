@@ -14,6 +14,3 @@ def flip_coin():
         dict_of_causes[count_of_head] += 1
 
     return {key: value / 100 for key, value in dict_of_causes.items()}
-
-
-print(flip_coin())
