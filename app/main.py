@@ -1,11 +1,11 @@
 import random
+
 import matplotlib.pyplot as plt
 import numpy as np
-from math import floor
 
 
 def flip_coin(cases):
-    dictionary = {}
+    dictionary = {i: 0 for i in range(11)}
 
     for _ in range(cases):
         heads = 0
@@ -15,9 +15,10 @@ def flip_coin(cases):
         dictionary[heads] = dictionary.get(heads, 0) + 1
 
     for key, value in dictionary.items():
-        dictionary[key] = floor(value / cases * 100)
+        dictionary[key] = int(value / cases * 100)
 
-    return dict(sorted(dictionary.items()))
+
+    return dict(dictionary.items())
 
 
 def draw_gaussian_distribution_graph():
@@ -27,14 +28,14 @@ def draw_gaussian_distribution_graph():
     heads_count = [*data.keys()]
     percentage = [*data.values()]
 
-    plt.ylim(0, 100)
     x_points = np.array(heads_count)
     y_points = np.array(percentage)
+
+    plt.plot(x_points, y_points)
 
     plt.xticks(np.arange(0, 11, 1))
     plt.yticks(np.arange(0, 101, 10))
 
-    plt.plot(x_points, y_points)
 
     plt.ylabel("Drop percentage %")
     plt.xlabel("Heads count")
