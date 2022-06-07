@@ -3,9 +3,7 @@ from matplotlib import pyplot as plt
 
 
 def flip_coin():
-    outcomes = dict()
-    for i in range(11):
-        outcomes[i] = 0
+    outcomes = {i: 0 for i in range(11)}
 
     for _ in range(10000):
         heads = 0
@@ -27,5 +25,3 @@ def draw_gaussian_distribution_graph():
 
 
 draw_gaussian_distribution_graph()
-
-
