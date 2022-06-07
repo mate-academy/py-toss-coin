@@ -13,4 +13,4 @@ def flip_coins():
 
     dict_of_values = dict(sorted(dict_of_values.items()))
 
-    return dict_of_values
+    return {key: value / 100 for key, value in dict_of_values.items()}
