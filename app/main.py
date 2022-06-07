@@ -13,7 +13,9 @@ def flip_coin():
 
     result_dict = {}
     for head_count in range(11):
-        result_dict[head_count] = math.ceil((array_of_heads.count(head_count) / 10000) * 100)
+        result_dict[head_count] = math.ceil(
+            (array_of_heads.count(head_count) / 10000) * 100
+        )
 
     return result_dict
 
