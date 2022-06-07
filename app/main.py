@@ -12,8 +12,8 @@ def flip_coin():
     ]
 
     result_dict = {}
-    for x in range(11):
-        result_dict[x] = math.ceil((array_of_heads.count(x) / 10000) * 100)
+    for head_count in range(11):
+        result_dict[head_count] = math.ceil((array_of_heads.count(head_count) / 10000) * 100)
 
     return result_dict
 
@@ -21,12 +21,12 @@ def flip_coin():
 def draw_gaussian_distribution_graph():
     result_dict = flip_coin()
 
-    x = list(result_dict.keys())
-    y = list(result_dict.values())
+    x_coordinates = list(result_dict.keys())
+    y_coordinates = list(result_dict.values())
 
     fig, ax = plt.subplots()
 
-    ax.plot(x, y, color='b', linewidth=3)
+    ax.plot(x_coordinates, y_coordinates, color='b', linewidth=3)
     plt.title('Gaussian distribution')
     plt.xlabel('Heads count')
     plt.ylabel('Drop percentage %')
