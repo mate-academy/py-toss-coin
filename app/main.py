@@ -13,4 +13,3 @@ def flip_coin():
     for key_index in range(11):
         result[key_index] = result[key_index] / 100
     return result
-
