@@ -14,7 +14,7 @@ def flip_coin(num_of_cases):
 
     data_percentage = {}
     for num, counts in data.items():
-        data_percentage[num] = counts / (sum(data.values()) / 100)
+        data_percentage[num] = counts / (num_of_cases / 100)
 
     return draw_gaussian_distribution_graph(data_percentage)
 
@@ -44,3 +44,6 @@ def draw_gaussian_distribution_graph(data: dict):
 
     plt.show()
     return data
+
+
+flip_coin(10000)
