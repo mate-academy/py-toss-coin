@@ -3,19 +3,7 @@ import random
 
 def flip_coin():
     count = 11
-    final_dict = {
-        0: 0,
-        1: 0,
-        2: 0,
-        3: 0,
-        4: 0,
-        5: 0,
-        6: 0,
-        7: 0,
-        8: 0,
-        9: 0,
-        10: 0
-    }
+    final_dict = {i: 0 for i in range(11)}
     list_ = ["heads", "tails"]
     for i in range(10000):
         if count == 0:
@@ -46,3 +34,4 @@ def flip_coin():
             if item == "heads":
                 count += 1
     return final_dict
+
