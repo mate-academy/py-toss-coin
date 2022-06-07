@@ -12,8 +12,11 @@ def flip_coin(num_of_cases):
             flip.append(random.choice(["head", "tail"]))
         data[flip.count('head')] += 1
 
-    draw_gaussian_distribution_graph(data)
-    return data
+    data_percentage = {}
+    for num, counts in data.items():
+        data_percentage[num] = counts / (sum(data.values()) / 100)
+
+    return draw_gaussian_distribution_graph(data_percentage)
 
 
 def draw_gaussian_distribution_graph(data: dict):
@@ -29,7 +32,7 @@ def draw_gaussian_distribution_graph(data: dict):
     y_arr = []
     for x, y in data.items():
         x_arr.append(x)
-        y_arr.append(y / (sum(data.values()) / 100))
+        y_arr.append(y)
 
     plt.plot(x_arr, y_arr, 'b')
 
@@ -40,3 +43,4 @@ def draw_gaussian_distribution_graph(data: dict):
     ax.yaxis.set_minor_locator(ticker.MultipleLocator(5))
 
     plt.show()
+    return data
