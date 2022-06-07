@@ -12,6 +12,3 @@ def flip_coin():
     for key in stat_data:
         stat_data[key] = stat_data[key] / 100
     return stat_data
-
-
-flip_coin()
