@@ -23,7 +23,6 @@ def draw_gaussian_distribution_graph():
     y_plot_help = list(flip_coin().values())
     y_plot = [i * 100 / 10000 for i in y_plot_help]
     y_ticks = [y for y in range(101) if y % 10 == 0]
-    plt.ylim(None, 100)
     plt.title(
         "Gaussian distribution",
         fontsize=14,
@@ -40,6 +39,7 @@ def draw_gaussian_distribution_graph():
         color="black"
     )
     plt.plot(x_plot, y_plot, color="blue")
+    plt.axis([0, len(x_plot) - 1, 0, 100])
     plt.xticks(x_plot)
     plt.yticks(y_ticks)
     ax = plt.subplot()
