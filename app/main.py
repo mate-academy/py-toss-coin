@@ -10,4 +10,7 @@ def flip_coin():
             if flip_result:
                 heads += 1
         result_flipping[heads] += 1
-    return {k: v / 100 for k, v in result_flipping.items()}
+    return {
+        flipping_times: percentage / 100
+        for flipping_times, percentage in result_flipping.items()
+    }
