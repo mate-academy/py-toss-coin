@@ -23,7 +23,6 @@ def flip_coin():
 
 def draw_gaussian_distribution_graph():
     x_plot = list(flip_coin())
-    y_plot_help = list(flip_coin().values())
     y_plot = list(flip_coin().values())
     y_ticks = [y for y in range(101) if y % 10 == 0]
     plt.title(
