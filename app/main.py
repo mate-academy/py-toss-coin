@@ -4,16 +4,19 @@ import random
 
 
 def flip_coin():
-    dicts_of_flips = []
+    lists_of_flips = []
     for _ in range(10000):
-        dicts_of_flips.append([random.randint(0, 1) for _ in range(10)])
+        lists_of_flips.append([random.randint(0, 1) for _ in range(10)])
 
     counts = {
         0: 0, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0,
         6: 0, 7: 0, 8: 0, 9: 0, 10: 0}
 
-    for turn in dicts_of_flips:
+    for turn in lists_of_flips:
         counts[turn.count(1)] += 1
+
+    for num in counts:
+        counts[num] = round(counts[num] * 100 / 10000)
 
     return counts
 
@@ -21,7 +24,7 @@ def flip_coin():
 def draw_gaussian_distribution_graph():
     x_plot = list(flip_coin())
     y_plot_help = list(flip_coin().values())
-    y_plot = [i * 100 / 10000 for i in y_plot_help]
+    y_plot = list(flip_coin().values())
     y_ticks = [y for y in range(101) if y % 10 == 0]
     plt.title(
         "Gaussian distribution",
