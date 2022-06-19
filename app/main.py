@@ -12,10 +12,7 @@ def flip_coin():
         res_dict[heads] += 1
     for i in res_dict:
         res_dict[i] = res_dict[i] / 100
-    return res_dict
 
-
-def draw_gaussian_distribution_graph():
     y = list(res_dict.values())
     x = list(res_dict.keys())
 
