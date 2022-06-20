@@ -11,7 +11,7 @@ def flip_coin():
         for num, flip in enumerate(range(1, 11)):
             flip = random.choice(option)
             if flip == "heads":
-                if dictionary[num] in dictionary.keys():
+                if num in dictionary.keys():
                     dictionary[num] += 1.0
                 else:
                     dictionary[num] = 1
