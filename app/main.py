@@ -16,10 +16,8 @@ def flip_coin():
     return final_result
 
 
-coordinates = flip_coin()
-
-
 def draw_gaussian_distribution_graph():
+    coordinates = flip_coin()
     x = [key for key in coordinates.keys()]
     y = [value for value in coordinates.values()]
     plt.plot(x, y, color='blue', linestyle='solid')
