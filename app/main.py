@@ -3,10 +3,10 @@ import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
 
 
-def flip_coin(cases_count):
+def flip_coin():
     count = dict.fromkeys((keys for keys in range(0, 11)), 0)
     coin = ["head", "tail"]
-    for case in range(cases_count // 5):
+    for case in range(10000 // 5):
         head_counter = 0
 
         for flip in range(0, 10):
@@ -19,14 +19,13 @@ def flip_coin(cases_count):
         count[head_counter] += head_counter
 
     for key, value in count.items():
-        count[key] = round((value / cases_count) * 100, 3)
+        count[key] = round((value / 10000) * 100, 3)
 
     return count
 
 
 def draw_gaussian_distribution_graph():
-    cases = 10000
-    data = flip_coin(cases)
+    data = flip_coin()
     numbers = [keys for keys in data]
     percent = [values for values in data.values()]
 
