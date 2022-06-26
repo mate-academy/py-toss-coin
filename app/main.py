@@ -37,6 +37,3 @@ def draw_gaussian_distribution_graph():
     ax.set_ylabel('Drop percentage %')
     ax.plot(numbers, percent, color="blue", linestyle='solid')
     fig.savefig("Gaussian distribution")
-
-
-draw_gaussian_distribution_graph()
