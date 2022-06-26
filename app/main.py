@@ -18,6 +18,9 @@ def flip_coin(cases_count):
 
         count[head_counter] += head_counter
 
+    for key, value in count.items():
+        count[key] = round((value / cases_count) * 100, 3)
+
     return count
 
 
@@ -25,7 +28,7 @@ def draw_gaussian_distribution_graph():
     cases = 10000
     data = flip_coin(cases)
     numbers = [keys for keys in data]
-    percent = [(values / cases) * 100 for values in data.values()]
+    percent = [values for values in data.values()]
 
     fig, ax = plt.subplots()
 
