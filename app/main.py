@@ -1,1 +1,15 @@
-# write your code here
+import random
+
+
+def flip_coin():
+
+    list_of_total_cases = [
+        [random.choice(["h_s", "t_s"]) for _ in range(10)] for _ in range(1000)
+    ]
+
+    list_of_count_heads = [case.count("h_s") for case in list_of_total_cases]
+
+    dict_count_heads = {i: list_of_count_heads.count(i) / 10
+                        for i in range(11)}
+
+    return dict_count_heads
