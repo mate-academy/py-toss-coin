@@ -1,6 +1,7 @@
 from random import choice
 import matplotlib.pyplot as plt
 
+
 def flip_coin():
     result = dict.fromkeys((number for number in range(11)), 0)
 
