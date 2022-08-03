@@ -1,17 +1,13 @@
-from random import choice
+import random
 
 
 def flip_coin():
-    result = dict.fromkeys((number for number in range(11)), 0)
-
+    count = []
+    side = ["Heads", "Tails"]
     for _ in range(10000):
-        count = 0
-
-        for _ in range(10):
-            if choice(["Heads", "Tails"]) == "Heads":
-                count += 1
-            result[count] += 1
-
-    for key, value in result.items():
-        result[key] = value / 10000 * 100
-    return result
+        heads = 0
+        for i in range(10):
+            if random.choice(side) == "Heads":
+                heads += 1
+        count.append(heads)
+    return {i: count.count(i) * 100 / 10000 for i in range(11)}
