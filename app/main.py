@@ -21,4 +21,3 @@ def draw_gaussian_distribution_graph():
              lw=5, mec='b', mew=2, ms=10)
     plt.legend()
     plt.grid(True)
-    plt.show()
