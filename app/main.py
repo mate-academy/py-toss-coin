@@ -32,7 +32,3 @@ def draw_gaussian_distribution_graph():
 
 if __name__ == "main":
     flip_coin()
-
-flip_coin()
-
-draw_gaussian_distribution_graph()
