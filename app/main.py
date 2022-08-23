@@ -1,5 +1,5 @@
 import random
-import matplotlib.pylab as plt
+import matplotlib as plt
 
 
 def cointoss():
