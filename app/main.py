@@ -1,5 +1,5 @@
 import random
-import matplotlib as plt
+import matplotlib
 
 
 def cointoss():
@@ -23,5 +23,5 @@ def draw_gaussian_distribution_graph():
     dict = flip_coin()
     x = [key for key in dict.keys()]
     y = [values for values in dict.values()]
-    plt.plot(x, y)
-    plt.show()
+    matplotlib.plt.plot(x, y)
+    matplotlib.plt.show()
