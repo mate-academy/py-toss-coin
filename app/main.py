@@ -1,6 +1,4 @@
 import random
-import matplotlib as mpl
-import matplotlib.pyplot as plt
 
 
 def flip_coin(count=10000):
@@ -18,6 +16,8 @@ def flip_coin(count=10000):
 
 
 def draw_gaussian_distribution_graph(dic):
+    import matplotlib as mpl
+    import matplotlib.pyplot as plt
     dpi = 80
     fig = plt.figure(dpi=dpi, figsize=(512 / dpi, 384 / dpi))
     mpl.rcParams.update({'font.size': 10})
