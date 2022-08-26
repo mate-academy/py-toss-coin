@@ -47,7 +47,3 @@ def draw_gaussian_distribution_graph():
 
     plt.plot(xs, perc_vals, color='blue', linestyle='solid')
     fig.savefig('trigan.png')
-    pass
-
-
-draw_gaussian_distribution_graph()
