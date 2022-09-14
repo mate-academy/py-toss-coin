@@ -25,10 +25,10 @@ def flip_coin():
     return dict_
 
 
-def draw_gaussian_distribution_graph(dict_: dict):
-    plt.plot(dict_.keys(), dict_.values())
+def draw_gaussian_distribution_graph(flips: dict) -> None:
+    plt.plot(flips.keys(), flips.values())
     plt.ylim(0, 100)
-    plt.title("Gaussian_distribution")
-    plt.xlabel("Count_of_head")
-    plt.ylabel("Drop percentage")
+    plt.title("Gaussian distribution")
+    plt.xlabel("Heads count")
+    plt.ylabel("Drop percentage %")
     plt.show()
