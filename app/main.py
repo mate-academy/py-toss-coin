@@ -33,4 +33,4 @@ def draw_gaussian_distribution_graph():
         label='sin(x)'
     )
     plt.legend(loc='upper right')
-    fig.savefig('graph.png')
+    fig.savefig('graph_1.png')
