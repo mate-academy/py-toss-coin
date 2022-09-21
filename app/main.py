@@ -1,7 +1,5 @@
 import random
 
-import matplotlib.pyplot as plt
-
 
 def flip_coin():
     rounds = []
@@ -18,13 +16,5 @@ def flip_coin():
     percentage_of_cases = {
         x: (rounds.count(x) / (len(rounds) / 100)) for x in range(11)
     }
-
-    plt.axis([0, 10, 0, 100])
-    plt.title("Gaussian distribution")
-    plt.xlabel("Heads count")
-    plt.ylabel("Drop percentage %")
-
-    plt.plot(percentage_of_cases.values(), "b-")
-    plt.show()
 
     return percentage_of_cases
