@@ -1,6 +1,4 @@
 import random
-import matplotlib as mpl
-import matplotlib.pyplot as plt
 
 
 def flip_coin():
@@ -16,22 +14,3 @@ def flip_coin():
     for key in heads_dict:
         heads_dict[key] = heads_dict[key] / 100
     return heads_dict
-
-
-def draw_gaussian_distribution_graph():
-    dpi = 100
-    fig = plt.figure(dpi=dpi, figsize=(768 / dpi, 476 / dpi))
-    mpl.rcParams.update({'font.size': 10})
-    plt.axis([0, 10, 0, 100])
-
-    plt.title('Gaussian distribution')
-    plt.xlabel('Heads count')
-    plt.ylabel('Drop percentage %')
-
-    point_dict = flip_coin()
-    xs = list(point_dict.keys())
-    gauss_values = list(point_dict.values())
-
-    plt.plot(xs, gauss_values)
-
-    fig.savefig('Gaussian_distribution.png')
