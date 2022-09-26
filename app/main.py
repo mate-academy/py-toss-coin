@@ -12,7 +12,7 @@ def flip_coin() -> dict:
             if random.choice(coins) == "heads":
                 count += 1
         res[count] += 1
-    res1 = {x: v/100 for x, v in res.items()}
+    res1 = {x: v / 100 for x, v in res.items()}
     return res1
 
 
