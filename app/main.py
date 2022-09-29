@@ -27,8 +27,7 @@ def flip_coin():
                 d_result[i] += 1
         count = 0
     for i in range(11):
-        d_result[i] /= 10000
-        d_result[i] *= 100
+        d_result[i] /= 100
         d_result[i] = round(d_result[i], 2)
     print(d_result)
     return d_result
