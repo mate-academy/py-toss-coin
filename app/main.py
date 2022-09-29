@@ -19,7 +19,7 @@ def flip_coin():
         10: 0,
     }
     for _ in range(10000):
-        for _ in range(0, 11):
+        for _ in range(10):
             if random.choice([0, 1]) == 1:
                 count += 1
         for i in range(11):
@@ -28,7 +28,6 @@ def flip_coin():
         count = 0
     for i in range(11):
         d_result[i] /= 100
-        d_result[i] = round(d_result[i], 2)
     print(d_result)
     return d_result
 
