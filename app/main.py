@@ -1,8 +1,6 @@
 import random
 import matplotlib.pyplot as plt
-import matplotlib
 from matplotlib.pyplot import MultipleLocator
-matplotlib.use('TkAgg')
 
 
 def flip_coin():
