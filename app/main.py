@@ -1,13 +1,12 @@
 import random
 import matplotlib.pyplot as plt
-import matplotlib.ticker as ticker
 
 
 def flip_coin():
-    head_or_tail_list = [[random.choice(["h", "t"])
-        for i in range(10)] for y in range(0, 10000)]
+    head_or_tail_list = [[random.choice(["h", "t"]) for
+                          _ in range(10)] for _ in range(0, 10000)]
     list_of_count = [head.count("h") for head in head_or_tail_list]
-    dict_of_count = {i: list_of_count.count(i)/100 for i in range(11)}
+    dict_of_count = {i: list_of_count.count(i) / 100 for i in range(11)}
     return dict_of_count
 
 
@@ -19,6 +18,3 @@ def draw_gaussian_distribution_graph():
     plt.ylabel('Drope percentage %')
     plt.plot(data.keys(), data.values())
     plt.show()
-
-
-draw_gaussian_distribution_graph()
