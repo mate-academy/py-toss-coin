@@ -1,5 +1,8 @@
 import random
 
+import matplotlib as mpl
+import matplotlib.pyplot as plt
+
 
 def flip_coin() -> dict:
     flips_rate = {number: 0 for number in range(11)}
@@ -13,3 +16,20 @@ def flip_coin() -> dict:
         flips_rate[count] += 1
 
     return {key: value / 100 for key, value in flips_rate.items()}
+
+
+def draw_gaussian_distribution_graph() -> None:
+    dpi = 80
+    fig = plt.figure(dpi=dpi, figsize=(512 / dpi, 384 / dpi))
+    mpl.rcParams.update({"font.size": 10})
+
+    plt.axis([0, 10, 0, 100])
+
+    plt.title("Gaussian distribution")
+    plt.xlabel("Heads count")
+    plt.ylabel("Drop percentage %")
+
+    result = flip_coin()
+
+    plt.plot(result.keys(), result.values(), color="blue", linestyle="solid")
+    fig.savefig("graph.png")
