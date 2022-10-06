@@ -31,4 +31,4 @@ def draw_gaussian_distribution_graph() -> None:
 
     plt.plot(x_points, y_points, color="blue")
 
-    fig.savefig('Gaussian distribution.png')
+    fig.savefig("Gaussian distribution.png")
