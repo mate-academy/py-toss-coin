@@ -6,6 +6,6 @@ def flip_coin() -> dict:
 
     for _ in range(10000):
         num_heads = sum(random.randint(0, 1) for _ in range(10))
-        stats[num_heads] += 100 / 10000
+        stats[num_heads] += 0.01
 
     return stats
