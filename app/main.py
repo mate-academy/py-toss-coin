@@ -1,8 +1,7 @@
 import random
-from collections import Counter
 
 
-def flip_coin():
+def flip_coin() -> None:
     result = {key: 0 for key in range(0, 11)}
     for _ in range(10000):
         count = 0
