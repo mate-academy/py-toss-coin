@@ -1,5 +1,4 @@
 from random import choice
-import matplotlib as mpl
 import matplotlib.pyplot as plt
 
 
@@ -33,9 +32,6 @@ def flip_coin() -> dict:
 
 
 def draw_gaussian_distribution_graph() -> None:
-    dpi = 80
-    plt.figure(dpi=dpi, figsize=(512 / dpi, 384 / dpi))
-    mpl.rcParams.update({"font.size": 10})
     points = flip_coin()
     plt.title("Gaussian distribution")
     plt.xlabel("Heads count")
