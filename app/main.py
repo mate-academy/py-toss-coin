@@ -1,11 +1,11 @@
-from random import randint
+import random
 from matplotlib import pyplot as plt
 
 
 def chance_of_zero_from_10() -> int:
     count_zeros = 0
     for _ in range(10):
-        if randint(0, 1) == 0:
+        if random.choice((0, 1)) == 0:
             count_zeros += 1
     return count_zeros
 
