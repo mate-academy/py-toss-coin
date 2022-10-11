@@ -29,3 +29,6 @@ def draw_gaussian_distribution_graph() -> None:
     plt.plot(axis_x, axis_y)
     fig.savefig("fig.png")
     plt.show()
+
+
+print(draw_gaussian_distribution_graph())
