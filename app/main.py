@@ -1,11 +1,11 @@
 import random
+import matplotlib
 import matplotlib.pyplot as plt
 
 
 def flip_coin() -> dict:
     res = {i: 0 for i in range(11)}
     for _ in range(10000):
-        count_heads = 0
         flip = [random.randint(0, 1) for _ in range(10)]
         count_heads = flip.count(1)
         for key, value in res.items():
