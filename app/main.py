@@ -1,5 +1,4 @@
 import random
-import matplotlib
 import matplotlib.pyplot as plt
 
 
@@ -31,4 +30,4 @@ def draw_gaussian_distribution_graph() -> None:
     plt.show()
 
 
-print(draw_gaussian_distribution_graph())
+draw_gaussian_distribution_graph()
