@@ -1,7 +1,7 @@
 import random
 
 
-def flip_coin():
+def flip_coin() -> dict:
     result = {num: 0 for num in range(11)}
 
     for i in range(10000):
