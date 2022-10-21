@@ -3,26 +3,23 @@ from random import choice
 import matplotlib.pyplot as plt
 
 
-def is_head_equal(number: int) -> bool:
+def head_flipped() -> bool:
     result = 0
     coin = ["head", "tail"]
     for _ in range(10):
         if choice(coin) == "head":
             result += 1
-    return True if result == number else False
+    return result
 
 
 def flip_coin() -> dict:
-    number = 0
-    count = 0
-    result = {}
-    while number <= 10:
-        for _ in range(10000):
-            if is_head_equal(number):
-                count += 1
-        result[number] = round(count / 10000 * 100, 2)
-        number += 1
-        count = 0
+    result = {0: 0, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0, 10: 0}
+    for _ in range(10000):
+        count = head_flipped()
+        if count in result:
+            result[count] += 1
+    for key, value in result.items():
+        result[key] = round(value / 10000 * 100, 2)
     return result
 
 
