@@ -1,7 +1,7 @@
 import random
 
 
-def head_or_tail():
+def head_or_tail() -> int:
     total = 0
     coin = ["head", "tail"]
     for _ in range(10):
@@ -10,7 +10,7 @@ def head_or_tail():
     return total
 
 
-def flip_coin():
+def flip_coin() -> dict:
     head_dict = {i: 0 for i in range(11)}
 
     for _ in range(10000):
