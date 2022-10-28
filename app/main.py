@@ -5,7 +5,6 @@ import matplotlib.pyplot as plt
 def flip_coin() -> dict:
     result_dict = {0: 0, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0,
                    6: 0, 7: 0, 8: 0, 9: 0, 10: 0}
-    result = {}
     for _ in range(10000):
         amount = 0
         for _ in range(10):
@@ -13,12 +12,10 @@ def flip_coin() -> dict:
             if heads:
                 amount += 1
         if amount in result_dict:
-            result_dict[amount] += 1
+            result_dict[amount] += 0.01
         else:
-            result_dict[amount] = 1
-    for key, value in result_dict.items():
-        result[key] = value / 100
-    return result
+            result_dict[amount] = 0.01
+    return result_dict
 
 
 def draw_gaussian_distribution_graph(dict_graph: dict) -> None:
