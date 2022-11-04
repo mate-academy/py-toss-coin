@@ -18,14 +18,14 @@ def flip_coin() -> dict:
     return result
 
 
-def draw_gaussian_distribution_graph(result: dict) -> None:
-    pos_head = [x for x in result]
-    percent = [y for y in result.values()]
-    plt.axis([0, 10, 0, 100])
-    plt.yticks([step for step in range(0, 101, 10)])
-    plt.xticks([step for step in range(0, 11)])
-    plt.title("Gaussian distribution")
-    plt.xlabel("Heads count")
-    plt.ylabel("Drop percentage %")
-    plt.plot(pos_head, percent, color="b")
-    plt.show()
+# def draw_gaussian_distribution_graph(result: dict) -> None:
+#     pos_head = [x for x in result]
+#     percent = [y for y in result.values()]
+#     plt.axis([0, 10, 0, 100])
+#     plt.yticks([step for step in range(0, 101, 10)])
+#     plt.xticks([step for step in range(0, 11)])
+#     plt.title("Gaussian distribution")
+#     plt.xlabel("Heads count")
+#     plt.ylabel("Drop percentage %")
+#     plt.plot(pos_head, percent, color="b")
+#     plt.show()
