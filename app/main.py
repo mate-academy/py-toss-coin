@@ -20,10 +20,10 @@ def flip_coin() -> dict:
     return coins
 
 
-def draw_gaussian_distribution_graph():
+def draw_gaussian_distribution_graph() -> None:
     dpi = 80
     fig = plt.figure(dpi=dpi, figsize=(512 / dpi, 384 / dpi))
-    mpl.rcParams.update({'font.size': 10})
+    mpl.rcParams.update({"font.size": 10})
 
     plt.title("Gaussian distribution")
     plt.xlabel("Heads count")
@@ -31,12 +31,12 @@ def draw_gaussian_distribution_graph():
 
     plt.axis([0, 10, 0, 100])
 
-    x = []
-    y = []
+    ax = []
+    ay = []
 
     for key, value in sorted(flip_coin().items()):
-        x.append(key)
-        y.append(value)
+        ax.append(key)
+        ay.append(value)
 
-    plt.plot(x, y, color="red")
+    plt.plot(ax, ay, color="red")
     fig.savefig("graph.png")
