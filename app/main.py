@@ -29,15 +29,10 @@ def draw_gaussian_distribution_graph(flips: dict) -> None:
 
     plt.axis([0, 10, 0, 100])
 
-    plt.title("Gauss")
+    plt.title("Gaussian distribution")
     plt.xlabel("Heads count")
-    plt.ylabel("Drop %")
+    plt.ylabel("Drop percentage %")
     plt.plot(flips.keys(), flips.values(), color="blue", linestyle="solid",
              label="Drops")
     plt.legend(loc="upper right")
     fig.savefig("gauss.png")
-
-
-# d = flip_coin()
-# draw_gaussian_distribution_graph(d)
-# print(d)
