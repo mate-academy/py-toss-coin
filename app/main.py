@@ -21,12 +21,12 @@ def flip_coin() -> dict:
 
 
 def draw_gaussian_distribution_graph() -> None:
-    x = flip_coin().keys()
-    y = flip_coin().values()
+    heads_count = flip_coin().keys()
+    percentage = flip_coin().values()
 
     fig, ax = plt.subplots()
     plt.axis([0, 10, 0, 100])
-    ax.plot(x, y, color="r", linewidth=3)
+    ax.plot(heads_count, percentage, color="r", linewidth=3)
 
     plt.title("Gaussian distribution")
     plt.xlabel("Heads count")
