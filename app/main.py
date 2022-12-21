@@ -1,6 +1,6 @@
 import random
-import matplotlib as mpl
-import matplotlib.pyplot as plt
+# import matplotlib as mpl
+# import matplotlib.pyplot as plt
 
 
 def flip_coin() -> dict:
@@ -18,19 +18,19 @@ def flip_coin() -> dict:
     return result_dict
 
 
-def draw_gaussian_distribution_graph() -> None:
-    dpi = 80
-    fig = plt.figure(dpi=dpi, figsize=(512 / dpi, 384 / dpi))
-    mpl.rcParams.update({"font.size": 10})
-
-    plt.axis([0, 10, 0, 100])
-
-    plt.title("Gaussian Distribution")
-    plt.xlabel("Number of flips")
-    plt.ylabel("Drop percentage %")
-
-    plt.plot(flip_coin().values(), color="blue", linestyle="solid",
-             label="flips")
-
-    plt.legend(loc="upper right")
-    fig.savefig("flip.png")
+# def draw_gaussian_distribution_graph() -> None:
+#     dpi = 80
+#     fig = plt.figure(dpi=dpi, figsize=(512 / dpi, 384 / dpi))
+#     mpl.rcParams.update({"font.size": 10})
+#
+#     plt.axis([0, 10, 0, 100])
+#
+#     plt.title("Gaussian Distribution")
+#     plt.xlabel("Number of flips")
+#     plt.ylabel("Drop percentage %")
+#
+#     plt.plot(flip_coin().values(), color="blue", linestyle="solid",
+#              label="flips")
+#
+#     plt.legend(loc="upper right")
+#     fig.savefig("flip.png")
