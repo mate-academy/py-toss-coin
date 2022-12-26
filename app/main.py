@@ -4,7 +4,7 @@ from matplotlib import pyplot as plt
 
 def flip_coin() -> dict:
     static_dict = {x: 0 for x in range(11)}
-    for x in range(10000):
+    for _ in range(10000):
         head = 0
         for item in range(10):
             flip = random.randint(0, 1)
@@ -20,7 +20,7 @@ def draw_gaussian_distribution_graph(flips: dict) -> None:
     plt.plot(flips.keys(), flips.values())
     plt.ylim(0, 100)
     plt.title("Gaussian distribution")
-    plt.xlabel('Heads count')
+    plt.xlabel("Heads count")
     plt.ylabel("Drop percentage %")
     plt.show()
 
