@@ -25,6 +25,6 @@ def draw_gaussian_distribution_graph(flips: dict) -> None:
     plt.show()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     flip_coin()
     draw_gaussian_distribution_graph(flip_coin())
