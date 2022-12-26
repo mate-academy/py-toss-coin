@@ -2,7 +2,6 @@ import pytest
 
 from app.main import flip_coin
 
-
 def test_func_should_return_dict():
     assert isinstance(flip_coin(), dict), (
         "Function 'flip_coin' should return dictionary"
