@@ -1,7 +1,7 @@
 import random
 
 
-def flip_coin():
+def flip_coin() -> dict:
     list_to_analyze = []
     for toss in range(10000):
         heads_side = 0
@@ -17,4 +17,3 @@ def flip_coin():
     for result in set(list_to_analyze):
         final_dict[result] = list_to_analyze.count(result) / 100
     return final_dict
-
