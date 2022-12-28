@@ -30,7 +30,3 @@ def draw_gaussian_distribution_graph(distribution: dict) -> None:
              label="")
 
     plt.show()
-
-
-distrib = flip_coin()
-draw_gaussian_distribution_graph(distrib)
