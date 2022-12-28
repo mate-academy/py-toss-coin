@@ -1,5 +1,5 @@
 import random
-import matplotlib.pylab as plt
+# import matplotlib.pylab as plt
 
 
 def flipping() -> int:
@@ -22,11 +22,11 @@ def flip_coin() -> dict:
     return distribution
 
 
-def draw_gaussian_distribution_graph(distribution: dict) -> None:
-    plt.axis([0, 10, 0, 100])
-    x, y = zip(*distribution.items())
-
-    plt.plot(x, y, color="blue", linestyle="solid",
-             label="")
-
-    plt.show()
+# def draw_gaussian_distribution_graph(distribution: dict) -> None:
+#     plt.axis([0, 10, 0, 100])
+#     x, y = zip(*distribution.items())
+#
+#     plt.plot(x, y, color="blue", linestyle="solid",
+#              label="")
+#
+#     plt.show()
