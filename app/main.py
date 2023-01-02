@@ -1,4 +1,3 @@
-import matplotlib.pyplot as plt
 import random
 
 
@@ -22,12 +21,3 @@ def flip_coin() -> dict:
         )
 
     return total_distribution_percent
-
-
-def draw_gaussian_distribution_graph(distribution: dict) -> None:
-    keys = distribution.keys()
-    values = distribution.values()
-
-    plt.plot(keys, values)
-    plt.ylim(0, 100)
-    plt.show()
