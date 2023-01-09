@@ -1,5 +1,5 @@
 import random
-# import matplotlib as plt
+# import matplotlib.pyplot as plt
 
 
 def simulate(num: int) -> int:
@@ -14,17 +14,7 @@ def flip_coin() -> dict:
     for jote in range(10000):
         temp2 = simulate(10)
         trial.append(temp2)
-    distribution = {"0": trial.count(0) / 100,
-                    "1": trial.count(1) / 100,
-                    "2": trial.count(2) / 100,
-                    "3": trial.count(3) / 100,
-                    "4": trial.count(4) / 100,
-                    "5": trial.count(5) / 100,
-                    "6": trial.count(6) / 100,
-                    "7": trial.count(7) / 100,
-                    "8": trial.count(8) / 100,
-                    "9": trial.count(9) / 100,
-                    "10": trial.count(10) / 100}
+    distribution = {x: trial.count(x) / 100 for x in range(0, 11)}
     return distribution
 
 
@@ -33,3 +23,6 @@ def flip_coin() -> dict:
 #     ypoints = flip_coin().values()
 #     plt.plot(xpoints, ypoints)
 #     plt.show()
+#
+#
+# draw_gaussian_distribution_graph()
