@@ -11,7 +11,7 @@ def simulate(num: int) -> int:
 
 def flip_coin() -> dict:
     trial = []
-    for j in range(10000):
+    for jote in range(10000):
         temp2 = simulate(10)
         trial.append(temp2)
     distribution = {"0": trial.count(0) / 100,
