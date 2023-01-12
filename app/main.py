@@ -1,5 +1,4 @@
 import random
-import matplotlib.pyplot as plt
 
 
 def flip_coin() -> dict:
@@ -13,23 +12,8 @@ def flip_coin() -> dict:
             if head_rand == 0:
                 head += 1
         result[head] += 1
-        # if head in result:
-        #     result[head] += 1
-        # else:
-        #     result[head] = 1
 
     for i in range(11):
         result_in_percents[i] = result[i] / 10000 * 100
 
     return result_in_percents
-
-
-def draw_gaussian_distribution_graph() -> None:
-    x_points = []
-    y_points = []
-    for index in range(len(flip_coin())):
-        x_points.append(index)
-        y_points.append(flip_coin[index])
-
-    plt.plot(x_points, y_points)
-    plt.show()
