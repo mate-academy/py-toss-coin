@@ -35,6 +35,3 @@ def draw_gaussian_distribution_graph(data: callable) -> None:
     plt.title("Gaussian distribution")
     plt.show()
 
-
-data = flip_coin()
-draw_gaussian_distribution_graph(data)
