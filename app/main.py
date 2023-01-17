@@ -21,16 +21,3 @@ def flip_coin() -> dict:
         heads_count[i] = round(heads_count[i] / cases * 100, 2)
 
     return heads_count
-
-
-def draw_gaussian_distribution_graph(data: callable) -> None:
-
-    x_points = list(data.keys())
-    y_points = list(data.values())
-
-    plt.plot(x_points, y_points)
-
-    plt.xlabel("Heads count")
-    plt.ylabel("Drop percentage %")
-    plt.title("Gaussian distribution")
-    plt.show()
