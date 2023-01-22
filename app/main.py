@@ -15,18 +15,3 @@ def flip_coin() -> dict:
                 result_head += 1
         result_flip_coin[number_heads] = result_head / 10000 * 100
     return result_flip_coin
-
-
-def draw_gaussian_distribution_graf(dict_x_key_y_value: dict) -> None:
-    point_x = []
-    point_y = []
-    for index in range(11):
-        point_x.append(index)
-        point_y.append(dict_x_key_y_value[index])
-    plt.plot(point_x, point_y)
-
-    plt.title("Gaussian distribution")
-    plt.xlabel("Heads count")
-    plt.ylabel("Drop percentege %")
-
-    plt.show()
