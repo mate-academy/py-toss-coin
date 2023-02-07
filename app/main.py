@@ -17,9 +17,8 @@ def flip_coin() -> dict:
         9: 0,
         10: 0
     }
-    cycles_number = 100
 
-    for _ in range(cycles_number):
+    for _ in range(100):
         random.seed(random.randint(0, 1000))
         count_head = 0
         for _ in range(10):
@@ -30,7 +29,7 @@ def flip_coin() -> dict:
         flip_coin_head_values[count_head] += 1
 
     for key, values in flip_coin_head_values.items():
-        flip_coin_head_values[key] = round(values / cycles_number, 2)
+        flip_coin_head_values[key] = round(values / 100, 2)
 
     return flip_coin_head_values
 
