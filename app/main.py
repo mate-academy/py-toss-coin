@@ -1,6 +1,6 @@
 import random
-import matplotlib
-import matplotlib.pyplot
+# import matplotlib
+# import matplotlib.pyplot
 
 
 def flip_coin(number: int = 10000) -> dict:
@@ -9,9 +9,9 @@ def flip_coin(number: int = 10000) -> dict:
     return {i: round((array.count(i) / 100), 2) for i in set(array)}
 
 
-def draw_gaussian_distribution_graph() -> None:
-    axis_x = flip_coin().keys()
-    axis_y = flip_coin().values()
-    matplotlib.use("TkAgg")
-    matplotlib.pyplot.plot(axis_x, axis_y)
-    matplotlib.pyplot.show()
+# def draw_gaussian_distribution_graph() -> None:
+#     axis_x = flip_coin().keys()
+#     axis_y = flip_coin().values()
+#     matplotlib.use("TkAgg")
+#     matplotlib.pyplot.plot(axis_x, axis_y)
+#     matplotlib.pyplot.show()
