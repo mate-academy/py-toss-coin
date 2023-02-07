@@ -1,6 +1,6 @@
 import random
-import numpy as np
-import matplotlib.pyplot as plt
+import numpy
+from matplotlib import pyplot
 
 
 def flip_coin() -> dict:
@@ -35,9 +35,9 @@ def flip_coin() -> dict:
 
 
 def draw_gaussian_distribution_graph(distribution_results: dict) -> None:
-    point_x = np.array(list(distribution_results.keys()))
-    point_y = np.array(list(distribution_results.values()))
-    plt.plot(point_x, point_y)
-    plt.xlabel("Number of occurrences of the obverse of the coin in the cycle")
-    plt.ylabel("Number of repetitions of the loop value")
-    plt.show()
+    point_x = numpy.array(list(distribution_results.keys()))
+    point_y = numpy.array(list(distribution_results.values()))
+    pyplot.plot(point_x, point_y)
+    pyplot.xlabel("Number of occurrences of the obverse of the coin in the cycle")
+    pyplot.ylabel("Number of repetitions of the loop value")
+    pyplot.show()
