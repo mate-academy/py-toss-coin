@@ -19,7 +19,6 @@ def flip_coin() -> dict:
     }
 
     for _ in range(100):
-        random.seed(random.randint(0, 1000))
         count_head = 0
         for _ in range(10):
             flip_result = random.randint(0, 1)
