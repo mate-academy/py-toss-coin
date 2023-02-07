@@ -18,7 +18,7 @@ def flip_coin() -> dict:
         10: 0
     }
 
-    for _ in range(100):
+    for _ in range(10000):
         count_head = 0
         for _ in range(10):
             flip_result = random.randint(0, 1)
@@ -37,7 +37,11 @@ def draw_gaussian_distribution_graph(distribution_results: dict) -> None:
     point_x = numpy.array(list(distribution_results.keys()))
     point_y = numpy.array(list(distribution_results.values()))
     pyplot.plot(point_x, point_y)
-    pyplot.xlabel("Number of occurrences"
-                  " of the obverse of the coin in the cycle")
-    pyplot.ylabel("Number of repetitions of the loop value")
+    pyplot.xlabel("Heads count")
+    pyplot.ylabel("Drop percentage %")
     pyplot.show()
+
+
+res = flip_coin()
+draw_gaussian_distribution_graph(res)
+
