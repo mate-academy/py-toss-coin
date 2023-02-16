@@ -1,7 +1,7 @@
 import random
-import numpy as np
-import matplotlib.pyplot as plt
-import matplotlib as mpl
+# import numpy as np
+# import matplotlib.pyplot as plt
+# import matplotlib as mpl
 
 CASES = 10000
 
@@ -22,18 +22,18 @@ def flip_coin() -> dict:
     return {key: (value / 100) for key, value in result.items()}
 
 
-def draw_gaussian_distribution_graph() -> None:
-    data_dict = flip_coin()
-    list_value = list(data_dict.values())
-    y_point = np.array(list_value)
-
-    mpl.use("TkAgg")
-    plt.plot(y_point)
-
-    plt.xlabel("Heads count")
-    plt.ylabel("Drop percentage %")
-
-    plt.show()
-
-
-draw_gaussian_distribution_graph()
+# def draw_gaussian_distribution_graph() -> None:
+#     data_dict = flip_coin()
+#     list_value = list(data_dict.values())
+#     y_point = np.array(list_value)
+#
+#     mpl.use("TkAgg")
+#     plt.plot(y_point)
+#
+#     plt.xlabel("Heads count")
+#     plt.ylabel("Drop percentage %")
+#
+#     plt.show()
+#
+#
+# draw_gaussian_distribution_graph()
