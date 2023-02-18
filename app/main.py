@@ -11,13 +11,13 @@ def flip_coin() -> dict:
               10: 0}
     head_tail = ["head", "tail"]
     for case in range(CASES):
-        temporary_res = 0
+        heads = 0
         for _ in range(10):
             if head_tail[random.randint(0, 1)] == "head":
-                temporary_res += 1
+                heads += 1
 
-        if temporary_res in result:
-            result[temporary_res] += 1
+        if heads in result:
+            result[heads] += 1
 
     return {key: (value / 100) for key, value in result.items()}
 
