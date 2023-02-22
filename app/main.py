@@ -35,4 +35,3 @@ def draw_gaussian_distribution_graph() -> None:
     plt.ylabel("Drop percentage %")
     plt.ylim([0, 100])
     plt.show()
-
