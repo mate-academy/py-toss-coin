@@ -36,4 +36,5 @@ def draw_gaussian_distribution_graph(input_data: dict) -> None:
 
     plt.xticks(list(xpoints))
     plt.yticks(list(range(0, 101, 5)))
+
     plt.show()
