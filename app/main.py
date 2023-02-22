@@ -3,9 +3,7 @@ import random
 
 
 def flip_coin() -> dict:
-    dict_amount_count = {}
-    for i in range(0, 11):
-        dict_amount_count[i] = 0
+    dict_amount_count = {i: 0 for i in range(0, 11)}
 
     coin = ["head", "tail"]
     for _ in range(10000):
