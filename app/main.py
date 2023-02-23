@@ -1,5 +1,5 @@
 from random import randint
-import matplotlib.pylab as plt
+# from matplotlib import pylab as plt
 
 
 def flip_coin() -> dict:
@@ -11,8 +11,8 @@ def flip_coin() -> dict:
     return dict(sorted(pers_dict.items()))
 
 
-def draw_gaussian_distribution_graph(points: dict) -> None:
-    lists = sorted(points.items())
-    x, y = zip(*lists)
-    plt.plot(x, y)
-    plt.show()
+# def draw_gaussian_distribution_graph(points: dict) -> None:
+#     lists = sorted(points.items())
+#     x, y = zip(*lists)
+#     plt.plot(x, y)
+#     plt.show()
