@@ -19,6 +19,7 @@ def test_function_should_return_different_values():
     assert len(cache) == 20, (
         "Function should return different values, "
         "because 'random' should be used"
+
     )
 
 
