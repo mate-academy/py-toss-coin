@@ -1,5 +1,4 @@
 import random
-from matplotlib import pyplot as plt
 
 
 def flip_coin() -> None:
@@ -27,8 +26,3 @@ def flip_coin() -> None:
             )
     experiment_data = dict(sorted(experiment_data.items()))
     return experiment_data
-
-
-def draw_gaussian_distribution_graph() -> None:
-    plt.plot(flip_coin().keys(), flip_coin().values())
-    plt.show()
