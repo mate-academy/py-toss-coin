@@ -46,5 +46,3 @@ def draw_gaussian_distribution_graph(result_dict: dict[flip_coin()]) -> None:
     plt.yticks(np(min(y_ax), max(y_ax) + 80, 10))
     ax.yaxis.set_minor_locator(AutoMinorLocator(2))
     plt.show()
-
-draw_gaussian_distribution_graph(flip_coin())
