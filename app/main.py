@@ -1,5 +1,4 @@
 import random
-from numpy import arange as np
 import matplotlib.pyplot as plt
 
 
@@ -42,7 +41,7 @@ def draw_gaussian_distribution_graph(result_dict: dict[flip_coin()]) -> None:
     plt.xlabel("Heads count")
     plt.ylabel("Drop percentage %")
     plt.axis([0, 10, 0, 100])
-    plt.xticks(np(min(x_ax), max(x_ax) + 1, 1))
-    plt.yticks(np(min(y_ax), max(y_ax) + 80, 10))
+    plt.xticks(range(min(x_ax), max(x_ax) + 1, 1))
+    plt.yticks(range(0, 101, 10))
     ax.yaxis.set_minor_locator(AutoMinorLocator(2))
     plt.show()
