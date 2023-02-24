@@ -1,5 +1,5 @@
 import random
-import numpy as np
+from numpy import arange as np
 import matplotlib.pyplot as plt
 
 
