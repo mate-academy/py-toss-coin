@@ -1,6 +1,6 @@
-import random
-
 import matplotlib.pyplot as plt
+
+import random
 
 
 def flip_coin() -> dict:
