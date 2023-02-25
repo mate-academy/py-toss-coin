@@ -13,7 +13,6 @@ def flip_coin() -> dict:
             sum(1 for i in range(10) if random.choice(coin) == "heads")
         statistic[heads_from_10_toss] += 1
 
-    # convert number of hits to percentage
     for key, value in statistic.items():
         statistic[key] = value * 100 / toss
 
