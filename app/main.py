@@ -5,7 +5,7 @@ def flip_coin() -> None:
     flip_coin_keys = {key: 0 for key in range(11)}
     coin_side = [1, 2]
 
-    for i in range(10000):
+    for index in range(10000):
         count = 0
         for _ in range(10):
             if random.choice(coin_side) == 1:
