@@ -5,8 +5,8 @@ import numpy as np
 
 def flip_coin() -> dict:
     res = {}
-    for j in range(11):
-        res[j] = 0
+    for index in range(11):
+        res[index] = 0
 
     for _ in range(10000):
         count = 0
@@ -31,9 +31,3 @@ def draw_gaussian_distribution_graph(points_dict: dict) -> None:
 
     plt.plot(xpoints, ypoints)
     plt.show()
-
-
-if __name__ == '__main__':
-    points_dict = flip_coin()
-    print(points_dict)
-    draw_gaussian_distribution_graph(points_dict)
