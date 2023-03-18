@@ -3,7 +3,7 @@ import random
 import numpy as np
 
 
-def flip_coin():
+def flip_coin() -> dict:
     result = []
 
     for _ in range(10000):
@@ -29,7 +29,7 @@ def flip_coin():
     }
 
 
-def draw_gaussian_distribution_graph():
+def draw_gaussian_distribution_graph() -> None:
     xpoints = np.array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
     ypoints = np.array([flip_coin()[0],
                         flip_coin()[1],
