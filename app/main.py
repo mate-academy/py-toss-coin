@@ -1,4 +1,5 @@
 import random
+import numpy as np
 import matplotlib.pyplot as plt
 
 
@@ -22,7 +23,9 @@ array_y = []
 for i in range(11):
     array_y.append(array_dict[i])
     array_x.append(i)
-plt.plot(array_x, array_y, color="b")
+xxx = np.array(array_x)
+yyy = np.array(array_y)
+plt.plot(xxx, yyy, color="b")
 plt.xlim(0, 10)
 plt.ylim(0, 100)
 plt.xlabel("Heads count")
