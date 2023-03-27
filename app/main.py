@@ -1,6 +1,4 @@
 import random
-import numpy as np
-import matplotlib.pyplot as plt
 
 
 def flip_coin() -> None:
@@ -15,20 +13,3 @@ def flip_coin() -> None:
     for i in range(11):
         result_dict[i] /= 100
     return result_dict
-
-
-array_dict = flip_coin()
-array_x = []
-array_y = []
-for i in range(11):
-    array_y.append(array_dict[i])
-    array_x.append(i)
-xxx = np.array(array_x)
-yyy = np.array(array_y)
-plt.plot(xxx, yyy, color="b")
-plt.xlim(0, 10)
-plt.ylim(0, 100)
-plt.xlabel("Heads count")
-plt.ylabel("Drop percentage %")
-plt.title("Gaussian distribution")
-plt.show()
