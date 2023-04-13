@@ -1,5 +1,5 @@
 import random
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 
 
 def flip_coin() -> dict:
@@ -17,13 +17,13 @@ def flip_coin() -> dict:
     return stats
 
 
-if __name__ == "__main__":
-    data = flip_coin()
-
-    plt.plot(data.keys(), data.values())
-
-    plt.title("Gaussian distribution")
-    plt.xlabel("Heads count")
-    plt.ylabel("Drop percentage %")
-
-    plt.show()
+# if __name__ == "__main__":
+#     data = flip_coin()
+#
+#     plt.plot(data.keys(), data.values())
+#
+#     plt.title("Gaussian distribution")
+#     plt.xlabel("Heads count")
+#     plt.ylabel("Drop percentage %")
+#
+#     plt.show()
