@@ -1,17 +1,22 @@
-from numpy import random
+import random
 
 
-def flip_coin() -> dict:
-    results = {i: 0 for i in range(11)}
-    num_trials = 10_000
+def flip_coin() -> dict[int, float]:
+    heads = {i: 0 for i in range(0, 11)}
 
-    for num in range(num_trials):
-        num_heads = 0
+    for i in range(10_000):
+        count = 0
+
         for _ in range(10):
-            if random.random() <= 0.5:
-                num_heads += 1
-        results[num_heads] += 1
+            if random.choice((1, 2)) == 1:
+                count += 1
 
-    distribution = {k: v / num_trials * 100 for k, v in results.items()}
+        heads[count] += 1
 
-    return distribution
+    for key, value in heads.items():
+        heads[key] = round((value / 10_000) * 100, 2)
+
+    return heads
+
+
+flip_coin()
