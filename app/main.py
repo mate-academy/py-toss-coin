@@ -1,18 +1,17 @@
-import random
+from numpy import random
 
 
 def flip_coin() -> dict:
-    coin_dict = {}
-    for _ in range(10000):
-        heads = 0
-        for i in range(10):
-            if random.random() < 0.5:
-                heads += 1
-        if heads in coin_dict:
-            coin_dict[heads] += 1
-        else:
-            coin_dict[heads] = 1
-    for key in coin_dict:
-        coin_dict[key] = coin_dict[key] / 100
-    return coin_dict
+    results = {i: 0 for i in range(11)}
+    num_trials = 10_000
 
+    for num in range(num_trials):
+        num_heads = 0
+        for _ in range(10):
+            if random.random() <= 0.5:
+                num_heads += 1
+        results[num_heads] += 1
+
+    distribution = {k: v / num_trials * 100 for k, v in results.items()}
+
+    return distribution
