@@ -28,4 +28,6 @@ def draw_gaussian_distribution_graph() -> None:
     plt.xticks(range(11))
     plt.yticks(range(0, 101, 10))
     plt.show()
+
+
 draw_gaussian_distribution_graph()
