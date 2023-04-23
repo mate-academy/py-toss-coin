@@ -38,3 +38,6 @@ def draw_gaussian_distribution_graph() -> None:
     plt.plot(x_list, y_list, color="b")
     ax.set_yticks(np.arange(0, 110, 10))
     plt.show()
+
+
+draw_gaussian_distribution_graph()
