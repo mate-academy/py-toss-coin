@@ -18,9 +18,9 @@ def flip_coin(num_cases: int = 10000) -> dict:
 
 def draw_gaussian_distribution_graph() -> None:
     fig, ax = plt.subplots()
-    plt.title("Guassian distribution", fontdict={"size": 20})
-    plt.xlabel("Heads count", fontdict={"size": 15})
-    plt.ylabel("Drop percentage %", fontdict={"size": 15})
+    plt.title("Guassian distribution", fontdict={"size": 15})
+    plt.xlabel("Heads count", fontdict={"size": 10})
+    plt.ylabel("Drop percentage %", fontdict={"size": 10})
 
     x_list = []
     y_list = []
