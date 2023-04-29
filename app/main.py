@@ -27,4 +27,3 @@ def draw_gaussian_distribution_graph(func: dict) -> None:
     plt.xlabel("Heads count")
     plt.ylabel("Drop percentage %")
     plt.show()
-draw_gaussian_distribution_graph(flip_coin())
