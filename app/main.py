@@ -4,11 +4,10 @@ import matplotlib.pyplot as plt
 
 def flip_coin() -> dict:
     result = {coin: 0 for coin in range(11)}
-    eagle_and_tails = ["eagle", "tails"]
     for chance in range(10000):
         eagle_monet = 0
         for coin in range(10):
-            if random.choice(eagle_and_tails) == "eagle":
+            if random.choice(["eagle", "tails"]) == "eagle":
                 eagle_monet += 1
         result[eagle_monet] += 1
 
