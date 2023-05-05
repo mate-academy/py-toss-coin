@@ -3,19 +3,7 @@ import random
 
 def flip_coin() -> dict:
     coin = ["heads", "tails"]
-    times_of_heads = {
-        0: 0,
-        1: 0,
-        2: 0,
-        3: 0,
-        4: 0,
-        5: 0,
-        6: 0,
-        7: 0,
-        8: 0,
-        9: 0,
-        10: 0,
-    }
+    times_of_heads = {i: 0 for i in range(11)}
 
     for i in range(1, 10001):
         counter = 0
