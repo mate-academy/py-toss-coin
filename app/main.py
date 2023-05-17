@@ -1,5 +1,5 @@
 import random
-import matplotlib.pyplot as plt
+import matplotlib
 import numpy as np
 
 
@@ -36,8 +36,8 @@ def draw_gaussian_distribution_graph(interest_dictionary: dict) -> None:
         [key for key in interest_dictionary.values()]
     )
 
-    plt.plot(xpoints, ypoints)
-    plt.title("Gaussian distribution")
-    plt.xlabel("Heads count")
-    plt.ylabel("Drop percentage %")
-    plt.show()
+    matplotlib.pyplot.plot(xpoints, ypoints)
+    matplotlib.pyplot.title("Gaussian distribution")
+    matplotlib.pyplot.xlabel("Heads count")
+    matplotlib.pyplot.ylabel("Drop percentage %")
+    matplotlib.pyplot.show()
