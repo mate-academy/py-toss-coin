@@ -35,11 +35,5 @@ def draw_gaussian_distribution_graph() -> None:
     special_dict = flip_coin()
     x_points = [number for number in special_dict]
     y_points = [number for number in special_dict.values()]
-
     plt.plot(x_points, y_points)
     plt.show()
-
-
-if __name__ == "__main__":
-    print(flip_coin())
-    draw_gaussian_distribution_graph()
