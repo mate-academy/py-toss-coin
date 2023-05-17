@@ -41,8 +41,3 @@ def draw_gaussian_distribution_graph(interest_dictionary: dict) -> None:
     plt.xlabel("Heads count")
     plt.ylabel("Drop percentage %")
     plt.show()
-
-
-# interest_dictionary = flip_coin()
-# print(interest_dictionary)
-# draw_gaussian_distribution_graph(interest_dictionary)
