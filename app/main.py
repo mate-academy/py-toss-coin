@@ -23,15 +23,18 @@ def flip_coin() -> dict:
             head = randint(0, 1)
             if head == 1:
                 count_head += 1
-        dict_of_probabilities[count_head] += 1 / rang
+        dict_of_probabilities[count_head] += 1
 
-    return dict_of_probabilities
+    return {
+        number: count / rang * 100
+        for number, count in dict_of_probabilities.items()
+    }
 
 
 def draw_gaussian_distribution_graph() -> None:
     special_dict = flip_coin()
     x_points = [number for number in special_dict]
-    y_points = [round(number * 100) for number in special_dict.values()]
+    y_points = [number for number in special_dict.values()]
 
     plt.plot(x_points, y_points)
     plt.show()
