@@ -27,7 +27,7 @@ def flip_coin() -> dict:
     return percentages
 
 
-def draw_gaussian_distribution_graph():
+def draw_gaussian_distribution_graph() -> None:
     for heads, count, limit in flip_coin():
         xpoints = np.array([heads])
         ypoints = np.array([count])
