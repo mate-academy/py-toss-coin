@@ -1,5 +1,6 @@
 import random
 
+
 def flip_coin() -> dict:
     res = {
         0: 0,
@@ -26,5 +27,6 @@ def flip_coin() -> dict:
         res[key] = res[key] / 10000 * 100
 
     return res
+
 
 print(flip_coin())
