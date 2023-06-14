@@ -1,5 +1,5 @@
 import random
-import matplotlib.pyplot as plt
+from matplotlib import pyplot
 
 
 def flip_coin() -> dict:
@@ -19,14 +19,14 @@ def flip_coin() -> dict:
 normal_distribution = flip_coin()
 
 
-plt.plot([case for case in normal_distribution],
+pyplot.plot([case for case in normal_distribution],
          [value for value in normal_distribution.values()])
 
-plt.xlabel("Heads count")
-plt.ylabel("Drop percentage, %")
-plt.title("Gaussian distribution")
-plt.xlim(0, 10)
-plt.ylim(0, 100)
-plt.xticks(range(0, 11, 1))
-plt.yticks(range(0, 101, 10))
-# plt.show()  should be uncommented
+pyplot.xlabel("Heads count")
+pyplot.ylabel("Drop percentage, %")
+pyplot.title("Gaussian distribution")
+pyplot.xlim(0, 10)
+pyplot.ylim(0, 100)
+pyplot.xticks(range(0, 11, 1))
+pyplot.yticks(range(0, 101, 10))
+pyplot.show()
