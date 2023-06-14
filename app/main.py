@@ -29,4 +29,4 @@ plt.xlim(0, 10)
 plt.ylim(0, 100)
 plt.xticks(range(0, 11, 1))
 plt.yticks(range(0, 101, 10))
-plt.show()
+# plt.show()  should be uncommented
