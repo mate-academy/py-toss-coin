@@ -18,10 +18,10 @@ def flip_coin() -> dict:
 
 normal_distribution = flip_coin()
 
-
-pyplot.plot([case for case in normal_distribution],
-         [value for value in normal_distribution.values()])
-
+pyplot.plot(
+    [case for case in normal_distribution],
+    [value for value in normal_distribution.values()]
+)
 pyplot.xlabel("Heads count")
 pyplot.ylabel("Drop percentage, %")
 pyplot.title("Gaussian distribution")
