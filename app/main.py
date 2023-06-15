@@ -1,6 +1,4 @@
-import matplotlib.pyplot as plt
 import random
-from typing import Callable
 
 
 def flip_coin() -> dict[int]:
@@ -21,19 +19,3 @@ def flip_coin() -> dict[int]:
         heads_dict[head_count] += 1 / 100
 
     return heads_dict
-
-
-def draw_gaussian_distribution_graph(
-        flip_coin_func: Callable = flip_coin
-) -> None:
-    data_dict = flip_coin_func()
-
-    plt.bar(
-        list(data_dict.keys()),
-        list(data_dict.values()),
-    )
-    plt.title("Gaussian distribution")
-    plt.xlabel("Heads count")
-    plt.ylabel("Drop percentage %")
-
-    plt.show()
