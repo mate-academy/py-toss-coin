@@ -7,6 +7,10 @@ def draw_gaussian_distribution_graph(arr: dict) -> None:
     xpoints = np.array(range(11))
     ypoints = np.array([num for num in arr.values()])
     pyplot.plot(xpoints, ypoints)
+    pyplot.xlabel("Heads count")
+    pyplot.ylabel("Drop percantage %")
+    ax = pyplot.gca()
+    ax.set_ylim([0, 100])
     pyplot.show()
 
 
