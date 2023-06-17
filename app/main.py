@@ -1,5 +1,5 @@
 import random
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 
 
 def flip_coin() -> dict:
@@ -20,13 +20,13 @@ def flip_coin() -> dict:
     return results
 
 
-def draw_gaussian_distribution_graph() -> None:
-    data = dict(sorted(flip_coin().items()))
-    x_points = list(data.keys())
-    y_points = list(data.values())
-
-    plt.xlim(0, 10)
-    plt.ylim(0, 100)
-
-    plt.plot(x_points, y_points)
-    plt.show()
+# def draw_gaussian_distribution_graph() -> None:
+#     data = dict(sorted(flip_coin().items()))
+#     x_points = list(data.keys())
+#     y_points = list(data.values())
+#
+#     plt.xlim(0, 10)
+#     plt.ylim(0, 100)
+#
+#     plt.plot(x_points, y_points)
+#     plt.show()
