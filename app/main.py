@@ -1,7 +1,5 @@
 import random
 import typing
-import numpy as np
-import matplotlib.pyplot as plt
 
 
 def flip_coin() -> typing.Dict:
@@ -20,16 +18,3 @@ def flip_coin() -> typing.Dict:
         final_dict[i] = list_of_possibilities[i] / 100
 
     return final_dict
-
-
-def draw_gaussian_distribution_graph() -> None:
-    numbers_dict = list(flip_coin().values())
-    xpoints = np.array(numbers_dict)
-    plt.axis([0, 10, 0, 100])
-
-    plt.title("Gaussian distribution")
-    plt.xlabel("Heads count")
-    plt.ylabel("Drop percentage %")
-
-    plt.plot(xpoints)
-    plt.show()
