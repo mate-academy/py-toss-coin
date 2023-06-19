@@ -2,7 +2,7 @@ import random
 from collections import defaultdict
 
 
-def flip_coin():
+def flip_coin() -> dict:
     experiments = 10000
     coin_flips = 10
     results = defaultdict(float)
