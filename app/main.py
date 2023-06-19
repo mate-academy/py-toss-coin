@@ -25,8 +25,8 @@ def flip_coin() -> dict:
     return results
 
 
-def draw_gaussian_distribution_graph(func: Any) -> None:
-    lists = sorted(func.items())
+def draw_gaussian_distribution_graph(result: dict) -> None:
+    lists = sorted(result.items())
     x, y = zip(*lists)
     plt.plot(x, y)
 
