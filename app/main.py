@@ -7,4 +7,3 @@ def flip_coin() -> dict:
         count_of_heads = random.choices(["head", "tail"], k=10).count("head")
         flip_dict[count_of_heads] += 0.01
     return flip_dict
-
