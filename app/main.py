@@ -1,5 +1,4 @@
 import random
-from typing import Any
 from matplotlib import pyplot as plt
 
 
