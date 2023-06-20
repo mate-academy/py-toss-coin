@@ -1,5 +1,3 @@
-from matplotlib import pyplot
-from numpy import array
 import random
 
 
@@ -23,18 +21,3 @@ def flip_coin() -> dict:
         percent = round(value / cases * 100, 2)
         percents[key] = percent
     return {k: percents[k] for k in sorted(percents)}
-
-
-def draw_gaussian_distribution_graph() -> None:
-    data = flip_coin()
-    vertical_y = array(list(data.values()))
-    horizontal_x = array(list(data.keys()))
-
-    pyplot.plot(horizontal_x, vertical_y, "b")
-    pyplot.yticks([i for i in range(101) if i % 10 == 0])
-    pyplot.xticks([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
-    pyplot.xlim(left=0, right=10)
-    pyplot.title("Gaussian distribution")
-    pyplot.xlabel("Heads count")
-    pyplot.ylabel("Drop percentage %")
-    pyplot.show()
