@@ -44,5 +44,3 @@ def draw_gaussian_distribution_graph(results: dict) -> plt:
     plt.xlabel("Headers count")
     plt.ylabel("Drop %")
     plt.title("Gaussian distribution")
-
-    plt.show()
