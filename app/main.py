@@ -46,8 +46,3 @@ def draw_gaussian_distribution_graph(results: dict) -> plt:
     plt.title("Gaussian distribution")
 
     plt.show()
-
-
-flip_results = flip_coin()
-print(flip_results)
-draw_gaussian_distribution_graph(flip_results)
