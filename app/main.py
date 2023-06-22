@@ -22,12 +22,12 @@ def flip_coin() -> dict:
 
 def draw_gaussian_distribution_graph(results: dict) -> plt:
     headers = list(results.keys())
-    drop = list(results.values())
+    drops = list(results.values())
 
-    mean = sum(headers[i] * drop[i] for i in range(len(headers))) / sum(drop)
+    mean = sum(headers[i] * drops[i] for i in range(len(headers))) / sum(drops)
     std_dev = (
-        sum((headers[i] - mean) ** 2 * drop[i]
-            for i in range(len(headers))) / sum(drop)
+        sum((headers[i] - mean) ** 2 * drops[i]
+            for i in range(len(headers))) / sum(drops)
     )
     std_dev = std_dev ** 0.5
 
@@ -38,9 +38,9 @@ def draw_gaussian_distribution_graph(results: dict) -> plt:
         for i in curve_x
     ]
 
-    plt.bar(headers, drop, alpha=0.7, align="center")
+    plt.bar(headers, drops, alpha=0.7, align="center")
     plt.plot(curve_x, curve_y, color="r")
 
     plt.xlabel("Headers count")
-    plt.ylabel("Drop %")
+    plt.ylabel("drops %")
     plt.title("Gaussian distribution")
