@@ -17,11 +17,11 @@ def flip_coin() -> Dict[str, float]:
     return percent_heads_dict
 
 
-def draw_gaussian_distribution_graph(func: Callable):
+def draw_gaussian_distribution_graph(func: Callable) -> None:
     heads = func()
-    x = heads.keys()
-    y = heads.values()
-    plt.plot(x, y)
+    x_axis = heads.keys()
+    y_axis = heads.values()
+    plt.plot(x_axis, y_axis)
     plt.title("Coin flip distribution")
     plt.xlabel("Heads Count (times per 10 flips)")
     plt.ylabel("Drop percentage, %")
