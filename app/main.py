@@ -1,6 +1,5 @@
 import random
 
-
 def flip_coin() -> dict:
     cases = 10000
     times = 10
