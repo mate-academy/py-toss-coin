@@ -1,6 +1,6 @@
 import random
-import matplotlib.pyplot as plt
-import numpy as np
+# import matplotlib.pyplot as plt
+# import numpy as np
 
 
 def flip_coin() -> dict:
@@ -25,16 +25,16 @@ def flip_coin() -> dict:
     return results
 
 
-def draw_gaussian_distribution_graph(results: dict) -> None:
-    list_of_keys = [key for key in results]
-    list_of_values = [value for value in results.values()]
-
-    x_coordinates = np.array(list_of_keys)
-    y_coordinates = np.array(list_of_values)
-
-    plt.plot(x_coordinates, y_coordinates)
-
-    plt.xlabel("Frequency")
-    plt.ylabel("Percents")
-
-    plt.show()
+# def draw_gaussian_distribution_graph(results: dict) -> None:
+#     list_of_keys = [key for key in results]
+#     list_of_values = [value for value in results.values()]
+#
+#     x_coordinates = np.array(list_of_keys)
+#     y_coordinates = np.array(list_of_values)
+#
+#     plt.plot(x_coordinates, y_coordinates)
+#
+#     plt.xlabel("Frequency")
+#     plt.ylabel("Percents")
+#
+#     plt.show()
