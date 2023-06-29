@@ -1,30 +1,34 @@
+import random
 import matplotlib.pyplot as plt
 from matplotlib import ticker
-from random import randint
 
 
 def flip_coin() -> dict:
-    result = {key: 1 for key in range(11)}
-    for _ in range(10000):
-        heads_count = 0
-        for i in range(10):
-            if randint(0, 1) == 1:
-                heads_count += 1
+    result = {key: 0 for key in range(11)}
 
-        result[heads_count] += 1
+    for _ in range(10000):
+        head_dropped = 0
+
+        for _ in range(10):
+            if random.randint(0, 1) == 0:
+                head_dropped += 1
+
+        result[head_dropped] += 1
 
     stats = (
         {int(key): round((value / 10000) * 100, 2)
          for (key, value) in result.items()}
     )
+
     return stats
 
 
 def draw_gaussian_distribution_graph(stats: dict) -> None:
-    x_point = stats.key()
-    y_point = stats.value()
+    x_points = stats.keys()
+    y_points = stats.values()
 
-    plt.plot(x_point, y_point)
+    plt.plot(x_points, y_points)
+    plt.ylim([0, 100])
     plt.xlabel("Heads count")
     plt.ylabel("Drop percentage %")
     plt.title("Gaussian distribution")
