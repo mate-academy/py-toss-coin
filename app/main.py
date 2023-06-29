@@ -7,7 +7,7 @@ def flip_coin() -> dict:
               6: 0, 7: 0, 8: 0, 9: 0, 10: 0}
     for i in range(100000):
         heads = 0
-        for j in range(10):
+        for coin in range(10):
             coin = random.randint(0, 1)
             if coin == 0:
                 heads += 1
