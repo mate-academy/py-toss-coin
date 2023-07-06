@@ -28,12 +28,12 @@ def draw_gaussian_distribution_graph():
     plt.show()
 
 
-draw_gaussian_distribution_graph()
+    draw_gaussian_distribution_graph()
 
     return {
         number: count / rang * 100
         for number, count in dict_of_probabilities.items()
-    }
+                }
 
 
 def draw_gaussian_distribution_graph() -> None:
