@@ -5,19 +5,21 @@ import matplotlib.pyplot as plt
 def flip_coin() -> dict:
     result = {0: 0, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0,
               8: 0, 9: 0, 10: 0}
-    for event in range(100000):
+    rang = 100000
+    for event in range(rang):
         heads = 0
         for quantity in range(10):
             coin = random.randint(0, 1)
             if coin == 0:
                 heads += 1
         result[heads] += 1
-    for key in result:
-        result[key] = round(result[key] / 100, 2)
-    return result
+    return {
+        number: count / rang * 100
+        for number, count in result.items()
+    }
 
 
-def draw_gaussian_distribution_graph():
+def draw_gaussian_distribution_graph() -> None:
     data = flip_coin()
     var_x = list(data.keys())
     var_y = list(data.values())
@@ -28,12 +30,8 @@ def draw_gaussian_distribution_graph():
 
     plt.show()
 
-    draw_gaussian_distribution_graph()
 
-    return {
-        number: count / range * 100
-        for number, count in dict_of_probabilities.items()
-                }
+draw_gaussian_distribution_graph()
 
 
 def draw_gaussian_distribution_graph_1() -> None:
