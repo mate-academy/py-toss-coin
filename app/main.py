@@ -1,5 +1,6 @@
 import random
 
+
 def flip_coin() -> dict:
     result = []
 
