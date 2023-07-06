@@ -20,7 +20,7 @@ def flip_coin() -> dict:
     return flip_coin_result
 
 
-def draw_gaussian_distribution_graph():
+def draw_gaussian_distribution_graph() -> None:
     data = flip_coin()
     var_x = list(data.keys())
     var_y = list(data.values())
