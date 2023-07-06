@@ -1,29 +1,34 @@
-from random import randint
-from matplotlib import pyplot as plt
+import random
+import matplotlib.pyplot as plt
 
 
-def flip_coin() -> dict:
-    dict_of_probabilities = {
-        0: 0,
-        1: 0,
-        2: 0,
-        3: 0,
-        4: 0,
-        5: 0,
-        6: 0,
-        7: 0,
-        8: 0,
-        9: 0,
-        10: 0
-    }
-    rang = 10000
-    for _ in range(rang):
-        count_head = 0
-        for _ in range(10):
-            head = randint(0, 1)
-            if head == 1:
-                count_head += 1
-        dict_of_probabilities[count_head] += 1
+def flip_coin():
+    result = {0: 0, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0, 10: 0}
+    for i in range(100000):
+        heads = 0
+        for j in range(10):
+            coin = random.randint(0, 1)
+            if coin == 0:
+                heads += 1
+        result[heads] += 1
+    for key in result:
+        result[key] = round(result[key] / 100, 2)
+    return result
+
+
+def draw_gaussian_distribution_graph():
+    data = flip_coin()
+    x = list(data.keys())
+    y = list(data.values())
+    plt.plot(x, y)
+    plt.title("Gaussian Distribution Graph")
+    plt.xlabel("Value")
+    plt.ylabel("Frequency")
+
+    plt.show()
+
+
+draw_gaussian_distribution_graph()
 
     return {
         number: count / rang * 100
