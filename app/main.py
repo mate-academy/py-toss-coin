@@ -2,11 +2,12 @@ import random
 import matplotlib.pyplot as plt
 
 
-def flip_coin():
-    result = {0: 0, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0, 10: 0}
-    for i in range(100000):
+def flip_coin() -> dict:
+    result = {0: 0, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0,
+              8: 0, 9: 0, 10: 0}
+    for event in range(100000):
         heads = 0
-        for j in range(10):
+        for quantity in range(10):
             coin = random.randint(0, 1)
             if coin == 0:
                 heads += 1
@@ -18,25 +19,24 @@ def flip_coin():
 
 def draw_gaussian_distribution_graph():
     data = flip_coin()
-    x = list(data.keys())
-    y = list(data.values())
-    plt.plot(x, y)
+    var_x = list(data.keys())
+    var_y = list(data.values())
+    plt.plot(var_x, var_y)
     plt.title("Gaussian Distribution Graph")
     plt.xlabel("Value")
     plt.ylabel("Frequency")
 
     plt.show()
 
-
     draw_gaussian_distribution_graph()
 
     return {
-        number: count / rang * 100
+        number: count / range * 100
         for number, count in dict_of_probabilities.items()
                 }
 
 
-def draw_gaussian_distribution_graph() -> None:
+def draw_gaussian_distribution_graph_1() -> None:
     special_dict = flip_coin()
     x_points = [number for number in special_dict]
     y_points = [number for number in special_dict.values()]
@@ -44,4 +44,4 @@ def draw_gaussian_distribution_graph() -> None:
     plt.show()
 
 
-draw_gaussian_distribution_graph()
+draw_gaussian_distribution_graph_1()
