@@ -1,6 +1,6 @@
 import random
 
-import matplotlib.pyplot as plt
+import matplotlib
 
 
 def flip_coin() -> dict:
@@ -43,9 +43,9 @@ def draw_gaussian_distribution_graph(flip_results: dict) -> None:
     x_values = list(flip_results.keys())
     y_values = list(flip_results.values())
 
-    plt.plot(x_values, y_values, marker="o")
-    plt.xlabel("Number of Heads")
-    plt.ylabel("Percentage")
-    plt.title("Gaussian Distribution of Heads Flipped")
+    matplotlib.pyplot.plot(x_values, y_values, marker="o")
+    matplotlib.pyplot.xlabel("Number of Heads")
+    matplotlib.pyplot.ylabel("Percentage")
+    matplotlib.pyplot.title("Gaussian Distribution of Heads Flipped")
 
-    plt.show()
+    matplotlib.pyplot.show()
