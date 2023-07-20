@@ -19,9 +19,9 @@ def flip_coin() -> dict:
     return counter_eagle
 
 
-def draw_gaussian_distribution_graph(coords: dict) -> None:
-    x_coord = list(coords.keys())
-    y_coord = list(coords.values())
+def draw_gaussian_distribution_graph(coords_dict: dict) -> None:
+    x_coord = list(coords_dict.keys())
+    y_coord = list(coords_dict.values())
     plt.plot(x_coord, y_coord)
     y_ticks = [i * 10 for i in range(10)]
     y_labels = ["10", "20", "30", "40", "50", "60", "70", "80", "90", "100"]
