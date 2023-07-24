@@ -1,5 +1,5 @@
 import random
-from matplotlib import pyplot
+# from matplotlib import pyplot
 
 
 def flip_coin() -> dict:
@@ -31,13 +31,13 @@ def flip_coin() -> dict:
     return drop_percentage
 
 
-def draw_gaussian_distribution_graph(drop_percentage: dict) -> None:
-    x_coordinate = list(drop_percentage.keys())
-    y_coordinate = list(drop_percentage.values())
-
-    pyplot.plot(x_coordinate, y_coordinate)
-    pyplot.xlabel("Heads count")
-    pyplot.ylabel("Drop percentage %")
-    pyplot.title("Guassian distribution")
-
-    pyplot.show()
+# def draw_gaussian_distribution_graph(drop_percentage: dict) -> None:
+#     x_coordinate = list(drop_percentage.keys())
+#     y_coordinate = list(drop_percentage.values())
+#
+#     pyplot.plot(x_coordinate, y_coordinate)
+#     pyplot.xlabel("Heads count")
+#     pyplot.ylabel("Drop percentage %")
+#     pyplot.title("Guassian distribution")
+#
+#     pyplot.show()
