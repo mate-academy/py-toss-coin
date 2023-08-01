@@ -1,4 +1,3 @@
-import matplotlib.pyplot as plot
 from random import choice
 
 
@@ -18,15 +17,3 @@ def flip_coin() -> dict:
     for i in range(11):
         possibilities[i] = round((possibilities[i] / 10000) * 100, 2)
     return possibilities
-
-
-def draw_gaussian_distribution_graph() -> None:
-    coordinates = flip_coin()
-    xpoints = [key for key in coordinates]
-    ypoints = [value for value in coordinates.values()]
-    plot.plot(xpoints, ypoints)
-    plot.axis([0, 10, 0, 100])
-    plot.title("Gaussian distribution")
-    plot.xlabel("Heads count")
-    plot.ylabel("Drop percentage %")
-    plot.show()
