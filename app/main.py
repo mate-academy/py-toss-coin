@@ -24,7 +24,7 @@ def flip_coin() -> dict:
 
 def draw_gaussian_distribution_graph(data: dict) -> None:
     percents = [num for num in range(0, 101, 10)]
-    plt.style.use('seaborn-v0_8')
+    plt.style.use("seaborn-v0_8")
 
     fig, ax = plt.subplots()
     ax.plot(percents, data.values(), linewidth=3)
@@ -33,10 +33,10 @@ def draw_gaussian_distribution_graph(data: dict) -> None:
     ax.set_ylabel("Drop percentage %", fontsize=14)
     ax.set_xlabel("Heads count", fontsize=14)
 
-    ax.tick_params(axis='both', labelsize=14)
+    ax.tick_params(axis="both", labelsize=14)
 
     plt.show()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     draw_gaussian_distribution_graph(flip_coin())
