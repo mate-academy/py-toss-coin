@@ -15,7 +15,8 @@ def flip_coin(cases_of_flipping: int = 10_000, flip_coins: int = 10) -> dict:
         result[count_head] = result.get(count_head, 0) + 1
 
     for head_count in range(flip_coins + 1):
-        result[head_count] = round((result[head_count] / cases_of_flipping) * 100 ,2)
+        result[head_count] = round((result[head_count]
+                                    / cases_of_flipping) * 100, 2)
 
     return result
 
