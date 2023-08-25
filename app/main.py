@@ -8,10 +8,8 @@ def flip_coin() -> dict:
     percent = decimal.Decimal("100") / decimal.Decimal(str(n_of_iterations))
     results_dict = {i: decimal.Decimal("0") for i in range(0, 11)}
     for _ in range(n_of_iterations):
-        print(locals())
         head_flip_counter = 0
         for _ in range(10):
-            print(locals())
             if random.choice(coin) == "head":
                 head_flip_counter += 1
         results_dict[head_flip_counter] += percent
