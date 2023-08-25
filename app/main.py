@@ -18,9 +18,10 @@ def flip_coin() -> dict:
     return result
 
 
-def draw_gaussian_distribution_graph(result: dict) -> None:
-    x_coord = result.keys()
-    y_coord = result.values()
+def draw_gaussian_distribution_graph() -> None:
+    dict_of_numbers = flip_coin()
+    x_coord = dict_of_numbers.keys()
+    y_coord = dict_of_numbers.values()
 
     plt.ylabel("Drop percentage %")
     plt.xlabel("Heads count")
@@ -30,5 +31,5 @@ def draw_gaussian_distribution_graph(result: dict) -> None:
 
 
 if __name__ == "__main__":
-    # print(flip_coin())
-    draw_gaussian_distribution_graph(flip_coin())
+    print(flip_coin())
+    draw_gaussian_distribution_graph()
