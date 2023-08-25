@@ -17,15 +17,3 @@ def flip_coin() -> dict:
         result[count] += 1
 
     return {index: (value * 100 / cases) for index, value in result.items()}
-
-
-def draw_gaussian_distribution_graph() -> None:
-    data = flip_coin()
-    xpoints = []
-    ypoints = []
-    print(data)
-    for index, persent in data.items():
-        xpoints.append(index)
-        ypoints.append(persent)
-    plt.plot(xpoints, ypoints)
-    plt.show()
