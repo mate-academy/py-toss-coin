@@ -1,7 +1,7 @@
 import random
 
 
-def flip_coin():
+def flip_coin() -> dict:
     num_flips = 10
 
     outcomes = [0] * (num_flips + 1)
