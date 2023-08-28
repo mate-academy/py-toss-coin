@@ -24,12 +24,12 @@ def flip_coin() -> dict:
 def draw_gaussian_distribution_graph(distribution: dict) -> None:
     import matplotlib.pyplot as plt
     import numpy as np
-    x = np.arange(0, 11)
-    y = [distribution[num_heads] for num_heads in x]
+    x_points = np.arange(0, 11)
+    y_points = [distribution[num_heads] for num_heads in x_points]
 
-    plt.xlabel('Number of Heads')
-    plt.ylabel('Percentage')
-    plt.title('Distribution of Heads Dropped')
-    plt.plot(x, y)
+    plt.xlabel("Number of Heads")
+    plt.ylabel("Percentage")
+    plt.title("Distribution of Heads Dropped")
+    plt.plot(x_points, y_points)
 
     plt.show()
