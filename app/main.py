@@ -31,6 +31,3 @@ def draw_gaussian_distribution_graph(flip_results: dict) -> None:
 
     plt.plot(x_points, y_points)
     plt.show()
-
-
-
