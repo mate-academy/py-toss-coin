@@ -1,5 +1,4 @@
 import random
-import numpy as np
 import matplotlib.pyplot as plt
 
 
@@ -21,7 +20,7 @@ def draw_gaussian_distribution_graph(points: dict) -> None:
     plt.title("Gaussian distribution")
     plt.xlabel("Heads count")
     plt.ylabel("Drop percentage %")
-    xpoints = np.array(list(points.keys()))
-    ypoints = np.array(list(points.values()))
+    xpoints = list(points.keys())
+    ypoints = list(points.values())
     plt.plot(xpoints, ypoints)
     plt.show()
