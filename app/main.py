@@ -1,5 +1,4 @@
 import random
-import matplotlib.pyplot as plt
 
 
 def flip_coin() -> dict:
@@ -13,12 +12,3 @@ def flip_coin() -> dict:
     for time in res:
         res[time] = round(res[time] / 100, 2)
     return res
-
-
-plt.plot(flip_coin().keys(), flip_coin().values())
-plt.title("Gaussian distribution")
-plt.xlabel("Heads count")
-plt.ylabel("Drop percentage %")
-plt.xticks(range(0, 11))
-plt.yticks(range(0, 101, 10))
-plt.show()
