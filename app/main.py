@@ -22,7 +22,7 @@ def flip_coin(one_flip: int = 10) -> dict:
     return results
 
 
-def draw_gaussian_distribution_graph(results: dict):
+def draw_gaussian_distribution_graph(results: dict) -> None:
     ypoints = np.array(list(results.values()))
     xpoints = np.array(list(results.keys()))
     plt.title("Gaussian distribution")
