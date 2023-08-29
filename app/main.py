@@ -15,4 +15,3 @@ def flip_coin() -> dict:
         del choices
     result = {idx: value / 100 for idx, value in drop_count.items()}
     return result
-
