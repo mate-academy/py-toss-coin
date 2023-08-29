@@ -10,8 +10,8 @@ def flip_coin() -> dict:
             if random.choice([True, False]):
                 times += 1
         res[times] += 1
-    for n in res:
-        res[n] = round(res[n] / 100, 2)
+    for time in res:
+        res[time] = round(res[time] / 100, 2)
     return res
 
 
