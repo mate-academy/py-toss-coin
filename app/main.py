@@ -4,7 +4,7 @@ from random import randint
 
 
 def flip_coin() -> dict:
-    result = {}
+    results = {}
     head = 0
 
     for _ in range(10000):
@@ -12,18 +12,18 @@ def flip_coin() -> dict:
             drop = randint(0, 1)
             if drop == 0:
                 head += 1
-        if head not in result:
-            result[head] = 1
+        if head not in results:
+            results[head] = 1
         else:
-            result[head] += 1
+            results[head] += 1
         head = 0
 
-    result = dict(sorted(result.items(), key=lambda item: item[0]))
+    results = dict(sorted(results.items(), key=lambda item: item[0]))
 
-    for key, value in result.items():
-        result[key] = value / 100
+    for key, value in results.items():
+        results[key] = value / 100
 
-    return result
+    return results
 
 
 def draw_gaussian_distribution_graph(data: dict) -> None:
