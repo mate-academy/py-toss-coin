@@ -9,9 +9,9 @@ def flip_coin() -> dict:
 
     for _ in range(10000):
         for _ in range(10):
-            drop = randint(0, 1)
-            if drop == 0:
+            if randint(0, 1) == 0:
                 head += 1
+
         if head not in results:
             results[head] = 1
         else:
