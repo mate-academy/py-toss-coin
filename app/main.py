@@ -29,6 +29,3 @@ def draw_gaussian_distribution_graph() -> None:
     plt.xlabel("Heads number")
     plt.ylabel("Percentages")
     plt.show()
-
-
-# draw_gaussian_distribution_graph()
