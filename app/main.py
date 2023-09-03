@@ -31,4 +31,4 @@ def draw_gaussian_distribution_graph() -> None:
     plt.show()
 
 
-draw_gaussian_distribution_graph()
+# draw_gaussian_distribution_graph()
