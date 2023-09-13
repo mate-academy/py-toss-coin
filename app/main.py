@@ -4,19 +4,18 @@ import matplotlib.pyplot as plt
 
 
 def flip_coin() -> dict:
-    list_drop = []
-    list_data = []
-    result = {}
-    for i in range(1, 10001):
-        for _ in range(1, 11):
-            list_drop.append(random.randint(0, 1))
-            if len(list_drop) >= 10:
-                list_data.append(list_drop.count(1))
-                list_drop = []
-    for i in list_data:
-        key = list_data.count(i)
-        value = 100 / len(list_data) * key
-        result[i] = round(value, 2)
+
+    result = {i: 0 for i in range(11)}
+    for i in range(0, 10001):
+        heads_drop = 0
+        for _ in range(10):
+            side = random.randint(0, 1)
+            if side == 1:
+                heads_drop += 1
+        result[heads_drop] += 1
+    for key, value in result.items():
+        value = value / 10001 * 100
+        result[key] = round(value, 2)
 
     return result
 
