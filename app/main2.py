@@ -7,7 +7,7 @@ def flip_coin() -> dict:
     list_drop = []
     list_data = []
     result = {}
-    for i in range(1, 10001):
+    for i in range(1, 1001):
         for _ in range(1, 11):
             list_drop.append(random.randint(0, 1))
             if len(list_drop) >= 10:
