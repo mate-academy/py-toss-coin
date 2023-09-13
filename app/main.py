@@ -1,5 +1,5 @@
 import random
-import numpy as np
+import numpy
 import matplotlib.pyplot as plt
 
 
@@ -20,20 +20,17 @@ def flip_coin() -> dict:
     return result
 
 
-print(flip_coin())
-
-
 def draw_gaussian_distribution_graph() -> None:
     flip_cn = sorted(flip_coin().copy().items())
-    ar_x = []
-    ar_y = []
+    heads_drop = []
+    percent = []
 
     for key, value in flip_cn:
-        ar_x.append(key)
-        ar_y.append(value)
+        heads_drop.append(key)
+        percent.append(value)
 
-    ox = np.array(ar_x)
-    oy = np.array(ar_y)
+    ox = numpy.array(heads_drop)
+    oy = numpy.array(percent)
 
     plt.plot(ox, oy)
 
@@ -44,6 +41,3 @@ def draw_gaussian_distribution_graph() -> None:
     plt.ylabel("Drop percentage")
 
     plt.show()
-
-
-draw_gaussian_distribution_graph()
