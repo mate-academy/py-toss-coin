@@ -22,13 +22,12 @@ def draw_gaussian_distribution_graph(
         cases: int = 10000,
         trials: int = 10
 ) -> None:
-    distribution = flip_coin(cases, trials)
-    y_points = numpy.array(list(distribution.values()))
+    y_points = numpy.array(list(flip_coin().values()))
 
     pyplot.plot(y_points)
 
     pyplot.title("Gaussian distribution")
-    pyplot.xlabel("Drop percentage %")
-    pyplot.ylabel("Heads count")
+    pyplot.xlabel("Heads count")
+    pyplot.ylabel("Drop percentage %")
 
     pyplot.show()
