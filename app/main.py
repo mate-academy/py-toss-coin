@@ -36,6 +36,3 @@ def draw_gaussian_distribution_graph() -> None:
     plt.ylim(0, 100)  # Шкала y від 0 до 100
 
     plt.show()
-
-
-draw_gaussian_distribution_graph()
