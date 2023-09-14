@@ -18,6 +18,7 @@ def flip_coin() -> dict:
 
     for item in result:
         flipping[item] = result.count(item) / 100
+
     return dict(sorted(flipping.items()))
 
 
