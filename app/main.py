@@ -75,7 +75,7 @@ def draw_gaussian_distribution_graph() -> None:
         flips[7],
         flips[8],
         flips[9],
-        flips[10]
+        flips[10],
     ]
     plt.figure(figsize=(100, 10))
     plt.plot(xpoints, ypoints)
