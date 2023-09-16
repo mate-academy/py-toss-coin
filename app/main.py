@@ -28,10 +28,10 @@ def flip_coin() -> dict:
     for i in result.keys():
         result[i] = (result[i] / 10000) * 100
 
-    x = np.array(list(result.keys()))
-    y = np.array(list(result.values()))
+    x_axis = np.array(list(result.keys()))
+    y_axis = np.array(list(result.values()))
 
-    plt.plot(x, y)
+    plt.plot(x_axis, y_axis)
 
     plt.xlabel("Heads count")
     plt.ylabel("Drop percentage")
@@ -39,5 +39,3 @@ def flip_coin() -> dict:
     plt.show()
 
     return result
-
-flip_coin()
