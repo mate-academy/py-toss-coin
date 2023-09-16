@@ -1,6 +1,4 @@
 import random
-import numpy as np
-import matplotlib.pyplot as plt
 
 
 def flip_coin() -> dict:
@@ -27,15 +25,5 @@ def flip_coin() -> dict:
         result[number_of_heads] += 1
     for i in result.keys():
         result[i] = (result[i] / 10000) * 100
-
-    x_axis = np.array(list(result.keys()))
-    y_axis = np.array(list(result.values()))
-
-    plt.plot(x_axis, y_axis)
-
-    plt.xlabel("Heads count")
-    plt.ylabel("Drop percentage")
-
-    plt.show()
 
     return result
