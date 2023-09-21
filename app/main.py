@@ -1,7 +1,7 @@
 import random
 
 
-def flip_coin(num_cases=10000):
+def flip_coin(num_cases: int = 10000) -> dict:
     results = {i: 0 for i in range(11)}
 
     for _ in range(num_cases):
@@ -13,12 +13,8 @@ def flip_coin(num_cases=10000):
         results[heads_count] += 1
 
     total_cases = float(num_cases)
-    percentages = {key: (value / total_cases) * 100 for key, value in results.items()}
+    percentages = {
+        key: (value / total_cases) * 100 for key, value in results.items()
+    }
 
     return percentages
-
-
-# Test the function
-result = flip_coin()
-print(result)
-
