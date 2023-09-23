@@ -17,8 +17,8 @@ def flip_coin() -> dict:
 
 
 def draw_gaussian_distribution_graph(probable_distribution: dict) -> None:
-    x_value = list(probability_distribution.keys())
-    y_value = list(probability_distribution.values())
+    x_value = list(probable_distribution.keys())
+    y_value = list(probable_distribution.values())
 
     plt.bar(x_value, y_value, align="center", alpha=0.7)
     plt.xlabel("Number of Heads")
