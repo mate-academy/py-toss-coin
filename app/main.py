@@ -25,5 +25,4 @@ def draw_gaussian_distribution_graph(probable_distribution: dict) -> None:
     plt.ylabel("Percentage")
     plt.title("Gaussian Distribution of Coin Flips")
     plt.grid(True)
-
     plt.show()
