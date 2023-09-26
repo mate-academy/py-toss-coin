@@ -1,5 +1,4 @@
 import numpy as np
-from scipy.stats import binom
 
 
 def flip_coin() -> None:
@@ -17,7 +16,7 @@ def flip_coin() -> None:
 
     # Розрахувати відсоток для кожної кількості голів
     total_trials = float(num_trials)
-    probabilities = {i: (count / total_trials) * 100 
+    probabilities = {i: (count / total_trials) * 100
                      for i, count in enumerate(counts)}
 
     return probabilities
