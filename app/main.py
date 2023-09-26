@@ -1,5 +1,5 @@
 import random
-import matplotlib.pyplot as plt
+
 
 
 def flip_coin() -> dict:
@@ -21,9 +21,9 @@ def draw_gaussian_distribution_graph() -> None:
     graph_x = list(graph.keys())
     graph_y = list(graph.values())
 
-    plt.bar(graph_x, graph_y)
-    plt.xlabel("Heads count")
-    plt.ylabel("Drop percentage")
-    plt.title("Gaussian distribution")
-
-    plt.show()
+    # plt.bar(graph_x, graph_y)
+    # plt.xlabel("Heads count")
+    # plt.ylabel("Drop percentage")
+    # plt.title("Gaussian distribution")
+    #
+    # plt.show()
