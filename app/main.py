@@ -2,7 +2,7 @@ import numpy as np
 from scipy.stats import binom
 
 
-def flip_coin():
+def flip_coin() -> None:
     num_trials = 10000  # Кількість випробувань
     num_coin_flips = 10  # Кількість підкидань монети
 
