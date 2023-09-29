@@ -1,4 +1,4 @@
-from matplotlib import pyplot as plt
+# from matplotlib import pyplot as plt
 
 import random
 
@@ -19,9 +19,9 @@ def flip_coin() -> dict:
     return heads_chances
 
 
-def draw_gaussian_distribution_graph() -> None:
-    heads_chances = flip_coin()
-    xpoints = heads_chances.keys()
-    ypoints = heads_chances.values()
-    plt.plot(xpoints, ypoints)
-    plt.show()
+# def draw_gaussian_distribution_graph() -> None:
+#     heads_chances = flip_coin()
+#     xpoints = heads_chances.keys()
+#     ypoints = heads_chances.values()
+#     plt.plot(xpoints, ypoints)
+#     plt.show()
