@@ -1,1 +1,34 @@
-# write your code here
+import random
+import matplotlib.pyplot as plt
+from typing import Dict
+
+
+def flip_coin() -> Dict[int, float]:
+    outcomes = {i: 0 for i in range(11)}
+    total_cases = 10000
+
+    for _ in range(total_cases):
+        heads_count = sum(random.choice([0, 1]) for _ in range(10))
+        outcomes[heads_count] += 1
+
+    percentages = {key: (value / total_cases) * 100
+                   for key, value in outcomes.items()}
+    return percentages
+
+
+def draw_gaussian_distribution_graph(data: Dict[int, float]) -> None:
+    keys = list(data.keys())
+    values = list(data.values())
+
+    plt.figure(figsize=(8, 6))
+    plt.bar(keys, values, color="skyblue")
+    plt.title("Gaussian Distribution of Coin Flips (10,000 cases)")
+    plt.xlabel("Number of Heads")
+    plt.ylabel("Percentage")
+    plt.xticks(keys)
+    plt.show()
+
+
+result = flip_coin()
+print(result)
+draw_gaussian_distribution_graph(result)
