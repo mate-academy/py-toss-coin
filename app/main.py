@@ -4,20 +4,17 @@ import numpy as np
 
 
 def flip_coin() -> dict:
-    num_cases = 10000
-    results = {i: 0 for i in range(11)}
+    num_simulations = 10000
+    results = {}
 
-    for _ in range(num_cases):
-        coin_flips = [random.choice(["Heads", "Tails"]) for _ in range(10)]
+    for _ in range(num_simulations):
+        num_heads = sum(random.randint(0, 1) for _ in range(10))
+        results[num_heads] = results.get(num_heads, 0) + 1
 
-        num_heads = coin_flips.count("Heads")
+    for key in results:
+        results[key] = (results[key] / num_simulations) * 100
 
-        results[num_heads] += 1
-
-    percentages = {key: (value / num_cases) * 100 for key, value
-                   in results.items()}
-
-    return percentages
+    return results
 
 
 def draw_gaussian_distribution_graph() -> None:
