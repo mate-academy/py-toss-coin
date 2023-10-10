@@ -14,7 +14,8 @@ def flip_coin() -> dict:
 
         results[num_heads] += 1
 
-    percentages = {key: (value / num_cases) * 100 for key, value in results.items()}
+    percentages = {key: (value / num_cases) * 100 for key, value
+                   in results.items()}
 
     return percentages
 
