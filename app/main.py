@@ -1,6 +1,6 @@
 import random
-import numpy
-import matplotlib.pyplot
+# import numpy
+# import matplotlib.pyplot
 
 
 def flip_coin() -> dict:
@@ -19,12 +19,12 @@ def flip_coin() -> dict:
         output_dict[heads] = round(probability, 2)
     return dict(sorted(output_dict.items()))
 
-
-def draw_gaussian_distribution_graph(prob_dict: dict) -> None:
-    matplotlib.pyplot.title("Distribution")
-    matplotlib.pyplot.xlabel("Heads count")
-    matplotlib.pyplot.ylabel("Drop percentage, %")
-
-    y_points = numpy.array([value for value in prob_dict.values()])
-    matplotlib.pyplot.plot(y_points)
-    matplotlib.pyplot.show()
+#
+# def draw_gaussian_distribution_graph(prob_dict: dict) -> None:
+#     matplotlib.pyplot.title("Distribution")
+#     matplotlib.pyplot.xlabel("Heads count")
+#     matplotlib.pyplot.ylabel("Drop percentage, %")
+#
+#     y_points = numpy.array([value for value in prob_dict.values()])
+#     matplotlib.pyplot.plot(y_points)
+#     matplotlib.pyplot.show()
