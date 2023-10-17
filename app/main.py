@@ -1,7 +1,7 @@
 import random
 
 
-def flip_coin(trials: int = 1000, flips: int = 10) -> dict:
+def flip_coin(trials: int = 10000, flips: int = 10) -> dict:
     results = {}
     for _ in range(trials):
         num_heads = sum(random.randint(0, 1) for _ in range(flips))
