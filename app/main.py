@@ -1,6 +1,6 @@
 import random
 
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 
 
 def flip_coin() -> dict:
@@ -16,15 +16,15 @@ def flip_coin() -> dict:
     return percentages
 
 
-def draw_gaussian_distribution_graph(percentages: dict) -> None:
-    plt.bar(percentages.keys(), percentages.values())
-    plt.xlabel("Number of Heads")
-    plt.ylabel("Percentage")
-    plt.title("Gaussian Distribution of Coin Flips")
-    plt.show()
-
-
-if __name__ == "__main__":
-    percentages = flip_coin()
-    print(percentages)
-    draw_gaussian_distribution_graph(percentages)
+# def draw_gaussian_distribution_graph(percentages: dict) -> None:
+#     plt.bar(percentages.keys(), percentages.values())
+#     plt.xlabel("Number of Heads")
+#     plt.ylabel("Percentage")
+#     plt.title("Gaussian Distribution of Coin Flips")
+#     plt.show()
+#
+#
+# if __name__ == "__main__":
+#     percentages = flip_coin()
+#     print(percentages)
+#     draw_gaussian_distribution_graph(percentages)
