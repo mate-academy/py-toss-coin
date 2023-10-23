@@ -2,10 +2,7 @@ import random
 
 
 def flip_coin() -> dict:
-    count = 0
-    coin_flip_count = 0
-    temp_list = []
-    result_dict = {
+    result = {
         0: 0,
         1: 0,
         2: 0,
@@ -16,20 +13,17 @@ def flip_coin() -> dict:
         7: 0,
         8: 0,
         9: 0,
-        10: 0,
+        10: 0
     }
-    while count != 1_00_000:
-        coin_flip_count += 1
-        count += 1
-        coin = random.choice([0, 1])
-        temp_list.append(coin)
-        if coin_flip_count == 10:
-            coin_flip_count = 0
-            temp_count = temp_list.count(1)
-            result_dict[temp_count] += 1
-            temp_list = []
+    for _ in range(1, 10001):
+        heads = 0
+        for i in range(10):
+            coin = random.randint(0, 1)
+            if coin == 1:
+                heads += 1
+        result[heads] += 1
 
-    for key, value in result_dict.items():
-        result_dict[key] = round(100 / (10_000 / value), 2)
+    for key, value in result.items():
+        result[key] = value / 100
 
-    return result_dict
+    return result
