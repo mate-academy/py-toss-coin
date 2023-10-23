@@ -1,5 +1,6 @@
 import random
 
+
 def flip_coin() -> dict:
     count = 0
     coin_flip_count = 0
