@@ -32,7 +32,8 @@ def flip_coin() -> dict:
 
     return result
 
-""" 
+
+"""
 def draw_gaussian_distribution_graph() -> None:
     data = flip_coin()
     x_points = data.keys()
