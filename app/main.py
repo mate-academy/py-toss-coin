@@ -1,6 +1,4 @@
 import random
-import matplotlib.pyplot as plt
-
 
 def flip_coin() -> dict:
     count = 0
@@ -34,31 +32,3 @@ def flip_coin() -> dict:
         result_dict[key] = round(100 / (10_000 / value), 2)
 
     return result_dict
-
-
-def draw_gaussian_distribution_graph(data_dict: dict) -> None:
-
-    x_values = []
-    y_values = []
-
-    for key, value in data_dict.items():
-        x_values.append(key)
-        y_values.append(value)
-
-    plt.plot(x_values, y_values)
-
-    plt.xlim(0, 10)
-    plt.ylim(0, 100)
-
-    plt.xticks(range(11))
-
-    plt.title("Coin flip probability diagram")
-    plt.xlabel("Count of flips by 10 times")
-    plt.ylabel("Probability percent")
-
-    plt.show()
-
-
-dict_fot_table = flip_coin()
-
-draw_gaussian_distribution_graph(dict_fot_table)
