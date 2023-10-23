@@ -16,7 +16,7 @@ def flip_coin() -> dict:
         9 : 0,
         10 : 0
     }
-    
+
     counter = 0
     options = ["head", "eagle"]
     while counter < 10000:
