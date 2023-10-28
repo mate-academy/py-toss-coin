@@ -1,5 +1,5 @@
 import random
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 
 
 def flip_coin() -> dict:
@@ -23,14 +23,14 @@ def flip_coin() -> dict:
     return result
 
 
-result = flip_coin()
-
-xpoints = result.keys()
-ypoints = result.values()
-
-plt.plot(xpoints, ypoints)
-plt.ylim(0, 100)
-plt.title("Gaussian distribution")
-plt.xlabel("count of heads")
-plt.ylabel("Percent")
-plt.show()
+# result = flip_coin()
+#
+# xpoints = result.keys()
+# ypoints = result.values()
+#
+# plt.plot(xpoints, ypoints)
+# plt.ylim(0, 100)
+# plt.title("Gaussian distribution")
+# plt.xlabel("count of heads")
+# plt.ylabel("Percent")
+# plt.show()
