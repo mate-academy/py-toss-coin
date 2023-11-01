@@ -25,10 +25,10 @@ def flip_coin() -> dict:
 
 def draw_gaussian_distribution_graph() -> None:
     date_dict = flip_coin()
-    x = np.array(list(date_dict.keys()))
-    y = np.array(list(date_dict.values()))
+    x_axis = np.array(list(date_dict.keys()))
+    y_axis = np.array(list(date_dict.values()))
 
-    plt.plot(x, y)
+    plt.plot(x_axis, y_axis)
 
     plt.title("Gaussian distribution")
     plt.xlabel("Heads count")
