@@ -23,4 +23,3 @@ def draw_gaussian_distribution_graph() -> None:
 
 print(flip_coin())
 draw_gaussian_distribution_graph()
-#trialcomment
