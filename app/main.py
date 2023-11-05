@@ -24,7 +24,7 @@ def draw_gaussian_distribution_graph(data: dict) -> None:
     print("X=", x_)
     print("y=", y_)
 
-    plt.ylabel("Drop percentage %")
+    plt.ylabel("Drop  percentage %")
     plt.xlabel("Heads count")
     plt.title("Gaussian distribution")
     plt.plot(x_, y_)
