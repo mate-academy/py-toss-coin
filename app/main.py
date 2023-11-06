@@ -11,9 +11,9 @@ def flip_coin() -> dict:
             for _ in range(10)
         ])
         if heads in result.keys():
-            result[heads] += heads
+            result[heads] += 1
         else:
-            result[heads] = heads
+            result[heads] = 1
 
     for i in range(0, 11):
         result[i] = round(result[i] / 100, 2)
@@ -26,4 +26,5 @@ def draw_gaussian_distribution_graph(data: dict) -> None:
 
     plt.xlabel("Heads count")
     plt.ylabel("Drop percentage %")
+    plt.ylim([0, 100])
     plt.show()
