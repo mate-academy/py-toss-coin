@@ -9,5 +9,5 @@ def flip_coin() -> dict:
         count_of_head = sum(random.randint(0, 1) for _ in range(10))
         results[count_of_head] += 1
 
-    result = {key: value / num_cases * 100 for key, value in results.items()}
-    return result
+    res = {key: value / num_cases * 100 for key, value in results.items()}
+    return res
