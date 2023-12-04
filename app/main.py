@@ -1,6 +1,6 @@
 import random
 
-import matplotlib.pyplot as plt
+
 
 
 def flip_coin() -> dict:
@@ -14,11 +14,3 @@ def flip_coin() -> dict:
         result[occurences] /= (number_of_cases / 100)
 
     return result
-
-
-def draw_gaussian_distribution_graph() -> None:
-    data = flip_coin()
-    x_points = list(data.keys())
-    y_points = list(data.values())
-    plt.plot(x_points, y_points)
-    plt.show()
