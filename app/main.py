@@ -1,8 +1,6 @@
 import random
 
 
-
-
 def flip_coin() -> dict:
     result = dict.fromkeys(range(11), 0)
     number_of_cases = 45000
