@@ -16,11 +16,9 @@ def flip_coin() -> dict:
     return result
 
 
-def show_graph(data: dict) -> None:
+def draw_gaussian_distribution_graph() -> None:
+    data = flip_coin()
     x_points = list(data.keys())
     y_points = list(data.values())
     plt.plot(x_points, y_points)
     plt.show()
-
-
-show_graph(flip_coin())
