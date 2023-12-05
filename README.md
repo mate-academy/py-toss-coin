@@ -29,7 +29,7 @@ that draws a graph that shows the distribution.
 `matplotlib` is relevant library for this purpose.
 
 - [matplotlib, Plotting](https://www.w3schools.com/python/matplotlib_plotting.asp)
-- [matplotlib, Labels](https://www.w3schools.com/python/matplotlib_labels.asp)
+- [tlib, Labels](https://www.w3schools.com/python/matplotlib_labels.asp)
 
 You should get graph like this:
 
