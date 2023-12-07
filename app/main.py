@@ -1,6 +1,4 @@
 import random
-import numpy
-import matplotlib.pyplot as plt
 
 
 def flip_coin() -> dict:
@@ -14,19 +12,3 @@ def flip_coin() -> dict:
         for value, count in temporary_dict.items()
     }
     return percentage_dict
-
-
-def draw_gaussian_distribution_graph(percentage_dict: dict) -> None:
-    x_axis = numpy.array([value for value in percentage_dict.keys()])
-    y_axis = numpy.array([percent for percent in percentage_dict.values()])
-
-    plt.plot(x_axis, y_axis)
-
-    plt.title("Gaussian distribution")
-    plt.xlabel("Heads count")
-    plt.ylabel("Drop percentage %")
-
-    plt.show()
-
-
-draw_gaussian_distribution_graph(flip_coin())
