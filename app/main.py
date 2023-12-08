@@ -13,5 +13,4 @@ def flip_coin(
     percentages = (
         {key: (value / num_flips) * 100 for key, value in results.items()}
     )
-    print(results)
     return percentages
