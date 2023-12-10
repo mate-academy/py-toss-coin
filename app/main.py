@@ -2,7 +2,8 @@ import random
 from collections import Counter
 
 
-def flip_coin(num_flips=10000, num_coins=10) -> dict:
+def flip_coin(num_flips: int = 10000,
+              num_coins: int = 10) -> dict:
     results = Counter()
 
     for _ in range(num_flips):
