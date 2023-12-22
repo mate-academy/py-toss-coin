@@ -42,7 +42,7 @@ def draw_gaussian_distribution_graph(statistic: dict) -> None:
     plt.xlim(0, 10)
     plt.ylim(0, 100)
     plt.yticks(np.arange(0, 101, 10))
-    plt.tick_params(axis='y', which='minor', length=4)
+    plt.tick_params(axis="y", which="minor", length=4)
     plt.yticks(np.arange(0, 101, 5), minor=True)
 
     plt.title("Gaussian distribution")
