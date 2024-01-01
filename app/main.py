@@ -14,7 +14,7 @@ def flip_coin() -> dict:
     }
 
 
-def draw_gaussian_distribution_graph(dict_cases: dict):
+def draw_gaussian_distribution_graph(dict_cases: dict) -> None:
     xpoints = array([*dict_cases.keys()])
     ypoints = array([*dict_cases.values()])
     pyplot.plot(xpoints, ypoints)
@@ -22,4 +22,4 @@ def draw_gaussian_distribution_graph(dict_cases: dict):
     pyplot.xlabel("Heads count")
     pyplot.ylabel("Drop percentage %")
     pyplot.ylim(0, 100)
-    return pyplot.show()
+    pyplot.show()
