@@ -1,5 +1,4 @@
 import random
-from matplotlib import pyplot
 
 
 def flip_coin() -> dict:
@@ -29,20 +28,3 @@ def flip_coin() -> dict:
         result_of_percentage[element] = (round(result_of_bars.get(element)
                                                / number_of_bars * 100, 2))
     return result_of_percentage
-
-
-def draw_gaussian_distribution_graph(percentage: dict) -> None:
-    x_points = [element for element in percentage]
-    y_points = [percentage.get(element) for element in percentage]
-
-    pyplot.plot(x_points, y_points)
-    pyplot.title("Gaussian distribution")
-    pyplot.xlabel("Heads count")
-    pyplot.ylabel("Drop percentage %")
-    pyplot.xlim(0, 10)
-    pyplot.ylim(0, 100)
-    pyplot.show()
-
-
-"""print(flip_coin())
-draw_gaussian_distribution_graph(flip_coin())"""
