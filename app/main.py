@@ -1,5 +1,4 @@
 import random
-import numpy as np
 import matplotlib.pyplot as plt
 
 
@@ -16,8 +15,8 @@ def flip_coin() -> dict:
 
 
 def draw_gaussian_distribution_graph(coins: dict) -> None:
-    xarr = np.array([num for num in coins.keys()])
-    yarr = np.array([num for num in coins.values()])
+    xarr = [num for num in coins.keys()]
+    yarr = [num for num in coins.values()]
 
     plt.plot(xarr, yarr)
 
