@@ -4,20 +4,20 @@ import random
 # from matplotlib import pyplot
 
 
-def flip_coin() -> dict:
+def flip_coin(nr_cases: int = 10000, nr_of_flips: int = 10) -> dict:
 
-    result = {num: 0 for num in range(0, 12)}
+    result = {num: 0 for num in range(0, 11)}
 
-    for case in range(10000):
+    for case in range(nr_cases):
         nr_of_heads_out_of_10 = 0
-        for num in range(1, 11):
+        for num in range(nr_of_flips):
             heads_or_tails = random.randint(0, heads := 1)
             if heads_or_tails == heads:
                 nr_of_heads_out_of_10 += 1
 
         result[nr_of_heads_out_of_10] += 1
 
-    return {key: value / 100 for key, value in result.items()}
+    return {key: value / nr_cases * 100 for key, value in result.items()}
 
 
 """
