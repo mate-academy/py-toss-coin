@@ -1,7 +1,7 @@
 import random
-from typing import Callable
-
-from matplotlib import pyplot
+# from typing import Callable
+#
+# from matplotlib import pyplot
 
 
 def flip_coin() -> dict:
@@ -25,28 +25,28 @@ def flip_coin() -> dict:
 
     return dict(sorted(result.items()))
 
-
-def draw_gaussian_distribution_graph(func: Callable) -> None:
-    result_dict = func()
-    x_points = []
-    y_points = []
-
-    for key, values in result_dict.items():
-        x_points.append(key)
-        y_points.append(values)
-
-    pyplot.plot(
-        x_points,
-        y_points,
-        "h-.m",
-        ms=10,
-        mec="k",
-        mfc="#00CED1"
-    )
-
-    pyplot.title("Gaussian distribution")
-    pyplot.xlabel("Heads count")
-    pyplot.ylabel("Drop percentage %")
-    pyplot.xlim(0, 10)
-    pyplot.ylim(0, 100)
-    pyplot.show()
+# # EXTRA TASK
+# def draw_gaussian_distribution_graph(func: Callable) -> None:
+#     result_dict = func()
+#     x_points = []
+#     y_points = []
+#
+#     for key, values in result_dict.items():
+#         x_points.append(key)
+#         y_points.append(values)
+#
+#     pyplot.plot(
+#         x_points,
+#         y_points,
+#         "h-.m",
+#         ms=10,
+#         mec="k",
+#         mfc="#00CED1"
+#     )
+#
+#     pyplot.title("Gaussian distribution")
+#     pyplot.xlabel("Heads count")
+#     pyplot.ylabel("Drop percentage %")
+#     pyplot.xlim(0, 10)
+#     pyplot.ylim(0, 100)
+#     pyplot.show()
