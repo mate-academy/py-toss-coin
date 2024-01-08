@@ -36,7 +36,7 @@ def flip_coin() -> dict:
     return result_of_percentage
 
 
-def draw_gaussian_distribution_graph(result_of_percentage: dict):
+def draw_gaussian_distribution_graph(result_of_percentage: dict) -> None:
     xpoints = np.array([key for key in result_of_percentage.keys()])
     ypoints = np.array([value for value in result_of_percentage.values()])
 
