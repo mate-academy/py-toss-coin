@@ -36,6 +36,3 @@ def draw_gaussian_distribution_graph(flip_coin: Callable) -> None:
 
     plt.plot(x_points, y_points)
     plt.show()
-
-
-draw_gaussian_distribution_graph(flip_coin)
