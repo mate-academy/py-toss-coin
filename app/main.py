@@ -1,7 +1,7 @@
 import random
-import matplotlib.pyplot as plt
 from decimal import Decimal
-from typing import Callable
+# import matplotlib.pyplot as plt
+# from typing import Callable
 
 
 def flip_coin(
@@ -24,15 +24,15 @@ def flip_coin(
     return percentage
 
 
-def draw_gaussian_distribution_graph(flip_coin: Callable) -> None:
-    data = flip_coin()
-    data_sorted = dict(sorted(data.items()))
-
-    x_points = list(data_sorted.keys())
-    y_points = list(data_sorted.values())
-
-    plt.xlim(0, 10)
-    plt.ylim(0, 100)
-
-    plt.plot(x_points, y_points)
-    plt.show()
+# def draw_gaussian_distribution_graph(flip_coin: Callable) -> None:
+#     data = flip_coin()
+#     data_sorted = dict(sorted(data.items()))
+#
+#     x_points = list(data_sorted.keys())
+#     y_points = list(data_sorted.values())
+#
+#     plt.xlim(0, 10)
+#     plt.ylim(0, 100)
+#
+#     plt.plot(x_points, y_points)
+#     plt.show()
