@@ -22,16 +22,14 @@ def flip_coin() -> dict:
 
 # ----------------Graph creation----------------
 
+def draw_gaussian_distribution_graph(data: dict) -> None:
+    heads_number = [i for i in range(11)]
+    probability = [value for value in data.values()]
 
-flip_stats = flip_coin()
+    plt.plot(heads_number, probability)
+    plt.xticks(heads_number, size=8)
+    plt.ylabel("Drop percentage, %")
+    plt.xlabel("Heads count")
+    plt.grid()
 
-heads_number = [i for i in range(11)]
-probability = [value for value in flip_stats.values()]
-
-plt.plot(heads_number, probability)
-plt.xticks(heads_number, size=8)
-plt.ylabel("Drop percentage, %")
-plt.xlabel("Heads count")
-plt.grid()
-
-plt.show()
+    plt.show()
