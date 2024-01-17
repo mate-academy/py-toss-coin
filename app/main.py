@@ -1,4 +1,5 @@
 import random
+import matplotlib.pyplot as plt
 
 
 def flip_coin() -> dict:
@@ -11,3 +12,15 @@ def flip_coin() -> dict:
             head_roll[heads] = 1
     result = {key: (value / 100) for key, value in head_roll.items()}
     return result
+
+
+def plot_histogram(data: dict) -> None:
+    sorted_data = dict(sorted(data.items()))
+    keys = list(sorted_data.keys())
+    values = list(sorted_data.values())
+
+    plt.plot(keys, values)
+    plt.xlabel("Number of Heads")
+    plt.ylabel("Probability in %")
+    plt.title("Coin Flip Simulation")
+    plt.show()
