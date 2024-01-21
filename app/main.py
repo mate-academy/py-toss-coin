@@ -1,32 +1,40 @@
-import json
-from decimal import Decimal
+import matplotlib.pyplot as plt
+import numpy as np
+from typing import Dict
 
 
-def calculate_profit(trades_file) -> None:
-    with open(trades_file, 'r') as file:
-        trades_data = json.load(file)
+def flip_coin(
+        num_trials: int = 10000,
+        num_flips: int = 10
+) -> Dict[int, float]:
+    results = {}
 
-    earned_money = Decimal(0)
-    matecoin_account = Decimal(0)
+    for _ in range(num_trials):
+        num_heads = sum(np.random.choice([0, 1], size=num_flips))
+        results[num_heads] = results.get(num_heads, 0) + 1
 
-    for trade in trades_data:
-        if trade.get("bought") is not None:
-            bought_volume = Decimal(trade["bought"])
-            matecoin_price = Decimal(trade["matecoin_price"])
-            cost = bought_volume * matecoin_price
-            earned_money -= cost
-            matecoin_account += bought_volume
-        if trade.get("sold") is not None:
-            sold_volume = Decimal(trade["sold"])
-            matecoin_price = Decimal(trade["matecoin_price"])
-            revenue = sold_volume * matecoin_price
-            earned_money += revenue
-            matecoin_account -= sold_volume
+    percentages = {
+        key: (value / num_trials) * 100 for key,
+        value in results.items()
+    }
+    return percentages
 
-        result = {
-            "earned_money": str(earned_money),
-            "matecoin_account": str(matecoin_account)
-        }
 
-        with open('profit.json', 'w') as result_file:
-            json.dump(result, result_file, indent=2)
+def draw_gaussian_distribution_graph(
+        coin_distribution: Dict[int, float]
+) -> None:
+    num_heads = list(coin_distribution.keys())
+    percentages = list(coin_distribution.values())
+
+    plt.bar(num_heads, percentages, color="blue", alpha=0.7)
+    plt.title("Coin Flip Distribution")
+    plt.xlabel("Number of Heads")
+    plt.ylabel("Percentage")
+    plt.show()
+
+
+if __name__ == "__main__":
+    coin_flip_results = flip_coin()
+    print(coin_flip_results)
+
+    draw_gaussian_distribution_graph(coin_flip_results)
