@@ -37,4 +37,4 @@ if __name__ == "__main__":
     coin_flip_results = flip_coin()
     print(coin_flip_results)
 
-    draw_gaussian_distribution_graph(coin_flip_results)
+    draw_gaussian_distribution_graph(coin_flip_results)  #
