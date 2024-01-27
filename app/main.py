@@ -20,7 +20,7 @@ def flip_coin() -> dict:
 
     x_points = [key for key in result.keys()]
     y_points = [value for value in result.values()]
-    draw_gaussian_distribution_graph(x_points, y_points)
+    #draw_gaussian_distribution_graph(x_points, y_points)
 
     return result
 
@@ -36,7 +36,3 @@ def draw_gaussian_distribution_graph(x_points: dict, y_points: dict) -> None:
     pyplot.ylabel("Drop percentage %")
 
     pyplot.show()
-
-
-if __name__ == "__main__":
-    flip_coin()
