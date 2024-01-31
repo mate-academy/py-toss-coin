@@ -13,5 +13,3 @@ def flip_coin(num_trials: int = 10000, num_flips: int = 10) -> dict:
         for key, value in results.items()
     }
     return percentages
-
-
