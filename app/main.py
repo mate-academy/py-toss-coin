@@ -1,5 +1,4 @@
 import random
-import numpy as np
 import matplotlib.pyplot as plt
 
 
@@ -21,7 +20,7 @@ def draw_gaussian_distribution_graph() -> None:
         "ro-",
         label="Flip coin"
     )
-    plt.yticks(np.arange(0, 101, 10))
+    plt.yticks(range(0, 101, 10))
     plt.title("Gaussian Distribution")
     plt.xlabel("Heads count")
     plt.ylabel("Drop percentage %")
