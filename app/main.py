@@ -15,8 +15,6 @@ def flip_coin(num_experiments: int = 10000,
 
     return result_dict
 
-print(flip_coin())
-
 
 def draw_gaussian_distribution_graph(data: dict) -> None:
     keys, values = zip(*sorted(data.items()))
