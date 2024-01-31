@@ -1,5 +1,4 @@
 import random
-import matplotlib.pyplot as plt
 
 
 def flip_coin(num_trials: int = 10000, num_flips: int = 10) -> dict:
@@ -13,10 +12,6 @@ def flip_coin(num_trials: int = 10000, num_flips: int = 10) -> dict:
         key: (value / num_trials) * 100
         for key, value in results.items()
     }
-    # draw_gaussian_distribution_graph(percentages)
     return percentages
 
 
-def draw_gaussian_distribution_graph(points: dict) -> None:
-    plt.plot(list(points.keys()), list(points.values()))
-    plt.show()
