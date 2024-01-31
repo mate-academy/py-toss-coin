@@ -1,5 +1,5 @@
 import random
-import matplotlib.pyplot as plt
+import matplotlib.pyplot
 from typing import Dict
 
 
@@ -18,12 +18,12 @@ def flip_coin(num_flips: int = 10000, num_coins: int = 10) -> Dict[int, float]:
 def draw_gaussian_distribution_graph(
         percentages: Dict[int, float]
 ) -> None:
-    plt.plot(
+    matplotlib.pyplot.plot(
         list(percentages.keys()),
         list(percentages.values()),
         marker="o",
         linestyle="-")
-    plt.title("Coin Flip Distribution")
-    plt.xlabel("Number of Heads")
-    plt.ylabel("Percentage")
-    plt.show()
+    matplotlib.pyplot.title("Coin Flip Distribution")
+    matplotlib.pyplot.xlabel("Number of Heads")
+    matplotlib.pyplot.ylabel("Percentage")
+    matplotlib.pyplot.show()
