@@ -1,4 +1,5 @@
 import random
+
 import matplotlib.pyplot as plt
 
 
@@ -25,3 +26,6 @@ def draw_gaussian_distribution_graph(result: dict) -> None:
     plt.ylabel("Drop percentage %")
     plt.title("Gaussian distribution")
     plt.show()
+
+
+draw_gaussian_distribution_graph(flip_coin())
