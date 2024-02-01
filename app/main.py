@@ -1,4 +1,5 @@
 import random
+from typing import Any
 
 import matplotlib.pyplot as plt
 
@@ -16,7 +17,7 @@ def flip_coin(num_flips: int = 10, num_trials: int = 10000) -> dict:
     return percentage_results
 
 
-def draw_distribution_graph(results):
+def draw_distribution_graph(results: Any) -> None:
     plt.bar(results.keys(), results.values(), color="blue")
     plt.title("Gaussian distribution")
     plt.xlabel("Heads count")
