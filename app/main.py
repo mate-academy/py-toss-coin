@@ -1,6 +1,6 @@
 import random
-import matplotlib.pyplot as plt
-import numpy as np
+# import matplotlib.pyplot as plt
+# import numpy as np
 
 
 def flip_coin(
@@ -18,17 +18,16 @@ def flip_coin(
 
     return results
 
-
-def draw_gaussian_distribution_graph() -> None:
-    result = flip_coin()
-    x_label = np.array(list(result.keys()))
-    y_label = np.array(list(result.values()))
-
-    plt.plot(10, 100)
-    plt.plot(x_label, y_label)
-
-    plt.title("Gaussian distribution")
-    plt.xlabel("Heads count")
-    plt.ylabel("Drop percentage %")
-
-    plt.show()
+# def draw_gaussian_distribution_graph() -> None:
+#     result = flip_coin()
+#     x_label = np.array(list(result.keys()))
+#     y_label = np.array(list(result.values()))
+#
+#     plt.plot(10, 100)
+#     plt.plot(x_label, y_label)
+#
+#     plt.title("Gaussian distribution")
+#     plt.xlabel("Heads count")
+#     plt.ylabel("Drop percentage %")
+#
+#     plt.show()
