@@ -1,5 +1,4 @@
 from random import randint
-from matplotlib import pyplot
 
 
 def flip_coin() -> dict:
@@ -13,12 +12,3 @@ def flip_coin() -> dict:
                 value in coin_flips.items()}
 
     return percents
-
-
-def draw_gaussian_distribution_graph(data: dict) -> None:
-    keys, values = zip(*sorted(data.items()))
-    pyplot.bar(keys, values, align="center", color="red")
-    pyplot.title("Gaussian Distribution")
-    pyplot.xlabel("Heads count")
-    pyplot.ylabel("Drop percentage, %")
-    pyplot.show()
