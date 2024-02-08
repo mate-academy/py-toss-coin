@@ -16,10 +16,10 @@ def flip_coin() -> dict:
 
 
 def draw_gaussian_distribution_graph(points: dict) -> None:
-    x = np.array([key for key in points.keys()])
-    y = np.array([value for value in points.values()])
+    x_line = np.array([key for key in points.keys()])
+    y_line = np.array([value for value in points.values()])
 
-    plt.plot(x, y)
+    plt.plot(x_line, y_line)
 
     plt.xlabel("Counts")
     plt.ylabel("Values")
