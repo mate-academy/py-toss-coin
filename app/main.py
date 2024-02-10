@@ -1,5 +1,5 @@
 from random import randint
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 
 
 def flip_coin() -> dict:
@@ -21,11 +21,11 @@ def flip_coin() -> dict:
     return flip
 
 
-def draw_gaussian_distribution_graph() -> None:
-    percentages = flip_coin()
-    plt.plot(list(percentages.keys()),
-             list(percentages.values()), marker="o", linestyle="-")
-    plt.xlabel("Number of Heads")
-    plt.ylabel("Percentage")
-    plt.title("Coin Flip Distribution")
-    plt.show()
+# def draw_gaussian_distribution_graph() -> None:
+#     percentages = flip_coin()
+#     plt.plot(list(percentages.keys()),
+#              list(percentages.values()), marker="o", linestyle="-")
+#     plt.xlabel("Number of Heads")
+#     plt.ylabel("Percentage")
+#     plt.title("Coin Flip Distribution")
+#     plt.show()
