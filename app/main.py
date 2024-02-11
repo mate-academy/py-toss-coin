@@ -1,7 +1,5 @@
 import random
 
-import matplotlib.pyplot as plt
-
 
 def flip_coin() -> dict:
     result = {i: 0 for i in range(11)}
@@ -21,17 +19,3 @@ def flip_coin() -> dict:
         result[key] = round((result[key] / total_flips) * 100, 2)
 
     return result
-
-
-def draw_gaussian_distribution_graph(percentage_data: dict) -> None:
-    percentages = [percent for percent in percentage_data.values()]
-
-    ids = [x for x in range(len(percentages))]
-
-    plt.plot(ids, percentages)
-
-    plt.title("Gaussian distribution")
-    plt.xlabel("Heads count")
-    plt.ylabel("Drop percentage")
-
-    plt.show()
