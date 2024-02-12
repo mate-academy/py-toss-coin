@@ -1,5 +1,4 @@
 import random
-import numpy as np
 import matplotlib.pyplot as plt
 
 
@@ -17,7 +16,7 @@ def flip_coin() -> dict:
 
 
 def draw_gaussian_distribution_graph(funck: dict) -> None:
-    xpoints = np.array([key for key in funck.keys()])
-    ypoints = np.array([vel for vel in funck.values()])
+    xpoints = [key for key in funck.keys()]
+    ypoints = [vel for vel in funck.values()]
     plt.bar(xpoints, ypoints)
     plt.show()
