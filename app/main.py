@@ -14,7 +14,7 @@ def flip_coin() -> dict:
     return calculate_resoults
 
 
-def draw_gaussian_distribution_graph(flip_coin: dict = flip_coin()) -> None:
+def draw_gaussian_distribution_graph(flip_coin: dict) -> None:
     x_cor = list(flip_coin.keys())
     y_cor = list(flip_coin.values())
 
