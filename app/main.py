@@ -1,5 +1,5 @@
 import random
-import numpy
+
 import matplotlib.pyplot as plt
 
 
@@ -15,8 +15,8 @@ def flip_coin() -> dict:
 
 
 def draw_gaussian_distribution_graph(flip_coin: dict = flip_coin()) -> None:
-    x_cor = numpy.array(list(flip_coin.keys()))
-    y_cor = numpy.array(list(flip_coin.values()))
+    x_cor = list(flip_coin.keys())
+    y_cor = list(flip_coin.values())
 
     plt.plot(x_cor, y_cor)
 
