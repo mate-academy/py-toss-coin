@@ -1,6 +1,6 @@
 import random
 from collections import defaultdict
-import matplotlib.pyplot as plt
+import matplotlib.pyplot
 
 
 def flip_coin() -> dict:
@@ -17,10 +17,10 @@ def draw_gaussian_distribution_graph(data: dict) -> None:
     keys = list(data.keys())
     values = list(data.values())
 
-    plt.figure(figsize=(10, 5))
-    plt.bar(keys, values, color="skyblue")
-    plt.xlabel("Number of Heads")
-    plt.ylabel("Percentage")
-    plt.title("Gaussian Distribution of Coin Flips")
-    plt.xticks(keys)
-    plt.show()
+    matplotlib.pyplot.figure(figsize=(10, 5))
+    matplotlib.pyplot.bar(keys, values, color="skyblue")
+    matplotlib.pyplot.xlabel("Number of Heads")
+    matplotlib.pyplot.ylabel("Percentage")
+    matplotlib.pyplot.title("Gaussian Distribution of Coin Flips")
+    matplotlib.pyplot.xticks(keys)
+    matplotlib.pyplot.show()
