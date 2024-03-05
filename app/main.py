@@ -17,13 +17,13 @@ def flip_coin() -> dict:
         9: 0,
         10: 0
     }
-    for _ in range(1000):
+    for _ in range(10000):
         number = [random.choice(["heads", "tails"])
                   for _ in range(10)].count("heads")
         result[number] += 1
 
     for i in range(len(result)):
-        result[i] = round(result[i] / 1000 * 100, 2)
+        result[i] = round(result[i] / 10000 * 100, 2)
 
     return result
 
