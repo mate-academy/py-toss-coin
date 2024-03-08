@@ -1,4 +1,3 @@
-import matplotlib.pyplot as plt
 from random import randint
 
 flip_dict, result_dict = {}, {}
@@ -21,15 +20,3 @@ def flip_coin() -> dict:
 
     return dict(sorted(flip_dict.items()))
 
-
-def draw_gaussian_distribution_graph() -> None:
-    flip_res = flip_coin()
-    xpoints = list(flip_res.keys())
-    ypoints = list(flip_res.values())
-
-    plt.plot(xpoints, ypoints)
-
-    plt.title("Gaussian distributions")
-    plt.xlabel("Heads count")
-    plt.ylabel("Drop percentage %")
-    plt.show()
