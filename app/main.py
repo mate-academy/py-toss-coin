@@ -19,4 +19,3 @@ def flip_coin() -> dict:
         flip_dict[key] = round(value / times * 100, 2)
 
     return dict(sorted(flip_dict.items()))
-
