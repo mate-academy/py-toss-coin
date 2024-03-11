@@ -1,29 +1,21 @@
 import random
-import matplotlib.pyplot as plt
 
 
-def flip_coin(num_cases: int = 10000, num_flips: int = 10) -> None:
-    outcomes = {i: 0 for i in range(num_flips + 1)}
-
-    for _ in range(num_cases):
-        num_heads = sum(random.choice([0, 1]) for _ in range(num_flips))
-        outcomes[num_heads] += 1
-
-    percentages = {key: (value / num_cases) * 100
-                   for key, value in outcomes.items()}
-    return percentages
-
-
-def draw_gaussian_distribution_graph(percentages: int) -> None:
-    plt.bar(percentages.keys(), percentages.values(), color="blue")
-    plt.xlabel("Number of Heads")
-    plt.ylabel("Percentage")
-    plt.title("Gaussian Distribution of Coin Flips")
-    plt.show()
-
-
-# Test the functions
-if __name__ == "__main__":
-    percentages = flip_coin()
-    print(percentages)
-    draw_gaussian_distribution_graph(percentages)
+def flip_coin() -> dict:
+    result_dict = {0: 0, 1: 0, 2: 0,
+                   3: 0, 4: 0, 5: 0,
+                   6: 0, 7: 0, 8: 0,
+                   9: 0, 10: 0}
+    for _ in range(10000):
+        head = 0
+        for _ in range(10):
+            value = random.randint(1, 2)
+            if value == 2:
+                head += 1
+        result_dict[head] += 1
+    all_values = 0
+    for i in range(10):
+        all_values += result_dict[i]
+    for key in result_dict:
+        result_dict[key] = round((result_dict[key] / all_values) * 100, 2)
+    return result_dict
