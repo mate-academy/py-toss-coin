@@ -17,10 +17,11 @@ def flip_coin() -> dict:
         9: 0,
         10: 0,
     }
+    standard_deviation = pow(10 * (1 - 0.5) * 0.5, 1 / 2)
     throws = randint(10000, 50000)
     throw = 0
     while throw != throws:
-        quantity_of_coins = round(gauss(5, 1.5))
+        quantity_of_coins = round(gauss(5, standard_deviation))
         if quantity_of_coins > 10:
             quantity_of_coins = 10
         if quantity_of_coins < 0:
