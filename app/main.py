@@ -19,9 +19,9 @@ def flip_coin() -> dict:
                 counter += 1
 
         cases[counter] += 1
-
-    for i in range(11):
-        cases[i] = round(cases[i] / 10000, 2)
+    sum_values = sum(cases[key] for key in cases)
+    for key in cases:
+        cases[key] = round((cases[key] / sum_values) * 100, 2)
 
     return cases
 
@@ -29,7 +29,7 @@ def flip_coin() -> dict:
 def draw_gaussian_distribution_graph() -> None:
     heads = flip_coin()
     x_axis = np.array([int(key) for key, value in heads.items()])
-    y_axis = np.array([value * 100 for key, value in heads.items()])
+    y_axis = np.array([value for key, value in heads.items()])
 
     plot.title("Gaussian distribution")
     plot.xlabel("Heads count")
