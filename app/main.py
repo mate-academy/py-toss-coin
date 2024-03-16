@@ -18,8 +18,13 @@ def flip_coin() -> dict:
 
 
 def draw_gaussian_distribution_graph(dict_of_chances: dict) -> None:
-    plt.bar(dict_of_chances.keys(), dict_of_chances.values(), color="blue")
-    plt.xlabel("Number of Heads")
-    plt.ylabel("Percentage")
-    plt.title("Gaussian Distribution of Coin Flips (10 times)")
-    plt.show()
+    plt.ylim(0, 100)
+    plt.xlim(0, 10)
+    plt.plot(dict_of_chances.keys(), dict_of_chances.values(), color="blue")
+    plt.xlabel("Heads count")
+    plt.ylabel("Drop percentage %")
+    plt.title("Gaussian Distribution")
+#     plt.show()
+#
+#
+# draw_gaussian_distribution_graph(flip_coin())
