@@ -15,12 +15,13 @@ def flip_coin() -> None:
                    value in result.items()}
     return percentages
 
-    def draw_gaussian_distribution_graph(data: Dict[int, float]) -> None:
-        x_data = list(data.keys())
-        y_data = list(data.values())
-        plt.plot(x_data, y_data, marker="o", linestyle="-")
-        plt.title("Gaussian Distribution of Coin Flips")
-        plt.xlabel("Number of Heads")
-        plt.ylabel("Percentage of Cases")
-        plt.grid(True)
-        plt.show()
+
+def draw_gaussian_distribution_graph(data: Dict[int, float]) -> None:
+    x_data = list(data.keys())
+    y_data = list(data.values())
+    plt.plot(x_data, y_data, marker="o", linestyle="-")
+    plt.title("Gaussian Distribution of Coin Flips")
+    plt.xlabel("Number of Heads")
+    plt.ylabel("Percentage of Cases")
+    plt.grid(True)
+    plt.show()
