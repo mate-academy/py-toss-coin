@@ -27,7 +27,3 @@ def draw_gaussian_distribution_graph(results: dict) -> None:
     pyplot.ylabel("Drop percentage %")
 
     pyplot.show()
-
-
-print(flip_coin())
-draw_gaussian_distribution_graph(flip_coin())
