@@ -1,29 +1,26 @@
 import random
-from typing import Dict
+from collections import defaultdict
+import matplotlib.pyplot as plt
 
 
-def flip_coin(
-        trials: int = 10000,
-        flips_per_trial: int = 10
-) -> Dict[int, float]:
-    results = {i: 0 for i in range(flips_per_trial + 1)}
-
-    for _ in range(trials):
-        heads_count = sum(
-            random.choice([0, 1]) for _ in range(flips_per_trial)
-        )
+def flip_coin() -> dict:
+    results = defaultdict(int)
+    for _ in range(10000):
+        heads_count = sum([random.choice([0, 1]) for _ in range(10)])
         results[heads_count] += 1
-
-    for key, value in results.items():
-        results[key] = (value / trials) * 100
-
-    return results
+    for key in results:
+        results[key] = round((results[key] / 10000) * 100, 2)
+    return dict(sorted(results.items()))
 
 
-def draw_gaussian_distribution_graph(percentage_results) -> None:
-    plt.bar(percentage_results.keys(), percentage_results.values(), color="skyblue")
-    plt.title("Гаусове розподілення підкидання монети")
-    plt.xlabel("Кількість гербів")
-    plt.ylabel("Bідсоток")
-    plt.xticks(range(11))
+def draw_gaussian_distribution_graph(data: dict) -> None:
+    keys = list(data.keys())
+    values = list(data.values())
+
+    plt.figure(figsize=(10, 5))
+    plt.bar(keys, values, color="skyblue")
+    plt.xlabel("Number of Heads")
+    plt.ylabel("Percentage")
+    plt.title("Gaussian Distribution of Coin Flips")
+    plt.xticks(keys)
     plt.show()
