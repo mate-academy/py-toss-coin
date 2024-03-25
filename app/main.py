@@ -2,7 +2,7 @@ import random
 
 
 def flip_coin(num_of_try: int = 10000) -> dict:
-    counts_dict = {count: 0 for count in range(11)}  # initialize counts to 0
+    counts_dict = {count: 0 for count in range(11)}
     for num in range(num_of_try):
         heads = 0
         for ran in range(10):
