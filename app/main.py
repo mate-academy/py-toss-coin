@@ -1,6 +1,4 @@
 import random
-import matplotlib.pyplot as plt
-import numpy as np
 
 
 def flip_coin() -> dict:
@@ -19,4 +17,3 @@ def flip_coin() -> dict:
         results[key] = round((results[key] / num_cases) * 100, 2)
 
     return results
-
