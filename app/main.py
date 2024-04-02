@@ -29,3 +29,9 @@ def draw_gaussian_distribution_graph(graph: dict) -> None:
     plt.xlabel("Count_of_coin_heads_from_10")
     plt.ylabel("Probability")
     plt.show()
+
+
+if __name__ == "__main__":
+    result = flip_coin()
+    print(result)
+    draw_gaussian_distribution_graph(result)
