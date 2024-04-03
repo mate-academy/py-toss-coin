@@ -12,18 +12,3 @@ def flip_coin() -> dict:
 
     return {key: round((value / 10000) * 100, 2)
             for key, value in heads.items()}
-
-
-def draw_gaussian_distribution_graph() -> None:
-    data_dict = flip_coin()
-    x_points = np.array([key for key in data_dict])
-    y_points = np.array([value for value in data_dict.values()])
-
-    plt.plot(x_points, y_points)
-
-    plt.title("Gaussian Distribution")
-    plt.xlabel("Heads count")
-    plt.ylabel("Drop percentage %")
-    plt.ylim(0, 100)
-
-    plt.show()
