@@ -5,13 +5,13 @@ from random import randint
 
 def flip_coin() -> dict:
     output = {i: 0 for i in range(11)}
-    repeats = 10**4
+    repeats = 10 ** 4
 
     for _ in range(repeats):
         result = [randint(0, 1) for _ in range(10)].count(1)
-        output[result] = output.get(result, 0) + 1 / repeats
+        output[result] = output.get(result, 0) + round(100 / repeats, 2)
 
-    return {key: round(value * 100, 2) for key, value in output.items()}
+    return output
 
 
 def draw_gaussian_distribution_graph(func: Callable) -> None:
