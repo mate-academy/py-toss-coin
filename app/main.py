@@ -14,5 +14,3 @@ def flip_coin() -> dict:
         results[key] = (results[key] / num_trials) * 100
 
     return results
-
-
