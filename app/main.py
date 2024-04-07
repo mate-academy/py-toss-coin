@@ -1,5 +1,4 @@
 from random import choice
-import matplotlib.pyplot as plt
 
 
 def flip_coin() -> None:
@@ -19,7 +18,9 @@ def flip_coin() -> None:
     return result
 
 
-def flip_coin_show() -> None:
+def draw_gaussian_distribution_graph() -> None:
+    import matplotlib.pyplot as plt
+
     result = flip_coin()
     xpoints = result.keys()
     ypoints = result.values()
