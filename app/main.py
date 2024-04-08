@@ -1,5 +1,4 @@
 import random
-import numpy
 import matplotlib.pyplot as plt
 
 
@@ -32,8 +31,8 @@ def flip_coin() -> dict:
 
 
 def draw_gaussian_distribution_graph(data: dict) -> None:
-    x_axscis = numpy.array(list(data.keys()))
-    y_axscis = numpy.array(list(data.values()))
+    x_axscis = list(data.keys())
+    y_axscis = list(data.values())
     ax = plt.gca()
     ax.set_xlim([0, 10])
     ax.set_ylim([0, 100])
