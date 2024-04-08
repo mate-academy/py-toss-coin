@@ -19,8 +19,3 @@ def draw_gaussian_distribution_graph(flips: dict) -> None:
     y_points = np.array(list(flips.values()))
     plt.plot(x_points, y_points)
     plt.show()
-
-
-if __name__ == "__main__":
-    flips_data = flip_coin()
-    draw_gaussian_distribution_graph(flips_data)
