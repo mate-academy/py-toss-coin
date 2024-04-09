@@ -1,5 +1,5 @@
 import random
-import matplotlib.pyplot as plt
+import matplotlib
 from typing import Dict
 
 
@@ -21,9 +21,9 @@ def draw_gaussian_distribution_graph(results: Dict[int, float]) -> None:
     x_values = list(results.keys())
     y_values = list(results.values())
 
-    plt.plot(x_values, y_values, marker="o", linestyle="-")
-    plt.title("Gaussian Distribution of Coin Flips")
-    plt.xlabel("Number of Heads")
-    plt.ylabel("Percentage")
-    plt.grid(True)
-    plt.show()
+    matplotlib.plot(x_values, y_values, marker="o", linestyle="-")
+    matplotlib.title("Gaussian Distribution of Coin Flips")
+    matplotlib.xlabel("Number of Heads")
+    matplotlib.ylabel("Percentage")
+    matplotlib.grid(True)
+    matplotlib.show()
