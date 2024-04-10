@@ -1,11 +1,10 @@
 import random
 
-from matplotlib import pyplot
+import matplotlib.pyplot as plt
 
 
-def flip_coin() -> dict:
+def flip_coin(amount: int = 10000) -> dict:
     coins_dict = dict.fromkeys(range(11), 0)
-    amount = 10000
     for _ in range(amount):
         heads_count = sum(random.randint(0, 1) for _ in range(10))
         coins_dict[heads_count] += 1
@@ -17,8 +16,8 @@ def flip_coin() -> dict:
 
 
 def draw_gaussian_distribution_graph(coins_dict: dict) -> None:
-    pyplot.bar(coins_dict.keys(), coins_dict.values())
-    pyplot.xlabel("Heads count")
-    pyplot.ylabel("Drop percentage %")
-    pyplot.title("Gaussian Distribution")
-    pyplot.show()
+    plt.bar(coins_dict.keys(), coins_dict.values())
+    plt.xlabel("Heads count")
+    plt.ylabel("Drop percentage %")
+    plt.title("Gaussian Distribution")
+    plt.show()
