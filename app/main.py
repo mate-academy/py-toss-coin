@@ -14,7 +14,7 @@ def flip_coin(num_trials: int = 10000) -> dict:
     return probabilities
 
 
-def create_plot(probabilities: dict) -> None:
+def draw_gaussian_distribution_graph(probabilities: dict) -> None:
     x_axis = list(probabilities.keys())
     y_axis = list(probabilities.values())
 
@@ -23,3 +23,6 @@ def create_plot(probabilities: dict) -> None:
     plt.xlabel("Heads, times")
     plt.ylabel("Probability, %")
     plt.show()
+
+
+flip_coin()
