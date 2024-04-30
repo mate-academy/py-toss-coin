@@ -10,7 +10,7 @@ def flip_coin() -> dict:
     for _ in range(10000):
         count = 0
         for _ in range(1, 11):
-           count += random.randint(0, 1)
+            count += random.randint(0, 1)
         result[count] += 1
 
     for key, value in result.items():
