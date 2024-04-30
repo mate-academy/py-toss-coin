@@ -1,7 +1,5 @@
-import matplotlib.pyplot as plt
+import matplotlib.pyplot
 import random
-
-from matplotlib.ticker import PercentFormatter
 
 
 def flip_coin() -> dict:
@@ -20,9 +18,8 @@ def flip_coin() -> dict:
 
 
 def draw_gaussian_distribution_graph() -> None:
-    plt.plot(range(0, 11), flip_coin().values())
-    plt.gca().yaxis.set_major_formatter(PercentFormatter(100))
-    plt.title("Gaussian distribution")
-    plt.xlabel("Heads count")
-    plt.ylabel("Drop percentage %")
-    plt.show()
+    matplotlib.pyplot.plot(range(0, 11), flip_coin().values())
+    matplotlib.pyplot.title("Gaussian distribution")
+    matplotlib.pyplot.xlabel("Heads count")
+    matplotlib.pyplot.ylabel("Drop percentage %")
+    matplotlib.pyplot.show()
