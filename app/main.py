@@ -25,7 +25,8 @@ def flip_coin() -> dict:
 
         head_times[heads] += 1
 
-    return {head_time: round(head_times[head_time] / 100, 2) for head_time in head_times}
+    return {head_time: round(head_times[head_time] / 100, 2)
+            for head_time in head_times}
 
 
 def draw_gaussian_distribution_graph(data: dict) -> None:
@@ -43,7 +44,3 @@ def draw_gaussian_distribution_graph(data: dict) -> None:
     plt.ylabel("Drop percentage %")
     plt.plot(x_points, y_points)
     plt.show()
-
-
-if __name__ == "__main__":
-    draw_gaussian_distribution_graph({0: 0.13, 1: 1.24, 2: 4.41, 3: 11.95, 4: 20.02, 5: 24.32, 6: 20.16, 7: 11.92, 8: 4.65, 9: 1.05, 10: 0.15})
