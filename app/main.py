@@ -16,20 +16,15 @@ def flip_coin() -> dict:
 
 
 def draw_gaussian_distribution_graph() -> None:
-    mu = 5
-    sigma = 2
-    axis_x = np.linspace(0, 10, 100)
-    axis_y = ((1 / (sigma * np.sqrt(2 * np.pi)))
-              * np.exp(-((axis_x - mu) ** 2) / (2 * sigma ** 2)))
-    axis_y *= 100 / np.max(axis_y)
-    plt.plot(flip_coin().values())
-    plt.title("Gaussian Distribution")
+    x_points = np.array(list(flip_coin().keys()))
+    y_points = np.array(list(flip_coin().values()))
+
+    plt.xlim(0, 11)
+    plt.ylim(0, 100)
+    plt.title("Gaussian distribution")
     plt.xlabel("Heads count")
     plt.ylabel("Drop percentage %")
-    plt.xticks(range(11))
-    plt.yticks(np.linspace(0, 100, 11))
-    plt.legend()
-    plt.grid(True)
+    plt.plot(x_points, y_points)
     plt.show()
 
 
