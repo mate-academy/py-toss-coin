@@ -1,5 +1,4 @@
 from random import randint
-import matplotlib.pyplot as plt
 
 
 def flip_coin() -> dict:
@@ -27,10 +26,3 @@ def flip_coin() -> dict:
         result[key] = round(result[key] / 100, 2)
 
     return result
-
-
-def draw_gaussian_distribution_graph() -> None:
-    result = flip_coin()
-    result_list = [result.get(i) for i in result]
-    plt.plot(result_list)
-    plt.show()
