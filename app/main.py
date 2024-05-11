@@ -33,3 +33,4 @@ def draw_gaussian_distribution_graph() -> None:
     result = flip_coin()
     result_list = [result.get(i) for i in result]
     plt.plot(result_list)
+    plt.show()
