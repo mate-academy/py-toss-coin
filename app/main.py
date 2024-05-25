@@ -3,16 +3,15 @@ import matplotlib.pyplot as plt
 
 
 def flip_coin() -> dict:
-    coin = ["heads", "tails"]
     throws = []
     result = {}
     for i in range(10000):
-        throw = {"heads": 0, "tails": 0}
+        throw = 0
         for _ in range(10):
-            throw[random.choice(coin)] += 1
+            throw += random.randint(0, 1)
         throws.append(throw)
     for i in range(11):
-        result[i] = round(len([t for t in throws if t["heads"] == i]) / len(throws) * 100, 2)
+        result[i] = round(throws.count(i) / len(throws) * 100, 2)
     return result
 
 
