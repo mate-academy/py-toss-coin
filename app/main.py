@@ -1,9 +1,7 @@
 from random import randint
-import numpy as np
-import matplotlib.pyplot as plt
 
 
-def flip_coin():
+def flip_coin() -> dict:
     # initialize dict
     result = {}
     for i in range(0, 11):
@@ -20,6 +18,3 @@ def flip_coin():
     for key in result:
         result[key] = (result[key] / attempts) * 100
     return result
-
-
-
