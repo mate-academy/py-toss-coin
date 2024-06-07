@@ -1,7 +1,7 @@
 import random
 
 
-def flip_coin(num_simulations=10000):
+def flip_coin(num_simulations: int = 10000) -> dict:
     results = {i: 0 for i in range(11)}
 
     for _ in range(num_simulations):
@@ -12,4 +12,3 @@ def flip_coin(num_simulations=10000):
         value /= 100
         results[key] = value
     return results
-
