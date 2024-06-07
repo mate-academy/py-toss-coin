@@ -25,12 +25,15 @@ def draw_gaussian_distribution_graph(distribution: Dict[int, float]) -> None:
     num_heads = np.array(list(distribution.keys()))
     percentages = np.array(list(distribution.values()))
 
-    plt.plot(num_heads, percentages, marker="o")
+    plt.plot(num_heads, percentages, marker="o", color="blue")
 
-    plt.xlabel("Number of Heads")
-    plt.ylabel("Percentage")
-    plt.title("Gaussian Distribution of "
-              "Coin Flips (10 flips, 10000 experiments)")
+    plt.xlabel("Heads count")
+    plt.ylabel("Drop percentage %")
+    plt.title("Gaussian distribution")
 
     plt.grid(True)
     plt.show()
+
+
+distribution = flip_coin()
+draw_gaussian_distribution_graph(distribution)
