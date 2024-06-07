@@ -16,19 +16,21 @@ def flip_coin() -> Dict[int, float]:
     results = [single_flip() for _ in range(10000)]
     counter = Counter(results)
     total_experiments = 10000
-    percentages = {k: (v / total_experiments) * 100 for k, v in counter.items()}
+    percentages = {key: (value / total_experiments) * 100
+                   for key, value in counter.items()}
     return percentages
 
 
 def draw_gaussian_distribution_graph(distribution: Dict[int, float]) -> None:
-    x = np.array(list(distribution.keys()))
-    y = np.array(list(distribution.values()))
+    num_heads = np.array(list(distribution.keys()))
+    percentages = np.array(list(distribution.values()))
 
-    plt.plot(x, y, marker='o')
+    plt.plot(num_heads, percentages, marker="o")
 
     plt.xlabel("Number of Heads")
     plt.ylabel("Percentage")
-    plt.title("Gaussian Distribution of Coin Flips (10 flips, 10000 experiments)")
+    plt.title("Gaussian Distribution of "
+              "Coin Flips (10 flips, 10000 experiments)")
 
     plt.grid(True)
     plt.show()
