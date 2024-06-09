@@ -1,5 +1,4 @@
 import random
-import numpy as np
 from matplotlib import pyplot
 
 
@@ -21,8 +20,8 @@ def draw_gaussian_distribution_graph(values: dict) -> None:
     pyplot.ylim(0, 100)
     pyplot.xlim(0, 10)
 
-    x_points = np.array(list(values.keys()))
-    y_points = np.array(list(values.values()))
+    x_points = list(values.keys())
+    y_points = list(values.values())
     pyplot.plot(x_points, y_points)
     pyplot.show()
 
