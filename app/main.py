@@ -5,7 +5,6 @@ import random
 
 def flip_coin() -> dict:
     results = {i: 0 for i in range(11)}
-
     num_trials = 10000
     num_flips = 10
 
