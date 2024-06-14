@@ -15,18 +15,3 @@ def flip_coin() -> dict:
     for flip in result_dict:
         result_dict[flip] = result_dict[flip] * 100 / 10000
     return result_dict
-
-
-def draw_gaussian_distribution_graph(points_dict: dict) -> None:
-    x_min_max = np.array([0, 0])
-    y_min_max = np.array([10, 100])
-    plt.plot(x_min_max, y_min_max, "o")
-    xpoints = np.array([i for i in points_dict])
-    print(xpoints)
-    ypoints = np.array([points_dict[i] for i in points_dict])
-    print(ypoints)
-    plt.plot(xpoints, ypoints)
-    plt.show()
-
-
-draw_gaussian_distribution_graph(flip_coin())
