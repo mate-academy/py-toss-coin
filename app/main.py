@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-def flip_coin():
+def flip_coin() -> dict:
     result_dict = {i: i for i in range(11)}
     for number in range(10000):
         counter = 0
@@ -17,10 +17,10 @@ def flip_coin():
     return result_dict
 
 
-def draw_gaussian_distribution_graph(points_dict):
-    x = np.array([0, 0])
-    y = np.array([10, 100])
-    plt.plot(x, y, 'o')
+def draw_gaussian_distribution_graph(points_dict: dict) -> None:
+    x_min_max = np.array([0, 0])
+    y_min_max = np.array([10, 100])
+    plt.plot(x_min_max, y_min_max, "o")
     xpoints = np.array([i for i in points_dict])
     print(xpoints)
     ypoints = np.array([points_dict[i] for i in points_dict])
