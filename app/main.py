@@ -5,7 +5,7 @@ def flip_coin(num_cases: int = 10000) -> dict:
     results = {i: 0 for i in range(11)}
     for _ in range(num_cases):
         heads = 0
-        for h in range(10):
+        for _ in range(10):
             if random.random() < 0.5:
                 heads += 1
         results[heads] += 1
