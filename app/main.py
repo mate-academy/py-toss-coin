@@ -1,8 +1,5 @@
 import random
 
-import matplotlib.pyplot as plt
-import numpy as np
-
 
 def flip_coin(num_flips: int = 10, num_trials: int = 10000) -> dict:
     results = {i: 0 for i in range(num_flips + 1)}
@@ -17,6 +14,7 @@ def flip_coin(num_flips: int = 10, num_trials: int = 10000) -> dict:
     return results
 
 
+"""
 def draw_gaussian_distribution_graph() -> None:
     keys = list(flip_coin().keys())
     values = list(flip_coin().values())
@@ -33,4 +31,4 @@ def draw_gaussian_distribution_graph() -> None:
     plt.ylim(0, 100)
     plt.yticks(np.arange(0, 101, 5))
 
-    plt.show()
+    plt.show()"""
