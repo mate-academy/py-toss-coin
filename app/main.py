@@ -2,8 +2,8 @@ import random
 import matplotlib.pyplot as plt
 
 
-def flip_coin(num_simulations: int =10000, num_flips: int =10) -> dict:
-    results = {key: 0 for k in range(num_flips + 1)}
+def flip_coin(num_simulations: int = 10000, num_flips: int = 10) -> dict:
+    results = {key: 0 for key in range(num_flips + 1)}
     for _ in range(num_simulations):
         flips = [random.choice(["H", "T"]) for _ in range(num_flips)]
         num_heads = flips.count("H")
@@ -13,7 +13,7 @@ def flip_coin(num_simulations: int =10000, num_flips: int =10) -> dict:
     return results
 
 
-def draw_gaussian_distribution_graph(data):
+def draw_gaussian_distribution_graph(data: dict) -> None:
     keys = list(data.keys())
     values = list(data.values())
     plt.bar(keys, values)
