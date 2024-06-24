@@ -39,6 +39,7 @@ def flip_coin() -> dict:
     return result
 
 
+"""
 def draw_gaussian_distribution_graph(result: dict) -> None:
     keys = []
     values = []
@@ -57,3 +58,4 @@ def draw_gaussian_distribution_graph(result: dict) -> None:
     plt.ylabel("Drop percentage %")
 
     plt.show()
+"""
