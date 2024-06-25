@@ -30,4 +30,3 @@ def draw_gaussian_distribution_graph() -> None:
     plt.title("Distribution of Heads in 10 Coin Flips (10,000 Trials)")
     plt.grid(True)  # Add grid lines
     plt.show()
-
