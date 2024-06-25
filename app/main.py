@@ -28,3 +28,4 @@ def draw_gaussian_distribution_graph() -> None:
     plt.ylabel("Percentage")
     plt.title("Distribution of Heads in 10 Coin Flips (10,000 Trials)")
     plt.show()
+
