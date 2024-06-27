@@ -1,6 +1,7 @@
 import random
 import matplotlib.pyplot as plt
 
+
 def flip_coin() -> dict:
     trials = 10000
     results = {i: 0 for i in range(11)}
@@ -21,11 +22,11 @@ def draw_gaussian_distribution_graph() -> None:
     percentages = list(data.values())
 
     plt.figure(figsize=(10, 6))
-    plt.plot(heads, percentages, color='blue', linestyle='-', linewidth="2")
+    plt.plot(heads, percentages, color="blue", linestyle="-", linewidth="2")
 
-    plt.xlabel('Heads count')
-    plt.ylabel('Drop percentage %')
-    plt.title('Gaussian Distibution')
+    plt.xlabel("Heads count")
+    plt.ylabel("Drop percentage %")
+    plt.title("Gaussian Distibution")
     plt.xticks(range(11))
     plt.yticks(range(0, 101, 10))
     plt.grid(True)
