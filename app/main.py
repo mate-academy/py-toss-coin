@@ -1,7 +1,7 @@
 import random
 
-import matplotlib.pyplot as plt
-import numpy as np
+# import matplotlib.pyplot as plt
+# import numpy as np
 
 
 def sort_dict(my_dict: dict) -> dict:
@@ -26,18 +26,18 @@ def flip_coin() -> dict:
     return percentage(sort_dict(result_dict))
 
 
-def draw_gaussian_distribution_graph() -> None:
-    flip_coin_result = flip_coin()
-    flip_coin_keys = list(flip_coin_result.keys())
-    flip_coin_values = list(flip_coin_result.values())
-
-    x_points = np.array(flip_coin_keys)
-    y_points = np.array(flip_coin_values)
-    plt.grid(True)
-    plt.plot(x_points, y_points)
-    plt.xlabel("Heads count")
-    plt.ylim(0, 100)
-    plt.xticks(range(0, 11))
-    plt.ylabel("Drop percentage %")
-    plt.title("Gaussian distribution")
-    plt.show()
+# def draw_gaussian_distribution_graph() -> None:
+#     flip_coin_result = flip_coin()
+#     flip_coin_keys = list(flip_coin_result.keys())
+#     flip_coin_values = list(flip_coin_result.values())
+#
+#     x_points = np.array(flip_coin_keys)
+#     y_points = np.array(flip_coin_values)
+#     plt.grid(True)
+#     plt.plot(x_points, y_points)
+#     plt.xlabel("Heads count")
+#     plt.ylim(0, 100)
+#     plt.xticks(range(0, 11))
+#     plt.ylabel("Drop percentage %")
+#     plt.title("Gaussian distribution")
+#     plt.show()
