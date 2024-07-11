@@ -3,7 +3,7 @@ import random
 
 def flip_coin() -> dict:
     result_dict = {
-        i: 0 for i in range(11)
+        i: 0.0 for i in range(11)
     }
     for _ in range(10000):
         flips = (
@@ -21,5 +21,6 @@ def flip_coin() -> dict:
         occurrences = flips.count(1)
         result_dict[occurrences] += 1
     for key in result_dict:
-        result_dict[key] = round((result_dict[key] / 10000) * 100, 2)
+        value = result_dict[key]
+        result_dict[key] = round((value / 100), 2)
     return result_dict
