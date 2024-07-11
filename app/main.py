@@ -22,4 +22,4 @@ def flip_coin() -> dict:
         result_dict[occurrences] += 1
     for key in result_dict:
         result_dict[key] = round((result_dict[key] / 10000) * 100, 2)
-    return result_dict:
+    return result_dict
