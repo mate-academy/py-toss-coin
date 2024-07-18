@@ -1,4 +1,3 @@
-# write your code here
 import random
 from matplotlib import pyplot
 import numpy
