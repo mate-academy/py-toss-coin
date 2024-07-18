@@ -6,7 +6,6 @@ def flip_coin() -> dict:
     result = {i: 0.00 for i in range(11)}
     i = 0
     heads = 0
-
     while i != simulations_amount:
         heads = 0
         for _ in range(10):
@@ -14,7 +13,6 @@ def flip_coin() -> dict:
                 heads += 1
         result[heads] += 1
         i += 1
-
     for key in result:
         result[key] = round((result[key] / simulations_amount) * 100, 2)
 
