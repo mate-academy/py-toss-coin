@@ -11,5 +11,5 @@ def flip_coin() -> dict:
     ]
     return {
         i: round(result.count(i) / exp_count * 100, 2)
-        for i in range(flips+1)
+        for i in range(flips + 1)
     }
