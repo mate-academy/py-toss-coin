@@ -1,5 +1,5 @@
 from random import choice
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 
 
 def flip_coin() -> dict:
@@ -12,19 +12,19 @@ def flip_coin() -> dict:
                 heads += 1
         result[heads] += 1
     result = {i: round(result[i] / 100, 2) for i in range(0, 10 + 1)}
-    plot(result)
+    # plot(result)
     return result
 
 
-def plot(data: dict) -> None:
-    x_points = list(data.keys())
-    y_points = list(data.values())
-    plt.xlim(0, 10)
-    plt.xticks([i for i in range(0, 10 + 1)])
-    plt.yticks([i for i in range(0, 100 + 10, 10)])
-    plt.ylim(0, 100)
-    plt.plot(x_points, y_points)
-    plt.title("Gaussian Distribution")
-    plt.xlabel("Heads Count")
-    plt.ylabel("Drop percentage %")
-    plt.show()
+# def plot(data: dict) -> None:
+#     x_points = list(data.keys())
+#     y_points = list(data.values())
+#     plt.xlim(0, 10)
+#     plt.xticks([i for i in range(0, 10 + 1)])
+#     plt.yticks([i for i in range(0, 100 + 10, 10)])
+#     plt.ylim(0, 100)
+#     plt.plot(x_points, y_points)
+#     plt.title("Gaussian Distribution")
+#     plt.xlabel("Heads Count")
+#     plt.ylabel("Drop percentage %")
+#     plt.show()
