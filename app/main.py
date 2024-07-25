@@ -1,4 +1,5 @@
 from random import random
+# import matplotlib.pyplot as plt
 
 
 def flip_coin() -> dict:
@@ -14,3 +15,20 @@ def flip_coin() -> dict:
     for key, value in result.items():
         result[key] = value / 100
     return result
+
+#
+# dict_after_flipping = flip_coin()
+#
+#
+# def draw_gaussian_distribution_grap(dic: dict) -> None:
+#     x_cord = [0]
+#     y_cord = [0]
+#     for key, value in dic.items():
+#         x_cord.append(key)
+#         y_cord.append(value)
+#     plt.plot(x_cord, y_cord)
+#     plt.ylim(0, 100)
+#     plt.show()
+#
+#
+# draw_gaussian_distribution_grap(dict_after_flipping)
