@@ -11,7 +11,7 @@ def flip_coin(trials: int = 10000) -> dict:
         results[heads_count] += 1
 
     for key in results:
-        results[key] = round((results[key] / trials) * 100, 2)
+        results[key] = (results[key] / trials) * 100
 
     return results
 
