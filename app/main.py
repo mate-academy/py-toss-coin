@@ -23,8 +23,3 @@ def draw_gaussian_distribution_graph(results: dict) -> None:
     plt.title("Distribution of Heads")
     plt.grid(True)
     plt.show()
-
-
-res = flip_coin()
-print(res)
-draw_gaussian_distribution_graph(res)
