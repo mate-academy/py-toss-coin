@@ -18,6 +18,7 @@ def flip_coin() -> dict:
 
     return result
 
+
 """
 def draw_gaussian_distribution_graph(dist: dict) -> None:
     xpoints = np.array([x for x in range(0, 11)])
