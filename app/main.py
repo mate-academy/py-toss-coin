@@ -27,6 +27,6 @@ def draw_gaussian_distribution_graph(data: dict) -> None:
     plt.bar(keys, values, color="green")
     plt.xlabel("Keys")
     plt.ylabel("Values")
-    plt.title("The distribution graph")
+    plt.title("The distribution")
     plt.grid(True)
     plt.show()
