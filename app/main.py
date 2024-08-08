@@ -1,6 +1,6 @@
 import random
 from typing import Dict
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 
 
 def flip_coin(num_trials: int = 10000) -> Dict[int, float]:
@@ -14,12 +14,12 @@ def flip_coin(num_trials: int = 10000) -> Dict[int, float]:
     return percentages
 
 
-def draw_gaussian_distribution_graph(percentages: Dict[int, float]) -> None:
-    num_heads = list(percentages.keys())
-    percentage = list(percentages.values())
-
-    plt.bar(num_heads, percentage, color="skyblue", edgecolor="black")
-    plt.xlabel("Number of Heads")
-    plt.ylabel("Percentage (%)")
-    plt.title("Distribution of Number of Heads in 10 Coin Flips")
-    plt.show()
+# def draw_gaussian_distribution_graph(percentages: Dict[int, float]) -> None:
+#     num_heads = list(percentages.keys())
+#     percentage = list(percentages.values())
+#
+#     plt.bar(num_heads, percentage, color="skyblue", edgecolor="black")
+#     plt.xlabel("Number of Heads")
+#     plt.ylabel("Percentage (%)")
+#     plt.title("Distribution of Number of Heads in 10 Coin Flips")
+#     plt.show()
