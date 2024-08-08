@@ -1,8 +1,8 @@
 import random
 
-import matplotlib.pyplot as plt
-import matplotlib.ticker as ticker
-import numpy as np
+# import matplotlib.pyplot as plt
+# import matplotlib.ticker as ticker
+# import numpy as np
 
 
 def flip_coin() -> dict:
@@ -33,22 +33,22 @@ def flip_coin() -> dict:
         results[key] = round((results[key] / total_trials) * 100, 2)
 
     return results
-
-
-def draw_gaussian_distribution_graph(points: dict) -> None:
-    x_points = np.array(list(points.keys()))
-    y_points = np.array(list(points.values()))
-
-    plt.plot(x_points, y_points)
-
-    plt.ylim(0, 100)
-    plt.xlim(0, 10)
-
-    plt.title("Gaussian distribution")
-    plt.xlabel("Heads count")
-    plt.ylabel("Drop percentage %")
-
-    plt.gca().yaxis.set_major_locator(ticker.MultipleLocator(10))
-    plt.gca().xaxis.set_major_locator(ticker.MultipleLocator(1))
-
-    plt.show()
+#
+#
+# def draw_gaussian_distribution_graph(points: dict) -> None:
+#     x_points = np.array(list(points.keys()))
+#     y_points = np.array(list(points.values()))
+#
+#     plt.plot(x_points, y_points)
+#
+#     plt.ylim(0, 100)
+#     plt.xlim(0, 10)
+#
+#     plt.title("Gaussian distribution")
+#     plt.xlabel("Heads count")
+#     plt.ylabel("Drop percentage %")
+#
+#     plt.gca().yaxis.set_major_locator(ticker.MultipleLocator(10))
+#     plt.gca().xaxis.set_major_locator(ticker.MultipleLocator(1))
+#
+#     plt.show()
