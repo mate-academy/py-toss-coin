@@ -23,5 +23,4 @@ def draw_gaussian_distribution_graph(percentages: Dict[int, float]) -> None:
     plt.xlabel("Number of Heads")
     plt.ylabel("Percentage (%)")
     plt.title("Distribution of Number of Heads in 10 Coin Flips")
-
     plt.show()
