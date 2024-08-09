@@ -1,4 +1,3 @@
-# write your code here
 import random
 import matplotlib.pyplot as plt
 import numpy as np
@@ -17,6 +16,7 @@ def flip_coin() -> dict:
         result[key] = result[key] / 100
 
     return result
+
 
 def draw_gaussian_distribution_graph() -> None:
     x_points = np.array([key for key in flip_coin().keys()])
