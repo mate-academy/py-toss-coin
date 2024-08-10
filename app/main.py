@@ -24,24 +24,24 @@ def flip_coin() -> dict:
 
 
 # coin_dict = flip_coin()
-# 
-# 
+#
+#
 # def draw_gaussian_distribution_graph() -> None:
     # xpoints = np.array([key for key in coin_dict.keys()])
     # ypoints = np.array([value for value in coin_dict.values()])
-# 
+#
     # font1 = {"family": "serif", "color": "blue", "size": 20}
     # font2 = {"family": "serif", "color": "darkred", "size": 15}
-# 
+#
     # plt.title("Gaussian distribution", fontdict=font1)
     # plt.xlabel("Heads count", fontdict=font2)
     # plt.ylabel("Drop persceintage %", fontdict=font2)
-# 
+#
     # plt.plot(xpoints, ypoints)
     # plt.show()
-# 
+#
     # plt.savefig(sys.stdout.buffer)
     # sys.stdout.flush()
-# 
-# 
+#
+#
 # draw_gaussian_distribution_graph()
