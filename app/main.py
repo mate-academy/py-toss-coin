@@ -1,4 +1,3 @@
-import matplotlib.pyplot
 import random
 
 
@@ -12,10 +11,3 @@ def flip_coin() -> dict:
         result_dict[number_of_heads] += 1 / 100
 
     return result_dict
-
-
-def draw_gaussian_distribution_graph() -> None:
-    y_points = list(flip_coin().values())
-
-    matplotlib.pyplot.plot(y_points)
-    matplotlib.pyplot.show()
