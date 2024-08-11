@@ -6,9 +6,9 @@ from matplotlib import pyplot as plt
 def flip_coin(num_flips: int = 10, num_cases: int = 10000) -> dict:
     result_dict = {i: 0 for i in range(num_flips + 1)}
 
-    for num in range(num_cases):
+    for _ in range(num_cases):
         coin_count = sum(random.randint(0, 1)
-                         for num in range(num_flips))
+                         for _ in range(num_flips))
         result_dict[coin_count] += 1
 
     for percent in result_dict:
