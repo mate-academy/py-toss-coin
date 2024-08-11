@@ -20,3 +20,6 @@ def draw_gaussian_distribution_graph() -> object:
     plt.plot(list(keys), list(values))
     plt.show()
     return plt
+
+
+draw_gaussian_distribution_graph()
