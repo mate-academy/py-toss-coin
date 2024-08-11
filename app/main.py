@@ -34,5 +34,6 @@ def draw_gaussian_distribution_graph(data: dict[int, float]) -> None:
     plt.show()
 
 
-result = flip_coin(10000)
-draw_gaussian_distribution_graph(result)
+if __name__ == "__main__":
+    result = flip_coin(10000)
+    draw_gaussian_distribution_graph(result)
