@@ -1,6 +1,3 @@
-# import numpy as np
-import matplotlib.pyplot as plt
-
 import random
 
 
@@ -26,22 +23,3 @@ def flip_coin() -> dict:
     }
 
     return res_dict
-
-
-def draw_graph(statistic_dict: dict) -> None:
-    sorted_dict = dict(sorted(statistic_dict.items()))
-    # x_arr = np.array([int(key) for key in sorted_dict.keys()])
-    # y_arr = np.array([value for value in sorted_dict.values()])
-    x_arr = [int(key) for key in sorted_dict.keys()]
-    y_arr = [value for value in sorted_dict.values()]
-
-    plt.title("Gaussian distribution")
-    plt.xlabel("Drop percentage %")
-    plt.ylabel("Heads count")
-    plt.ylim(0, 100)
-
-    plt.xticks(range(0, 11, 1))
-    plt.yticks(range(0, 101, 10))
-
-    plt.plot(x_arr, y_arr)
-    plt.show()
