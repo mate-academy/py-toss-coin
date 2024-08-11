@@ -20,6 +20,3 @@ def draw_gaussian_distribution_graph() -> object:
     matplotlib.plot(list(keys), list(values))
     matplotlib.show()
     return matplotlib
-
-
-draw_gaussian_distribution_graph()
