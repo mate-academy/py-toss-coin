@@ -5,7 +5,7 @@ from collections import defaultdict
 
 
 def flip_coin(trials: int = 10000) -> dict[int, float]:
-    dict_result: defaultdict[int, float] = defaultdict(int)
+    dict_result: defaultdict[int, int] = defaultdict(int)
 
     for _ in range(trials):
         heads_count = sum(random.choice([0, 1]) for _ in range(10))
