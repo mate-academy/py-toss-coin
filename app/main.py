@@ -1,4 +1,7 @@
-import random
+
+import matplotlib.pyplot as plt
+import numpy as np
+import random as my_random
 from collections import defaultdict
 
 
@@ -6,7 +9,7 @@ def flip_coin(trials: int = 10000) -> dict[int, float]:
     dict_result: defaultdict[int, int] = defaultdict(int)
 
     for _ in range(trials):
-        heads_count = sum(random.choice([0, 1]) for _ in range(10))
+        heads_count = sum(my_random.choice([0, 1]) for _ in range(10))
 
         dict_result[heads_count] += 1
 
@@ -17,3 +20,21 @@ def flip_coin(trials: int = 10000) -> dict[int, float]:
         final_result[key] = round(percentage, 2)
 
     return final_result
+
+
+def draw_gaussian_distribution_graph(data: dict[int, float]) -> None:
+    x_points = np.array(list(data.keys()))
+    y_points = np.array(list(data.values()))
+
+    plt.plot(x_points, y_points)
+    plt.title("Gaussain distribution")
+    plt.xlabel("Heads count")
+    plt.ylabel("Drop percentage %")
+    plt.xticks(range(0, 11))
+
+    plt.show()
+
+
+if __name__ == "__main__":
+    result = flip_coin(10000)
+    draw_gaussian_distribution_graph(result)
