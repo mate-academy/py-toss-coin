@@ -1,8 +1,9 @@
 import random
+from typing import Dict
 
 
-def flip_coin() -> dict:
-    result_dict = {i: 0 for i in range(11)}
+def flip_coin() -> Dict[int, float]:
+    result_dict: Dict[int, int] = {i: 0 for i in range(11)}
 
     for _ in range(10000):
         times = 0
@@ -12,10 +13,11 @@ def flip_coin() -> dict:
 
         result_dict[times] += 1
 
-    for key in result_dict:
-        result_dict[key] = round(result_dict[key] / 10000, 3)
+    probability_dict: Dict[int, float]\
+        = {key: round(value / 10000, 3)
+           for key, value in result_dict.items()}
 
-    return result_dict
+    return probability_dict
 
 
 print(flip_coin())
