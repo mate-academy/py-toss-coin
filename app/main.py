@@ -16,7 +16,12 @@ def flip_coin() -> dict:
 
 
 def draw_gaussian_distribution_graph() -> None:
-    pyplot.plot(flip_coin().items())
+    result_of_flipping_coin = flip_coin()
+
+    pyplot.plot(
+        result_of_flipping_coin.keys(),
+        result_of_flipping_coin.values()
+    )
 
     pyplot.title("Gaussian distribution")
     pyplot.xlabel("Heads count")
