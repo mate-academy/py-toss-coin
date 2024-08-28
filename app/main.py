@@ -32,6 +32,3 @@ def draw_gaussian_distribution_graph() -> None:
     plt.plot(x_coordinate, y_coordinate, marker="o")
     plt.grid(True)
     plt.show()
-
-
-draw_gaussian_distribution_graph()
