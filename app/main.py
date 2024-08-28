@@ -26,3 +26,4 @@ def draw_gaussian_distribution_graph(data: dict[int, float]) -> None:
     plt.ylabel("Drop percentage %")
     plt.grid(True)
     plt.show()
+
