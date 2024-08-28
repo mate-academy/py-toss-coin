@@ -30,3 +30,4 @@ def draw_gaussian_distribution_graph() -> None:
     x_coordinate = np.array(list(result.keys()))
     y_coordinate = np.array(list(result.values()))
     plt.plot(x_coordinate, y_coordinate)
+    plt.show()
