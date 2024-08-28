@@ -29,7 +29,9 @@ def draw_gaussian_distribution_graph() -> None:
     result = flip_coin()
     x_coordinate = np.array(list(result.keys()))
     y_coordinate = np.array(list(result.values()))
-    plt.plot(x_coordinate, y_coordinate, marker='o')
+    plt.plot(x_coordinate, y_coordinate, marker="o")
     plt.grid(True)
     plt.show()
+
+
 draw_gaussian_distribution_graph()
