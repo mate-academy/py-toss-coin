@@ -2,7 +2,7 @@ import random
 import matplotlib.pyplot as plt
 
 
-def flip_coin(num_trials=10000: int, num_flips=10: int) -> dict:
+def flip_coin(num_trials: int=10000, num_flips: int=10) -> dict:
     results = {i: 0 for i in range(num_flips + 1)}
 
     for _ in range(num_trials):
