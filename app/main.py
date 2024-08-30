@@ -1,7 +1,7 @@
 import random
 
 
-def flip_coin():
+def flip_coin() -> dict:
     result = {}
 
     flip_times = [[random.randint(0, 1) for flip in range(10)]
