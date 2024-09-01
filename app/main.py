@@ -19,14 +19,14 @@ def flip_coin(cases: int = 10000) -> dict:
 
 
 def draw_gaussian_distribution_graph(data: dict) -> None:
-    x = list(data.keys())
-    y = list(data.values())
-    
-    # Plot the data
-    plt.plot(x, y, color='red')
-    plt.xlabel('Number of Heads')
-    plt.ylabel('Percentage, %')
+    x_values = list(data.keys())
+    y_values = list(data.values())
+
+    plt.plot(x_values, y_values, color="red")
+    plt.xlabel("Number of Heads")
+    plt.ylabel("Percentage, %")
     plt.show()
+
 
 print(flip_coin())
 draw_gaussian_distribution_graph(flip_coin())
