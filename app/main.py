@@ -18,7 +18,7 @@ def flip_coin(trials: int = 10000, flips: int = 10) -> dict:
 
 
 def draw_gaussian_distribution_graph() -> None:
-    pyplt.plot(flip_coin().values())
+    pyplt.plot(list(flip_coin().values()))
 
     pyplt.title("Gaussian graph")
     pyplt.xlabel("Heads count")
