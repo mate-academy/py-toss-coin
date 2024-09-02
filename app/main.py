@@ -4,8 +4,9 @@ import random
 
 def flip_coin(
     num_trials: int = 10000,
-    num_flips: int = 10,
+    num_flips: int = 10
 ) -> dict[int, float]:
+
     results = {i: 0 for i in range(num_flips + 1)}
 
     for _ in range(num_trials):
@@ -19,11 +20,7 @@ def flip_coin(
 
 
 def draw_gaussian_distribution_graph(data: dict[int, float]) -> None:
-    plt.plot(
-        list(data.keys()),
-        list(data.values()),
-        color="blue"
-    )
+    plt.plot(list(data.keys()), list(data.values()), color="blue")
     plt.title("Gaussian distribution")
     plt.xlabel("Heads count")
     plt.ylabel("Drop percentage %")
