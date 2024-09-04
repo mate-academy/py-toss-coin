@@ -20,11 +20,12 @@ def flip_coin() -> dict:
     result_dict_sorted = dict(sorted(result_dict.items()))
     return result_dict_sorted
 
-def draw_gaussian_distribution_graph() -> None:
-    x = np.array(list(flip_coin().keys()))
-    y = np.array(list(flip_coin().values()))
 
-    plt.plot(x, y)
+def draw_gaussian_distribution_graph() -> None:
+    x_points = np.array(list(flip_coin().keys()))
+    y_points = np.array(list(flip_coin().values()))
+
+    plt.plot(x_points, y_points)
 
     plt.title("Gaussian distribution")
     plt.xlabel("Heads count")
@@ -33,5 +34,6 @@ def draw_gaussian_distribution_graph() -> None:
     plt.ylim(0, 100)
 
     plt.show()
+
 
 draw_gaussian_distribution_graph()
