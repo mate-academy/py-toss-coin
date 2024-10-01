@@ -1,6 +1,4 @@
 import random
-import matplotlib.pyplot as plt
-import numpy as np
 
 
 def flip_coin() -> dict:
@@ -13,13 +11,3 @@ def flip_coin() -> dict:
         result[head_count] += 1
     result = {key: round(value / 100, 2) for key, value in result.items()}
     return result
-
-
-ypoints = np.array([value for value in flip_coin().values()])
-plt.plot(ypoints)
-plt.ylim(0, 100)
-plt.xlim(0, 10)
-plt.title("Gaussian distribution")
-plt.xlabel("Heads count")
-plt.ylabel("Drop percentage %")
-plt.show()
