@@ -1,10 +1,6 @@
 import random
 
 
-import matplotlib.pyplot as plt
-import numpy as np
-
-
 def flip_coin() -> dict:
 
     result = {i: 0 for i in range(11)}
@@ -19,6 +15,9 @@ def flip_coin() -> dict:
 
 
 def draw_gaussian_distribution_graph(graph: dict) -> None:
+    import matplotlib.pyplot as plt
+    import numpy as np
+
     x_coor = np.array([number for number in graph.keys()])
     y_coor = np.array([number for number in graph.values()])
 
