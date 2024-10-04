@@ -9,9 +9,9 @@ def flip_coin() -> dict:
 
     result = {i: 0 for i in range(11)}
 
-    for _ in range(10000):
-        heads_count = sum(random.choice([0, 1]) for _ in range(10))
-        result[heads_count] += 1
+    for i in range(10000):
+        count = sum(random.choice([0, 1]) for i in range(10))
+        result[count] += 1
 
     result = {k: round(((v / 10000) * 100), 2) for k, v in result.items()}
 
