@@ -7,7 +7,6 @@ def flip_coin(num_experiments: int = 10000) -> dict:
         result = random.binomial(n=10, p=0.5)
         statistics[result] += 1
 
-    # Обчислюємо відсотки для кожної кількості орлів
     percentages = {key: (value / num_experiments) * 100
                    for key, value in statistics.items()}
 
