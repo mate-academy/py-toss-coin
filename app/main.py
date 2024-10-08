@@ -11,9 +11,10 @@ def flip_coin() -> dict:
         dict_[key] += 1
     for i in range(len(dict_)):
         dict_[i] /= 100
-    plt.title("Gaussian distribution")
-    plt.xlabel("Heads count")
-    plt.ylabel("Drop percentage %")
-    plt.plot(dict_.keys(), (dict_.values()))
-    plt.show()
+    # Extra logic:
+    # plt.title("Gaussian distribution")
+    # plt.xlabel("Heads count")
+    # plt.ylabel("Drop percentage %")
+    # plt.plot(dict_.keys(), (dict_.values()))
+    # plt.show()
     return dict_
