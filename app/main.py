@@ -4,7 +4,7 @@ import random
 import matplotlib.pyplot as plt
 
 
-def flip_coin():
+def flip_coin() -> dict:
     dict_ = {index: 0 for index in range(11)}
     for i in range(10000):
         key = sum(random.choice([0, 1]) for i in range(10))
