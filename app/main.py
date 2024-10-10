@@ -4,21 +4,13 @@ import matplotlib.pyplot as plt
 
 
 def flip_coin() -> dict:
-    result_dict = {}
+    result_dict = {i: 0 for i in range(11)}
 
     for _ in range(10000):
-        counter = 0
-        for _ in range(10):
-            flip = random.randint(0, 1)
-            if flip:
-                counter += 1
-        if counter not in result_dict:
-            result_dict[counter] = 1
-        else:
-            result_dict[counter] += 1
+        counter = sum(random.choice([0, 1]) for i in range(10))
+        result_dict[counter] += 1
 
-    sorted_dict = dict(sorted(result_dict.items())).items()
-    return {key: (value / 10000) * 100 for key, value in sorted_dict}
+    return {key: (value / 10000) * 100 for key, value in result_dict.items()}
 
 
 def draw_gaussian_distribution_graph(points: dict) -> None:
