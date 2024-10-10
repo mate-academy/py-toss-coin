@@ -22,9 +22,9 @@ def flip_coin() -> dict:
 
 
 def draw_gaussian_distribution_graph(points: dict) -> None:
-    x = list(points.keys())
-    y = list(points.values())
-    plt.plot(x, y)
+    x_axis = list(points.keys())
+    y_axis = list(points.values())
+    plt.plot(x_axis, y_axis)
 
     plt.xticks(range(0, 11, 1))
     plt.yticks(range(0, 101, 10))
