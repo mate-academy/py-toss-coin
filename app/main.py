@@ -2,8 +2,6 @@ import random
 from collections import defaultdict
 
 
-
-
 def flip_coin(cases: int = 10000, flips_per_case: int = 10) -> dict:
     """
     Simulates multiple cases of flipping a coin a specified number of times.
