@@ -1,5 +1,4 @@
 import random
-import app.matplotlib.pyplot as plt
 from typing import Dict
 
 
@@ -14,12 +13,3 @@ def flip_coin(num_trials: int = 10000) -> Dict[int, float]:
         results[key] = (results[key] / num_trials * 100)
 
     return results
-
-
-def draw_gaussian_distribution_graph(results: Dict[int, float]) -> None:
-    plt.bar(results.keys(), results.values())
-    plt.title("Гауссово распределение подбрасываний монеты (10 подбрасываний)")
-    plt.xlabel("Количество орлов")
-    plt.ylabel("Процент испытаний")
-    plt.xticks(range(11))
-    plt.show()
