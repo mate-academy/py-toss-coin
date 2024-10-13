@@ -1,5 +1,5 @@
 import random
-import matplotlib.pyplot as plt
+import app.matplotlib.pyplot as plt
 from typing import Dict
 
 
