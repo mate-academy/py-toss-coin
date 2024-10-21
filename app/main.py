@@ -14,7 +14,8 @@ def flip_coin() -> dict:
         coin_toss_results[head_counter] += 1
 
     coin_toss_results_in_percentage = {item: round(value / 100, 2) for
-                                       item, value in coin_toss_results.items()}
+                                       item, value in
+                                       coin_toss_results.items()}
 
     return coin_toss_results_in_percentage
 
