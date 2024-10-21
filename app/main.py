@@ -13,7 +13,8 @@ def flip_coin() -> dict:
 
         coin_toss_results[head_counter] += 1
 
-    coin_toss_results_in_percentage = {item: round(value / 100, 2) for item, value in coin_toss_results.items()}
+    coin_toss_results_in_percentage = {item: round(value / 100, 2) for
+                                       item, value in coin_toss_results.items()}
 
     return coin_toss_results_in_percentage
 
@@ -26,7 +27,7 @@ def draw_gaussian_distribution_graph() -> None:
     plt.xlim(0, 10)
     plt.ylim(0, 100)
 
-    plt.plot(x_points, y_points, marker='o')
+    plt.plot(x_points, y_points, marker="o")
 
     plt.xlabel("Heads count")
     plt.ylabel("Drop percentage %")
