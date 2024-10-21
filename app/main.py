@@ -30,7 +30,7 @@ def draw_gaussian_distribution_graph(gau_dict: dict) -> None:
     y_point = gau_dict.values()
     plt.bar(x_point, y_point)
 
-    plt.xlabel("Number of head dropped")
+    plt.xlabel("Numbers of head dropped")
     plt.ylabel("Percentage of total tries")
 
     plt.show()
