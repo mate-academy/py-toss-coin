@@ -48,5 +48,3 @@ def flip_coin() -> dict:
         9: nine_one_counter,
         10: ten_zero_counter
     }
-
-
