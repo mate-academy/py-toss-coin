@@ -1,5 +1,4 @@
 import random
-import numpy as np
 import matplotlib.pyplot as plt
 from scipy.stats import norm
 
@@ -20,10 +19,9 @@ def flip_coin(attempts: int = 10000) -> dict:
 
 def draw_gaussian_distribution_graph(mean: float = 5,
                                      standard_deviation: float = 1) -> None:
-    x_coord = np.linspace(
-        mean - 4 * standard_deviation, mean + 4 * standard_deviation, 1000
-    )
-    y_coord = norm.pdf(x_coord, mean, standard_deviation)
+    x_coord = [mean - 4 * standard_deviation + i
+               * (8 * standard_deviation / 1000) for i in range(1000)]
+    y_coord = [norm.pdf(x, mean, standard_deviation) for x in x_coord]
 
     plt.figure(figsize=(10, 6))
     plt.plot(x_coord, y_coord, color="blue", label="Gaussian Distribution")
