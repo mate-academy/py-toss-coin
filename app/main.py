@@ -1,7 +1,6 @@
 from __future__ import annotations
 import random
 
-import numpy as np
 import matplotlib.pyplot as plt
 
 
@@ -24,11 +23,8 @@ def flip_coin() -> dict:
 
 
 def draw_gaussian_distribution_graph(dict_for_grafik: dict) -> None:
-    list_of_keys = [key for key in dict_for_grafik]
-    list_of_meaning = [dict_for_grafik[key] for key in dict_for_grafik]
-
-    x_points = np.array(list_of_keys)
-    y_points = np.array(list_of_meaning)
+    x_points = [key for key in dict_for_grafik]
+    y_points = [dict_for_grafik[key] for key in dict_for_grafik]
 
     plt.plot(x_points, y_points)
     plt.xlabel("Count of heads")
