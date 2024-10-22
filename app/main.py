@@ -1,7 +1,4 @@
-from __future__ import annotations
 import random
-
-import matplotlib.pyplot as plt
 
 
 def flip_coin() -> dict:
@@ -20,13 +17,3 @@ def flip_coin() -> dict:
         dict_of_res[number] = round((list_res.count(number) / 10000 * 100), 2)
 
     return dict_of_res
-
-
-def draw_gaussian_distribution_graph(dict_for_grafik: dict) -> None:
-    x_points = [key for key in dict_for_grafik]
-    y_points = [dict_for_grafik[key] for key in dict_for_grafik]
-
-    plt.plot(x_points, y_points)
-    plt.xlabel("Count of heads")
-    plt.ylabel("%")
-    plt.show()
