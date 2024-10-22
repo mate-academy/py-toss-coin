@@ -34,7 +34,3 @@ def draw_gaussian_distribution_graph(dict_for_grafik: dict) -> None:
     plt.xlabel("Count of heads")
     plt.ylabel("%")
     plt.show()
-
-
-flip_coin()
-draw_gaussian_distribution_graph(flip_coin())
