@@ -8,8 +8,7 @@ def flip_coin(trials: int = 10000, flips_per_trial: int = 10) \
     results = {i: 0 for i in range(flips_per_trial + 1)}
 
     for _ in range(trials):
-        heads_count = sum(random.choice([0, 1])
-                          for _ in range(flips_per_trial))
+        heads_count = sum(random.choices([0, 1], k=flips_per_trial))
         results[heads_count] += 1
 
     for key in results:
@@ -24,17 +23,18 @@ def draw_gaussian_distribution_graph(distribution: Dict[int, float]) -> None:
 
     plt.figure(figsize=(10, 6))
     plt.plot(heads, percentages, marker="o", linestyle="-", color="b")
-    plt.title("Gaussian distribution")
-    plt.xlabel("Heads count")
-    plt.ylabel("Drop percentage %")
+    plt.title("Gaussian Distribution of Coin Flips")
+    plt.xlabel("Heads Count")
+    plt.ylabel("Drop Percentage %")
     plt.xticks(heads)
     plt.xlim(0, 10)
-    plt.ylim(0, 30)
+    plt.ylim(0, max(percentages) + 5)
     plt.grid(True)
 
     plt.show()
 
 
-result = flip_coin()
-print(result)
-draw_gaussian_distribution_graph(result)
+if __name__ == "__main__":
+    result = flip_coin()
+    print(result)
+    draw_gaussian_distribution_graph(result)
