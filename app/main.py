@@ -1,6 +1,4 @@
 import random
-import matplotlib.pyplot as mp
-import numpy as np
 
 
 def flip_coin() -> dict:
@@ -14,9 +12,3 @@ def flip_coin() -> dict:
     for num_heads, percentage in result.items():
         result[num_heads] = percentage / 100
     return result
-
-
-ypoints = np.array(list(flip_coin().values()))
-mp.plot(ypoints)
-mp.xlabel("Heads count")
-mp.ylabel("Drop percentage %")
