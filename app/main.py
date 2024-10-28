@@ -18,10 +18,9 @@ def flip_coin() -> dict:
         else:
             result_dict[count] = 1
 
-    percentage_result_dict = {}
-    for count, value in result_dict.items():
-        percentage_result_dict[count] = round((value / total_flips) * 100, 2)
-    return dict(sorted(percentage_result_dict.items()))
+    for key, value in result_dict.items():
+        result_dict[key] = round((value / total_flips) * 100, 2)
+    return dict(sorted(result_dict.items()))
 
 
 # def draw_gaussian_distribution_graph(data: dict) -> None:
