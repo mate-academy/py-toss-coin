@@ -36,8 +36,12 @@ def draw_gaussian_distribution_graph() -> None:
     y_points = np.array([value for value in points.values()])
 
     p_plt.plot(x_points, y_points)
+    p_plt.ylim(0, 100)
     p_plt.title("Gaussian distribution")
     p_plt.xlabel("Heads count")
     p_plt.ylabel("Drop percentage %")
 
     p_plt.show()
+
+
+draw_gaussian_distribution_graph()
