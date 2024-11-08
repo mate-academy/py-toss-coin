@@ -1,4 +1,4 @@
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 import random
 
 
@@ -13,14 +13,14 @@ def flip_coin() -> dict:
     return {key: (value / trials) * 100 for key, value in results.items()}
 
 
-def draw_gaussian_distribution_graph(flip_heads: dict) -> None:
-    plt.plot(list(flip_heads.keys()), list(flip_heads.values()), color="red")
-    plt.title("Gaussian distribution")
-    plt.xlabel("Heads count")
-    plt.ylabel("Drop percentage %")
-    plt.ylim(0, 100)
-    plt.xlim(0, 10)
-    plt.show()
-
-
-draw_gaussian_distribution_graph(flip_coin())
+# def draw_gaussian_distribution_graph(flip_heads: dict) -> None:
+#     plt.plot(list(flip_heads.keys()), list(flip_heads.values()), color="red")
+#     plt.title("Gaussian distribution")
+#     plt.xlabel("Heads count")
+#     plt.ylabel("Drop percentage %")
+#     plt.ylim(0, 100)
+#     plt.xlim(0, 10)
+#     plt.show()
+#
+#
+# draw_gaussian_distribution_graph(flip_coin())
