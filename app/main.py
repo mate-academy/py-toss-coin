@@ -1,5 +1,4 @@
 import random
-import numpy as np
 import matplotlib.pyplot as plt
 
 from collections import Counter
@@ -27,7 +26,7 @@ def draw_gaussian_distribution_graph() -> None:
 
     plt.yticks(range(0, 110, 10))
     plt.xticks(range(0, 11, 1))
-    minor_ticks = np.arange(5, 105, 10)
+    minor_ticks = range(5, 105, 10)
     plt.minorticks_on()
     plt.yticks(minor_ticks, minor=True)
     plt.xlabel("Heads count")
