@@ -1,12 +1,18 @@
 import random
 
 
-def flip_coin(num_of_cases: int = 10000) -> dict:
-    results = {i: 0 for i in range(11)}
+def flip_coin() -> dict:
+    result = {i: 0 for i in range(11)}
 
-    for _ in range(num_of_cases):
-        heads_count = sum(random.choice([0, 1]) for _ in range(10))
-        results[heads_count] += 1
+    trials = 10000
+    for _ in range(trials):
+        count = 0
+        for _ in range(10):
+            flip = random.randint(0, 1)
+            count += flip
 
-    percentages = {k: round((v / num_of_cases) * 100, 2) for k, v in results.items()}
-    return percentages
+        result[count] += 1
+
+    percentage = {key: (value / trials) * 100 for key, value in result.items()}
+
+    return percentage
