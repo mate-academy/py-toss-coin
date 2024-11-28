@@ -28,7 +28,7 @@ def flip_coin() -> dict:
     return result_dict
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     result = flip_coin()
     x_asics = [num for num in range(0, 11)]
     print(x_asics)
@@ -36,7 +36,7 @@ if __name__ == '__main__':
     occurrences = [num for num in result.values()]
     fig, ax = plt.subplots()
 
-    ax.plot(x_asics, occurrences, "-o", label='Occurrences')
+    ax.plot(x_asics, occurrences, "-o", label="Occurrences")
     ax.set_ylim(0, 100)
     ax.set_yticks([num for num in range(0, 101, 10)])
 
