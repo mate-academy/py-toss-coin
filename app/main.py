@@ -1,7 +1,7 @@
 import random
 
 
-def choice_side() -> dict:
+def flip_coin() -> dict:
     chance_head_dict = {}
     for _ in range(10000):
         count = count_head()
@@ -17,7 +17,7 @@ def choice_side() -> dict:
     return dict(sorted(chance_head_dict.items()))
 
 
-def flip_coin() -> str:
+def choice_side() -> str:
     coin = ("head", "tail")
     return random.choice(coin)
 
@@ -25,7 +25,7 @@ def flip_coin() -> str:
 def count_head() -> int:
     count = 0
     for _ in range(10):
-        if flip_coin() == "head":
+        if choice_side() == "head":
             count += 1
 
     return count
