@@ -14,7 +14,6 @@ def flip_coin() -> dict:
     for dict_key, dict_value in result_dict.items():
         dict_value /= 100
         result_dict[dict_key] = dict_value
-    print(result_dict)
     return result_dict
 
 
