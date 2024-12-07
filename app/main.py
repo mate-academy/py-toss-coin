@@ -21,6 +21,7 @@ def draw_gaussian_distribution_graph() -> None:
     start_data_dict = flip_coin()
     x_list = []
     y_list = []
+
     for dict_key, dict_value in start_data_dict.items():
         x_list.append(dict_key)
         y_list.append(dict_value)
