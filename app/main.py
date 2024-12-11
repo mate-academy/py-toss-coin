@@ -3,7 +3,7 @@ from collections import Counter
 
 
 def flip_coin() -> dict:
-    
+
     num_experiments = 10000
     results = []
 
@@ -12,5 +12,7 @@ def flip_coin() -> dict:
         results.append(num_heads)
 
     counts = Counter(results)
-    percentages = {k: round((v / num_experiments) * 100, 2) for k, v in counts.items()}
+    percentages = {
+        k: round((v / num_experiments) * 100, 2) for k, v in counts.items()
+    }
     return percentages
