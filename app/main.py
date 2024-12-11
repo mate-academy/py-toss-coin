@@ -9,5 +9,6 @@ def flip_coin() -> None:
         heads_count = sum(random.choice([0, 1]) for _ in range(10))
         results[heads_count] += 1
 
-    percentages = {key: (value / trials) * 100 for key, value in results.items()}
+    percentages = {key: (value / trials) * 100
+                   for key, value in results.items()}
     return percentages
