@@ -1,5 +1,5 @@
 import random
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 
 
 def flip_coin() -> dict:
@@ -9,14 +9,13 @@ def flip_coin() -> dict:
                    for i in range(11)}
     return result_dict
 
-
-def draw_gaussian_distribution_graph(result_dict: dict) -> None:
-    x_param = list(result_dict.keys())
-    y_param = list(result_dict.values())
-    plt.figure(figsize=(10, 6))
-    plt.plot(x_param, y_param)
-    plt.yticks(range(0, 110, 10))
-    plt.title("Gaussian distribution")
-    plt.xlabel("Heads count")
-    plt.ylabel("Drop percentage %")
-    plt.show()
+# def draw_gaussian_distribution_graph(result_dict: dict) -> None:
+#     x_param = list(result_dict.keys())
+#     y_param = list(result_dict.values())
+#     plt.figure(figsize=(10, 6))
+#     plt.plot(x_param, y_param)
+#     plt.yticks(range(0, 110, 10))
+#     plt.title("Gaussian distribution")
+#     plt.xlabel("Heads count")
+#     plt.ylabel("Drop percentage %")
+#     plt.show()
