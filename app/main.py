@@ -11,17 +11,3 @@ def flip_coin() -> dict:
         key: round((value / 100), 2) for key, value in result_dict.items()
     }
     return percentages
-
-
-def draw_gaussian_distribution_graph() -> None:
-    data = flip_coin()
-    axis_x = list(data.keys())
-    axis_y = list(data.values())
-
-    plt.plot(axis_x, axis_y)
-
-    plt.title("Gaussian Distribution")
-    plt.xlabel("Number of Heads")
-    plt.ylabel("Percentage")
-
-    plt.show()
