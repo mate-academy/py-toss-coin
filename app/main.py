@@ -1,4 +1,4 @@
-import matplotlib.pyplot as plt
+import matplotlib.pyplot
 import random
 
 
@@ -19,8 +19,8 @@ def draw_gaussian_distribution_graph() -> None:
     coordinates = flip_coin()
     xpoints = [key for key in coordinates.keys()]
     ypoints = [value for value in coordinates.values()]
-    plt.plot(xpoints, ypoints)
-    plt.title("Gaussian distribution")
-    plt.ylabel("Drop percentage %")
-    plt.xlabel("Heads count")
-    plt.show()
+    matplotlib.pyplot.plot(xpoints, ypoints)
+    matplotlib.pyplot.title("Gaussian distribution")
+    matplotlib.pyplot.ylabel("Drop percentage %")
+    matplotlib.pyplot.xlabel("Heads count")
+    matplotlib.pyplot.show()
