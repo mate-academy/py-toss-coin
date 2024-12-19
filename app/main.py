@@ -24,7 +24,3 @@ def draw_gaussian_distribution_graph() -> None:
     matplotlib.pyplot.ylabel("Drop percentage %")
     matplotlib.pyplot.xlabel("Heads count")
     matplotlib.pyplot.show()
-
-
-print(flip_coin())
-draw_gaussian_distribution_graph()
