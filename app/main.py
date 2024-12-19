@@ -11,12 +11,14 @@ def flip_coin() -> Dict[int, float]:
         simulation_results[heads_count] += 1
 
     for key in simulation_results:
-        simulation_results[key] = (simulation_results[key] / num_simulations) * 100
+        simulation_results[key] = ((simulation_results[key] / num_simulations)
+                                   * 100)
 
     return simulation_results
 
 
-def draw_gaussian_distribution_graph(simulation_results: Dict[int, float]) -> None:
+def draw_gaussian_distribution_graph(simulation_results: Dict[int, float]) -> \
+        None:
     number_of_heads = list(simulation_results.keys())
     percentage_values = list(simulation_results.values())
 
