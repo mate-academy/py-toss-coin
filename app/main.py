@@ -17,8 +17,8 @@ def flip_coin() -> dict:
     for key, value in attempts.items():
         attempts[key] = value / 10000 * 100
 
-    x = np.array(list(range(0, 11)))
-    y = np.array(list(attempts.values()))
+    x_axis = np.array(list(range(0, 11)))
+    y_axis = np.array(list(attempts.values()))
 
     plt.plot(x, y)
 
