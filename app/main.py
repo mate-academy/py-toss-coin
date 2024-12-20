@@ -2,7 +2,7 @@ import random
 import matplotlib.pyplot as plt
 
 
-def flip_coin():
+def flip_coin() -> dict:
     trials = 10000
     results = {i: 0 for i in range(11)}
 
@@ -15,13 +15,11 @@ def flip_coin():
     return percentages
 
 
-def draw_gaussian_distribution_graph():
+def draw_gaussian_distribution_graph() -> None:
     percentages = flip_coin()
 
-    x = list(percentages.keys())
-    y = list(percentages.values())
+    x_cord = list(percentages.keys())
+    y_cord = list(percentages.values())
 
-    plt.plot(x, y)
+    plt.plot(x_cord, y_cord)
     plt.show()
-
-draw_gaussian_distribution_graph()
