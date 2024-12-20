@@ -1,6 +1,4 @@
 import random
-import matplotlib.pyplot as plt
-import numpy as np
 
 
 def flip_coin() -> dict:
@@ -16,16 +14,5 @@ def flip_coin() -> dict:
 
     for key, value in attempts.items():
         attempts[key] = value / 10000 * 100
-
-    x_axis = np.array(list(range(0, 11)))
-    y_axis = np.array(list(attempts.values()))
-
-    plt.plot(x_axis, y_axis)
-
-    plt.xlabel("Heads count")
-    plt.ylabel("Drop percentage %")
-    plt.title("Gaussian distribution")
-
-    plt.show()
 
     return attempts
