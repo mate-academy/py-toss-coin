@@ -20,7 +20,7 @@ def flip_coin() -> dict:
     x_axis = np.array(list(range(0, 11)))
     y_axis = np.array(list(attempts.values()))
 
-    plt.plot(x, y)
+    plt.plot(x_axis, y_axis)
 
     plt.xlabel("Heads count")
     plt.ylabel("Drop percentage %")
