@@ -3,7 +3,7 @@ import random
 
 
 def flip_coin() -> dict:
-    number_of_flips = 100000
+    number_of_flips = 10000
     data = {i: 0 for i in range(11)}
     for _ in range(number_of_flips):
         count_1 = sum([1 for _ in range(10) if random.choice([0, 1]) == 1])
