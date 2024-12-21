@@ -28,14 +28,3 @@ def draw_gaussian_distribution_graph() -> None:
     plt.xticks(range(11))
     plt.yticks(range(0, 101, 10))
     plt.show()
-
-
-if __name__ == "__main__":
-    cache = set()
-
-    for _ in range(20):
-        coins = flip_coin()
-
-        cache.add(tuple(result for result in coins.values()))
-    print(cache)
-    draw_gaussian_distribution_graph()
