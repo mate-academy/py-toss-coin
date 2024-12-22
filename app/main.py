@@ -12,13 +12,13 @@ def flip_coin() -> dict:
 
     for _ in range(10000):
 
-        x = 0
+        random_number = 0
         for _ in range(10):
-            x += random.randint(0, 1)
-        if x in percentage_dict:
-            percentage_dict[x] += 1
+            random_number += random.randint(0, 1)
+        if random_number in percentage_dict:
+            percentage_dict[random_number] += 1
             continue
-        percentage_dict[x] = 1
+        percentage_dict[random_number] = 1
 
     for key, value in percentage_dict.items():
         percentage_dict[key] = value / 10000 * 100
@@ -26,7 +26,7 @@ def flip_coin() -> dict:
     return percentage_dict
 
 
-'''statistic_dict = flip_coin()
+"""statistic_dict = flip_coin()
 
 # Sort the data by key
 sorted_items = sorted(statistic_dict.items())
@@ -45,4 +45,4 @@ plt.title("Distribution of Heads Count in 10 Coin Flips")
 
 
 plt.grid(True)
-plt.show()'''
+plt.show()"""
