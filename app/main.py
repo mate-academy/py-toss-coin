@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 
 def flip_coin() -> dict:
     result = {}
+
     coin_side = ["head", "tail"]
 
     for _ in range(10_000):
