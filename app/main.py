@@ -1,13 +1,13 @@
-import matplotlib
-import random
+"""import matplotlib
 import numpy as np
-import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt"""
+
+import random
+
+# matplotlib.use('TkAgg')
 
 
-matplotlib.use('TkAgg')
-
-
-def flip_coin():
+def flip_coin() -> dict:
     percentage_dict = {}
 
     for _ in range(10000):
@@ -26,7 +26,7 @@ def flip_coin():
     return percentage_dict
 
 
-statistic_dict = flip_coin()
+'''statistic_dict = flip_coin()
 
 # Sort the data by key
 sorted_items = sorted(statistic_dict.items())
@@ -45,4 +45,4 @@ plt.title("Distribution of Heads Count in 10 Coin Flips")
 
 
 plt.grid(True)
-plt.show()
+plt.show()'''
