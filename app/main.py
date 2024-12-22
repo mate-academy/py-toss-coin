@@ -20,8 +20,8 @@ def flip_coin() -> dict:
 
 
 def draw_gaussian_distribution_graph(data: dict) -> None:
-    x_values = sorted(data.keys())  # Number of heads (0 to 10)
-    y_values = [data[key] for key in x_values]  # Corresponding percentages
+    x_values = sorted(data.keys())
+    y_values = [data[key] for key in x_values]
 
     plt.figure(figsize=(10, 6))
     plt.plot(x_values,
