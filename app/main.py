@@ -10,8 +10,6 @@ def flip_coin() -> dict:
 
         result[num_of_heads] = result.get(num_of_heads, 0) + 1
 
-
     for key, value in result.items():
         result[key] = round((value / 10_000) * 100, 2)
     return dict(sorted((result.items())))
-
