@@ -1,33 +1,41 @@
-import random
+from random import randint
+
+import matplotlib
 import matplotlib.pyplot as plt
+matplotlib.use("Agg")
 
 
-def flip_coin() -> dict:
+def simulate_ten_flips() -> int:
+    return sum(randint(0, 1) for _ in range(10))
+
+
+def flip_coin(num_trials: int = 10000) -> dict[int, float]:
     results = {i: 0 for i in range(11)}
-    num_trials = 10000
 
     for _ in range(num_trials):
-        count = sum(random.choice([0, 1]) for _ in range(10))
-        results[count] += 1
+        heads_count = simulate_ten_flips()
+        results[heads_count] += 1
 
-    for key, value in results.items():
-        results[key]: (value // num_trials) * 100
+    for heads in results:
+        results[heads] = round((results[heads] / num_trials) * 100, 2)
+
     return results
 
 
-def draw_gaussian_distribution_graph(distribution: dict) -> None:
-    keys = list(distribution.keys())
-    values = list(distribution.values())
+def draw_gaussian_distribution_graph(data: dict[int, float]) -> None:
+    x_coords = list(data.keys())
+    y_coords = list(data.values())
 
-    plt.bar(keys, values, color="skyblue", edgecolor="black")
-    plt.title("Gaussian Distribution of Coin Flips")
+    plt.bar(x_coords, y_coords, color="blue", alpha=0.7, edgecolor="black")
     plt.xlabel("Number of Heads")
     plt.ylabel("Percentage")
-    plt.xticks(range(11))  # Set x-axis ticks from 0 to 10
+    plt.title("Distribution of Heads in 10 Coin Flips")
+    plt.xticks(range(11))
     plt.grid(axis="y", linestyle="--", alpha=0.7)
-    plt.show()
+    plt.savefig("distribution_graph.png")
 
-    coin_flip_distribution = flip_coin()
-    print(coin_flip_distribution)
 
-    draw_gaussian_distribution_graph(coin_flip_distribution)
+if __name__ == "__main__":
+    results = flip_coin()
+    print(results)
+    draw_gaussian_distribution_graph(results)
