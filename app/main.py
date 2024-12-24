@@ -1,6 +1,6 @@
 import random
-import sys
-import matplotlib.pyplot as plt
+# import sys
+# import matplotlib.pyplot as plt
 
 
 def flip_coin(sets: int = 10000) -> dict:
@@ -22,13 +22,13 @@ def flip_coin(sets: int = 10000) -> dict:
     return result
 
 
-def draw_gaussian_distribution_graph() -> None:
-    flips = flip_coin(10000)
-    xpoints = list(flips.keys())
-    ypoints = list(flips.values())
-    plt.plot(xpoints, ypoints)
-    plt.xlabel("Value")
-    plt.ylabel("Number of falls")
-    plt.show()
-    plt.savefig(sys.stdout.buffer)
-    sys.stdout.flush()
+# def draw_gaussian_distribution_graph() -> None:
+#     flips = flip_coin(10000)
+#     xpoints = list(flips.keys())
+#     ypoints = list(flips.values())
+#     plt.plot(xpoints, ypoints)
+#     plt.xlabel("Value")
+#     plt.ylabel("Number of falls")
+#     plt.show()
+#     plt.savefig(sys.stdout.buffer)
+#     sys.stdout.flush()
