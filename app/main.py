@@ -14,6 +14,6 @@ def flip_coin() -> dict:
     return {k: v / 100 for (k, v) in res.items()}
 
 
-def draw_gaussian_distribution_graph():
+def draw_gaussian_distribution_graph() -> None:
     plt.plot([y for y in flip_coin().values()])
     plt.show()
