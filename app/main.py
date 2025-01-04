@@ -1,4 +1,6 @@
 import random
+
+
 import matplotlib.pyplot as plt
 
 
@@ -20,6 +22,8 @@ def draw_gaussian_distribution_graph() -> None:
     x_ax = list(flip_coin().keys())
     y_ax = list(flip_coin().values())
     plt.plot(x_ax, y_ax)
+    plt.xlim(0, 10)
+    plt.ylim(0, 100)
     plt.ylabel("Drop percentage %")
     plt.xlabel("Heads count")
     plt.title("Gaussian distribution")
