@@ -25,7 +25,8 @@ def draw_gaussian_distribution_graph(data: dict[int, float]) -> None:
 
     plt.figure(figsize=(8, 6))
     plt.plot(
-        heads_counts, drop_percentages, color="blue", marker="o", markersize=0, linestyle="-"
+        heads_counts, drop_percentages,
+        color="blue", marker="o", markersize=0, linestyle="-"
     )
     plt.title("Gaussian Distribution", fontsize=16)
     plt.xlabel("Heads Count", fontsize=12)
