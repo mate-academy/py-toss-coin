@@ -6,7 +6,7 @@ flake8-quotes==3.3.1
 flake8-variables-names==0.0.5
 fonttools==4.55.3
 kiwisolver==1.4.8
-matplotlib=3.10.0
+matplotlib==3.10.0
 numpy==2.2.1
 pep8-naming==0.13.2
 pillow==11.1.0
