@@ -1,7 +1,6 @@
 import random
 
 
-
 def flip_coin() -> int:
     heads_count = 0
     for _ in range(10):
