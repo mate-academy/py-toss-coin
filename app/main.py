@@ -1,7 +1,7 @@
 import random
 
 
-def flip_coin() -> int:
+def single_flip() -> int:
     heads_count = 0
     for _ in range(10):
         if random.choice([0, 1]) == 1:
@@ -9,13 +9,13 @@ def flip_coin() -> int:
     return heads_count
 
 
-def flip_experiment(trials: int = 10000) -> dict[int, float]:
+def flip_coin(trials: int = 10000) -> dict[int, float]:
     results = {i: 0 for i in range(11)}
     for _ in range(trials):
-        heads_count = flip_coin()
+        heads_count = single_flip()
         results[heads_count] += 1
-    percentages = {k: (v / trials) * 100 for k, v in results.items()}
+    percentages = {k: round((v / trials) * 100, 2) for k, v in results.items()}
     return percentages
 
 
-print(flip_experiment())
+result = flip_coin(100000)
