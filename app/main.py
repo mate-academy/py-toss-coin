@@ -5,7 +5,7 @@ import random
 
 def flip_coin() -> dict:
     unsorted_dict = {}
-    iterations = 20000
+    iterations = 10000
 
     for _ in range(iterations):
         heads_counter = 0
