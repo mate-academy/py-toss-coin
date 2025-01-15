@@ -1,5 +1,3 @@
-import matplotlib.pyplot as plt
-import numpy as np
 import random
 
 
@@ -22,18 +20,3 @@ def flip_coin() -> dict:
     for key, value in sorted_dict.items():
         sorted_dict[key] = round((value / iterations * 100), 2)
     return sorted_dict
-
-
-def draw_gaussian_distribution_graph() -> None:
-    x_points = np.array([i for i in range(11)])
-    y_points = np.array([flip_coin().get(i, 0) for i in range(11)])
-
-    plt.plot(x_points, y_points, label="Coin flip results")
-    plt.xlabel("Number of Heads")
-    plt.ylabel("Percentage (%)")
-    plt.title("Coin Flip Results - Gaussian Distribution")
-    plt.grid(True)
-    plt.show()
-
-
-draw_gaussian_distribution_graph()
