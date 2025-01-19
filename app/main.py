@@ -19,15 +19,15 @@ def flip_coin() -> dict:
 
 
 def draw_gaussian_distribution_graph(data: dict) -> None:
-    x = list(data.keys())
-    y = list(data.values())
+    x_coor = list(data.keys())
+    y_coor = list(data.values())
 
-    plt.bar(x, y, color='skyblue')
-    plt.title('Coin Flip Distribution (10 Flips, 10000 Trials)')
-    plt.xlabel('Number of Heads')
-    plt.ylabel('Percentage of Occurrences')
-    plt.xticks(x)
-    plt.grid(axis='y', linestyle='--', alpha=0.7)
+    plt.bar(x_coor, y_coor, color="skyblue")
+    plt.title("Coin Flip Distribution (10 Flips, 10000 Trials)")
+    plt.xlabel("Number of Heads")
+    plt.ylabel("Percentage of Occurrences")
+    plt.xticks(x_coor)
+    plt.grid(axis="y", linestyle="--", alpha=0.7)
 
     plt.show()
 
