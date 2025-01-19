@@ -7,8 +7,8 @@ def flip_coin() -> dict:
     for _ in range(10000):
         heads = 0
         for _ in range(10):
-            side = random.randint(0, 1)
-            if side == 1:
+            side_of_coin = random.randint(0, 1)
+            if side_of_coin == 1:
                 heads += 1
         result[heads] += 1
 
