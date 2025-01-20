@@ -11,8 +11,8 @@ def flip_coin() -> dict:
         # Лічильник гербів
         heads_count = 0
         for _ in range(10):  # 10 разів
-            # Вибираємо першу половину діапазону
-            if random.random() < 0.5:
+            # Вибираємо нуль як герби
+            if random.choice([0, 1]) == 0:
                 heads_count += 1
         results.append(heads_count)
 
@@ -20,7 +20,7 @@ def flip_coin() -> dict:
     for number in sorted(results):
         if number not in res_dict:
             res_dict[number] = (sorted(results).count(number) / 10000) * 100
-    return res_dict
+
     # точки x, y
     x_ls = list(res_dict.keys())
     y_ls = list(res_dict.values())
@@ -31,3 +31,6 @@ def flip_coin() -> dict:
     plt.xlabel("Heads count")
     plt.ylabel("Drop percentage")
     plt.show()
+
+    return res_dict
+
