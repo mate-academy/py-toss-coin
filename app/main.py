@@ -31,4 +31,3 @@ def flip_coin() -> dict:
     plt.xlabel("Heads count")
     plt.ylabel("Drop percentage")
     plt.show()
-
