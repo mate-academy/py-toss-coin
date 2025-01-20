@@ -33,4 +33,3 @@ def flip_coin() -> dict:
     plt.show()
 
     return res_dict
-
