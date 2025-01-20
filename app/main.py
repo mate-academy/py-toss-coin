@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-def flip_coin() -> list:
+def flip_coin() -> dict:
     res_dict = {}
     # Список для збереження результатів
     results = []
@@ -19,7 +19,8 @@ def flip_coin() -> list:
     # Записуємо в словник ключі -герби 0-10, значення - кількість 0-10 в списку
     for number in sorted(results):
         if number not in res_dict:
-            res_dict[number] = sorted(results).count(number) / 10000
+            res_dict[number] = (sorted(results).count(number) / 10000) * 100
+    return res_dict
     # точки x, y
     x_ls = list(res_dict.keys())
     y_ls = list(res_dict.values())
@@ -27,6 +28,7 @@ def flip_coin() -> list:
     y_points = np.array(y_ls)
 
     plt.plot(x_points, y_points)
-    plt.xlabel("Number")
-    plt.ylabel("Probability")
+    plt.xlabel("Heads count")
+    plt.ylabel("Drop percentage")
     plt.show()
+
