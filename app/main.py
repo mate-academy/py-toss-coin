@@ -2,7 +2,18 @@ import random
 
 
 def flip_coin() -> dict:
-    our_dict: dict = {0: 0, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0, 10: 0}
+    our_dict: dict = {
+        0: 0,
+        1: 0,
+        2: 0,
+        3: 0,
+        4: 0,
+        5: 0,
+        6: 0,
+        7: 0,
+        8: 0,
+        9: 0,
+        10: 0}
     for raz in range(0, 10001):
         orel = 0
         for i in range(1, 11):
