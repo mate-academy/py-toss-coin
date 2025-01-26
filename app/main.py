@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 
 def flip_coin() -> Dict[int, float]:
-    num_trials = 100000
+    num_trials = 10000
     counts = {i: 0 for i in range(11)}
 
     for _ in range(num_trials):
