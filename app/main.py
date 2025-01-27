@@ -16,13 +16,13 @@ def flip_coin() -> dict:
         9: 0,
         10: 0
     }
-    for attempts in range(20001):
+    for attempts in range(10001):
         count = 0
         for attempt in range(10):
             head = (random.randint(1, 2))
             if head == 1:
                 count += 1
-        final_dict[count] += (1 / 20001) * 100
+        final_dict[count] += (1 / 10001) * 100
     return final_dict
 
 
