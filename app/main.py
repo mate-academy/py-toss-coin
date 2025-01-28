@@ -23,7 +23,7 @@ def flip_coin() -> dict:
             if head == 1:
                 count += 1
         final_dict[count] += (1 / 10001) * 100
-    return final_dict
+    return {num: round(value, 2) for num, value in final_dict.items()}
 
 
 plots_dict = flip_coin()
