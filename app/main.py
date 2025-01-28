@@ -1,18 +1,18 @@
 import random
-from collections import defaultdict
+from typing import Union
 
-def flip_coin() -> dict:
-    trials = 10000
-    flips_per_trial = 10
-    results = defaultdict(int)
 
-    for _ in range(trials):
-        heads = sum(random.choice([0, 1]) for _ in range(flips_per_trial))
-        results[heads] += 1
+def get_exchange_rate_prediction(exchange_rate: Union[int, float]) -> float:
+    if random.choice(["increase", "decrease"]) == "increase":
+        return round(exchange_rate / random.random(), 2)
+    return round(exchange_rate * random.random(), 2)
 
-    for heads in results:
-        results[heads] = (results[heads] / trials) * 100
 
-    return dict(results)
+def cryptocurrency_action(current_rate: Union[int, float]) -> str:
+    prediction_rate = get_exchange_rate_prediction(current_rate)
+    if prediction_rate / current_rate > 1.05:
+        return "Buy more cryptocurrency"
+    if prediction_rate / current_rate < 0.95:
+        return "Sell all your cryptocurrency"
+    return "Do nothing"
 
-print(flip_coin())
