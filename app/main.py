@@ -32,7 +32,7 @@ def flip_coin() -> dict:
 print(flip_coin())
 
 
-def draw_gaussian_distribution_graph():
+def draw_gaussian_distribution_graph() -> None:
     plt.ylim(0, 100)
     plt.xlim(0, 10)
     plt.xlabel("Heads count")
