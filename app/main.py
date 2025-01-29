@@ -43,4 +43,3 @@ def draw_gaussian_distribution_graph() -> None:
     y_point = np.array(list(points.values()))
     plt.plot(x_point, y_point)
     plt.show()
-# draw_gaussian_distribution_graph()
