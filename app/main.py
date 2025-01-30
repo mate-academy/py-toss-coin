@@ -1,6 +1,4 @@
 import random
-import matplotlib.pyplot as plt
-import numpy as np
 
 
 def flip_coin() -> dict:
@@ -18,6 +16,10 @@ def flip_coin() -> dict:
 
 
 def draw_gaussian_distribution_graph(statistic_dict: dict) -> None:
+    import matplotlib.pyplot as plt
+    import numpy as np
+
+
     xpoints = np.array(list(statistic_dict.keys()), dtype=int)
     ypoints = np.array(list(statistic_dict.values()), dtype=float)
 
