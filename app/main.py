@@ -1,9 +1,9 @@
 import random
-import matplotlib.pyplot as plt
-import numpy as np
+# import matplotlib.pyplot as plt
+# import numpy as np
 
 
-def flip_coin(trials=10000, flips_per_trial=10) -> dict:
+def flip_coin(trials: int = 10000, flips_per_trial: int = 10) -> dict:
     # here we initialize the dict with keys from 0 to 10 with all values
     # equal to 0, this considered as a initial state of the dict, and we
     # will add the values every single iteration up to 10000
@@ -20,21 +20,23 @@ def flip_coin(trials=10000, flips_per_trial=10) -> dict:
 
         flip_dict[heads_count] += 1
 
-    flip_dict = {key: round(value / trials * 100, 2) for key, value in flip_dict.items()}
+    flip_dict = {
+        key: round(value / trials * 100, 2) for key, value in flip_dict.items()
+    }
     return flip_dict
 
 
-def draw_gaussian_distribution_graph(flip_dict) -> None:
-    xpoints = np.array(list(flip_dict.keys()))
-    ypoints = np.array(list(flip_dict.values()))
-
-    plt.plot(xpoints, ypoints)
-    plt.title("Gaussian distribution")
-    plt.xlabel("Heads count")
-    plt.ylabel("Drop percentage %")
-    plt.legend()
-    plt.show()
-
-
-result_dict = flip_coin()
-draw_gaussian_distribution_graph(result_dict)
+# def draw_gaussian_distribution_graph(flip_dict: dict) -> None:
+#     xpoints = np.array(list(flip_dict.keys()))
+#     ypoints = np.array(list(flip_dict.values()))
+#
+#     plt.plot(xpoints, ypoints)
+#     plt.title("Gaussian distribution")
+#     plt.xlabel("Heads count")
+#     plt.ylabel("Drop percentage %")
+#     plt.legend()
+#     plt.show()
+#
+#
+# result_dict = flip_coin()
+# draw_gaussian_distribution_graph(result_dict)
