@@ -1,6 +1,7 @@
 import random
 import matplotlib.pyplot as plt
 
+
 def flip_coin(trials: int = 10000, flips: int = 10) -> dict[int, float]:
     flip_results = {i: 0 for i in range(flips + 1)}
 
@@ -14,11 +15,12 @@ def flip_coin(trials: int = 10000, flips: int = 10) -> dict[int, float]:
     draw_gaussian_distribution_graph(flip_results)
     return flip_results
 
+
 def draw_gaussian_distribution_graph(flip_results: dict) -> None:
     plt.bar(
         flip_results.keys(),
         flip_results.values(),
-        color="blue",
+        color="pink",
         alpha=0.7
     )
     plt.xlabel("Number of Heads")
@@ -29,4 +31,3 @@ def draw_gaussian_distribution_graph(flip_results: dict) -> None:
 
 flip_results = flip_coin()
 print(flip_results)
-
