@@ -29,5 +29,6 @@ def draw_gaussian_distribution_graph(flip_results: dict) -> None:
     plt.grid(axis="y", linestyle="--", alpha=0.7)
     plt.show()
 
+
 flip_results = flip_coin()
 print(flip_results)
