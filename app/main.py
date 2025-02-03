@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-def flip_coin(trials=10000, flips=10):
+def flip_coin(trials: int = 10000, flips: int = 10) -> None:
     result = {i: 0 for i in range(flips + 1)}
 
     for _ in range(trials):
@@ -13,10 +13,10 @@ def flip_coin(trials=10000, flips=10):
     for key in result:
         result[key] = round((result[key] / trials) * 100, 2)
 
-    x = list(result.keys())
-    y = list(result.values())
+    x_axis = list(result.keys())
+    y_axis = list(result.values())
 
-    plt.plot(x, y)
+    plt.plot(x_axis, y_axis)
     plt.xlim(0, 10)
     plt.ylim(0, 100)
     plt.yticks(np.arange(0, 101, 10))
@@ -26,3 +26,5 @@ def flip_coin(trials=10000, flips=10):
     plt.ylabel("Drop percentage %")
 
     plt.show()
+
+    return result
