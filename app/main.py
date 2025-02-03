@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-def flip_coin(trials: int = 10000, flips: int = 10) -> dict:
+def flip_coin(trials: int = 10000, flips: int = 10) -> dict[int, float]:
     results = {i: 0 for i in range(flips + 1)}
 
     for _ in range(trials):
