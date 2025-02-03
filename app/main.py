@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-def flip_coin(trials: int = 10000, flips: int = 10) -> None:
+def flip_coin(trials: int = 10000, flips: int = 10) -> dict:
     results = {i: 0 for i in range(flips + 1)}
 
     for _ in range(trials):
@@ -18,7 +18,7 @@ def flip_coin(trials: int = 10000, flips: int = 10) -> None:
     return results
 
 
-def draw_gaussian_distribution_graph(flip_dict: dict):
+def draw_gaussian_distribution_graph(flip_dict: dict) -> None:
     plt.plot(list(flip_dict.keys()), list(flip_dict.values()))
     plt.xlim(0, 10)
     plt.ylim(0, 100)
